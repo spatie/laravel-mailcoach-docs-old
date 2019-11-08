@@ -11,7 +11,7 @@ To use this feature, you must set `track_opens` to `true` of a campaign you're g
 
 ## How it works under the hood
 
-When you send a campaign that has open tracking enabled, we'll add a web beacon to it.  A web beacon is an extra `img` tag in the HTML of your mail.  Its `src` attribute points to an endpoint added by the route macro, `Route::emailCampaigns` that you added when installing the package.
+When you send a campaign that has open tracking enabled, we'll add a web beacon to it.  A web beacon is an extra `img` tag in the HTML of your mail.  Its `src` attribute points to an endpoint added by the route macro, `Route::MailCoach` that you added when installing the package.
 
  Here's an example of what the web beacon looks like:
 
@@ -21,7 +21,7 @@ When you send a campaign that has open tracking enabled, we'll add a web beacon 
 
 The last segment of the link contains the UUID of an `EmailSend` model. An `EmailSend` represents a mail that has been sent for a campaign and contains a relation to a subscriber.
 
-Each time an email client tries to display the web beacon it will send a get request to the `Spatie\EmailCampaigns\Http\Controllers\TrackOpensController`.
+Each time an email client tries to display the web beacon it will send a get request to the `Spatie\MailCoach\Http\Controllers\TrackOpensController`.
 
 ## Queuing open tracking
 

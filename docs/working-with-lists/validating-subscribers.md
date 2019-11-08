@@ -12,7 +12,7 @@ public function rules() {
    $emailList = EmailList::first();
 
    return [
-      'email' => ['email', new Spatie\EmailCampaigns\Rules\EmailListSubscriptionRule($emailList)]
+      'email' => ['email', new Spatie\MailCoach\Rules\EmailListSubscriptionRule($emailList)]
    ];
 }
 ```
@@ -20,7 +20,7 @@ public function rules() {
 You can customize the validation error message publishing the lang files.
 
 ```php
-php artisan vendor:publish --provider="Spatie\EmailCampaigns\EmailCampaignsServiceProvider" --tag="lang"
+php artisan vendor:publish --provider="Spatie\MailCoach\MailCoachServiceProvider" --tag="lang"
 ```
 
 You'll find the message in `resources/lang/en/messages.php`.

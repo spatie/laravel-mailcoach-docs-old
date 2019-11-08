@@ -23,7 +23,7 @@ To immediately subscribe someone, and skip sending a confirmation email, you can
 When a person clicks the email confirmation link, a simple message explaining the result of confirmation is displayed. You can customize that response by publishing the views.
 
 ```php
-php artisan vendor:publish --provider="Spatie\EmailCampaigns\EmailCampaignsServiceProvider" --tag="views"
+php artisan vendor:publish --provider="Spatie\MailCoach\MailCoachServiceProvider" --tag="views"
 ```
 
 The responses of a confirmation can now be modified in the view inside the `/resources/views/vendor/email-campaigns/confirmSubscription/` directory. It will contain these blade files:
@@ -39,7 +39,7 @@ You can customize the content of the double opt-in mail.
 First, you must publish the views.
 
 ```bash
-php artisan vendor:publish --provider="Spatie\EmailCampaigns\EmailCampaignsServiceProvider" --tag="views"
+php artisan vendor:publish --provider="Spatie\MailCoach\MailCoachServiceProvider" --tag="views"
 ```
 
 After that, the content of the double opt-in mail can be modified in the `/resources/views/vendor/email-campaigns/mails/confirmSubscription.blade.php` view.

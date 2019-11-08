@@ -3,12 +3,12 @@ title: Using custom mailables
 weight: 7
 ---
 
-You can use your own [mailable](https://laravel.com/docs/master/mail#writing-mailables) to be used when sending a campaign. Any mailable that extends `Spatie\EmailCampaigns\Mails\CampaignMailable` is valid.
+You can use your own [mailable](https://laravel.com/docs/master/mail#writing-mailables) to be used when sending a campaign. Any mailable that extends `Spatie\MailCoach\Mails\CampaignMailable` is valid.
 
 Here's an example mailable;
 
 ```php
-use Spatie\EmailCampaigns\Mails\CampaignMailable;
+use Spatie\MailCoach\Mails\CampaignMailable;
 
 class MyCustomMailable extends CampaignMailable
 {

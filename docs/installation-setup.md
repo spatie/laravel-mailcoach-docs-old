@@ -18,7 +18,7 @@ Configure Laravel to use one of [the many available mail drivers](https://larave
 You need to publish and run the migration:
 
 ```bash
-php artisan vendor:publish --provider="Spatie\EmailCampaigns\EmailCampaignsServiceProvider" --tag="migrations"
+php artisan vendor:publish --provider="Spatie\MailCoach\MailCoachServiceProvider" --tag="migrations"
 php artisan migrate
 ```
 
@@ -27,7 +27,7 @@ php artisan migrate
 You must register the routes needed to handle subscription confirmations, open, and click tracking. You can do that by adding this macro to your routes file.
 
 ```php
-Route::emailCampaigns('email-campaigns');
+Route::mailCoach('mail-coach');
 
 ```
 
@@ -49,7 +49,7 @@ protected function schedule(Schedule $schedule)
 You must publish the config file with this command.
 
 ```bash
-php artisan vendor:publish --provider="Spatie\EmailCampaigns\EmailCampaignsServiceProvider" --tag="config"
+php artisan vendor:publish --provider="Spatie\MailCoach\MailCoachServiceProvider" --tag="config"
 ```
 
 Below is the default content of the config file:
@@ -88,11 +88,11 @@ return [
        * Your custom action should always extend the one of the default ones.
        */
     'actions' => [
-        'personalize_html_action' => \Spatie\EmailCampaigns\Actions\PersonalizeHtmlAction::class,
-        'prepare_email_html_action' => \Spatie\EmailCampaigns\Actions\PrepareEmailHtmlAction::class,
-        'prepare_webview_html_action' => \Spatie\EmailCampaigns\Actions\PrepareWebviewHtmlAction::class,
-        'subscribe_action' => \Spatie\EmailCampaigns\Actions\SubscribeAction::class,
-        'confirm_subscription_action' => \Spatie\EmailCampaigns\Actions\ConfirmSubscriptionAction::class,
+        'personalize_html_action' => \Spatie\MailCoach\Actions\PersonalizeHtmlAction::class,
+        'prepare_email_html_action' => \Spatie\MailCoach\Actions\PrepareEmailHtmlAction::class,
+        'prepare_webview_html_action' => \Spatie\MailCoach\Actions\PrepareWebviewHtmlAction::class,
+        'subscribe_action' => \Spatie\MailCoach\Actions\SubscribeAction::class,
+        'confirm_subscription_action' => \Spatie\MailCoach\Actions\ConfirmSubscriptionAction::class,
     ],
 ];
 ```
