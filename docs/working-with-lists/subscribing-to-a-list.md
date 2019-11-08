@@ -1,6 +1,5 @@
 ---
 title: Subscribing to a list
-weight: 2
 ---
 
 You can use a string to subscribe to an email list.

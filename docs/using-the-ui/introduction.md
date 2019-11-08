@@ -1,6 +1,5 @@
 ---
 title: Introduction
-weight: 1
 ---
 
 This package contains a beautiful UI that allows you to manage campaigns, email lists and subscribers.

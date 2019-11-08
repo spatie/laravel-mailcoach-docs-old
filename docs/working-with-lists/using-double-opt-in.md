@@ -1,6 +1,5 @@
 ---
 title: Using double opt-in
-weight: 4
 ---
 
 To ensure that all subscribers of your email list really wanted to subscribe, you can enable the double opt-in requirement.

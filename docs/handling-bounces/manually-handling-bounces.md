@@ -1,5 +1,5 @@
 ---
-title: Processing feedback
+title: Manually handling bounces
 ---
 
 After a mail is sent, most email providers send feedback on the result.

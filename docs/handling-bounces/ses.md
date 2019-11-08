@@ -1,6 +1,5 @@
 ---
 title: SES
-weight: 2
 ---
 
 `laravel-mailcoach-ses-feedback` can handle bounce feedback coming from SES. All e-mail address that permanently bounce will be unsubscribed from all lists.

@@ -1,6 +1,5 @@
 ---
 title: Troubleshooting errors during sending
-weight: 6
 ---
 
 When sending a campaign, the package will create `CampaignSend` models for each mail to be sent. A `CampaignSend` has a property `sent_at` that stores the date time of when an email was actually sent. If that attribute is `null` the email has not yet been sent.

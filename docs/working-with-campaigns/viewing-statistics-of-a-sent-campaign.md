@@ -1,6 +1,5 @@
 ---
 title: Viewing campaign statistics
-weight: 6
 ---
 
 After a campaign is sent, some statistics will be made available.

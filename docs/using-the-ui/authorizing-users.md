@@ -1,6 +1,5 @@
 ---
 title: Authorizing users
-weight: 2
 ---
 
 You can determine which users of your application are allowed to view the mailcoach UI by defining a gate check called `viewMailCoach`.

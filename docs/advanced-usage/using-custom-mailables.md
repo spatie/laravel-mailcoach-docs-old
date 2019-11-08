@@ -1,6 +1,5 @@
 ---
 title: Using custom mailables
-weight: 7
 ---
 
 You can use your own [mailable](https://laravel.com/docs/master/mail#writing-mailables) to be used when sending a campaign. Any mailable that extends `Spatie\MailCoach\Mails\CampaignMailable` is valid.

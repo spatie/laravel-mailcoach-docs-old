@@ -1,6 +1,5 @@
 ---
 title: Testing a campaign
-weight: 2
 ---
 
 Before sending a campaign to an entire list, you can send a test to a given email address.

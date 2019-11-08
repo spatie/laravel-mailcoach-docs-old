@@ -1,6 +1,5 @@
 ---
 title: Unsubscribing from a list
-weight: 3
 ---
 
 You can add an unsubscribe link by [adding an `::unsubscribeUrl::` placeholder](https://docs.spatie.be/laravel-email-campaigns/v1/working-with-campaigns/creating-a-campaign/#setting-the-content-and-using-placeholders) to the HTML of your campaign.

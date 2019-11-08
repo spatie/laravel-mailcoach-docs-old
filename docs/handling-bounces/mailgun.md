@@ -1,6 +1,5 @@
 ---
 title: Mailgun
-weight: 1
 ---
 
 `laravel-mailcoach-mailgun-feedback` can handle bounce feedback coming from Mailgun. All e-mail address that permanently bounce will be unsubscribed from all lists.
