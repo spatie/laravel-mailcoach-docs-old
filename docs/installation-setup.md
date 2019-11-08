@@ -27,8 +27,7 @@ php artisan migrate
 You must register the routes needed to handle subscription confirmations, open, and click tracking. You can do that by adding this macro to your routes file.
 
 ```php
-Route::mailCoach('mail-coach');
-
+Route::mailCoach('mailcoach');
 ```
 
 ## Schedule the calculate statistics command

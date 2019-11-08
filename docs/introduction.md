@@ -3,9 +3,9 @@ title: Introduction
 weight: 1
 ---
 
-##### THIS PACKAGE IS STILL IN DEVELOPMENT, DO NOT USE YET
+//TODO: add screenshot
 
-This package allows you to send out email campaigns to a list of subscribers effortlessly.
+This package allows you to send out email campaigns to a list of subscribers effortlessly. It also provides a UI to manage campaigns, email lists and subscribers.
 
 Let’s take a quick look at how to use the package. First, create an email list:
 
