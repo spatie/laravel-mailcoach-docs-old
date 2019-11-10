@@ -13,7 +13,7 @@ Here's an example where we assume that administrators of your application have a
 
 public function boot()
 {
-   Gate::define('viewMailCoach', function ($user = null) {
+   Illuminate\Support\Facades\Gate::define('viewMailCoach', function ($user = null) {
        return optional($user)->admin;
    });
 }
