@@ -23,10 +23,10 @@ php artisan migrate
 
 ## Add the route macro
 
-You must register the routes needed to handle subscription confirmations, open, and click tracking. You can do that by adding this macro to your routes file.
+You must register the routes needed to handle subscription confirmations, open, and click tracking. We recommend that you don't put this in your routes file, but in the `map` method of `RouteServiceProvider`
 
 ```php
-Route::mailCoach('mailcoach');
+Route::mailcoach('mailcoach');
 ```
 
 ## Schedule the calculate statistics command
@@ -106,18 +106,3 @@ By default, we set this value to the default Laravel connection name, `default`.
 The package queues many tasks it performs. Because of this, use [a different queue driver](https://laravel.com/docs/master/queues#driver-prerequisites) than `sync`.
 
 You're able to run different jobs in different queues.  Specify this using the `perform_on_queue` key in the `email-campaigns` config file. The `register_click_job`, `register_open_job`, and `send_mail_job` jobs could receive a large number of jobs. Using only one queue potentially results in a long wait for other jobs. So we recommend using a separate queue for the `register_click_job`, `register_open_job`, and `send_mail_job` jobs.
-
-## Schedule commands
-
-To send out scheduled campaigns, you must add this command to your scheduler
-
-```php
-// in app\Console\Kernel.php
-
-    // ...
-
-    protected function schedule(Schedule $schedule)
-    {
-        $schedule->command('email-campaigns:send-scheduled-campaigns')->everyMinute();
-    }
-``` 
