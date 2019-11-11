@@ -2,15 +2,47 @@
 title: Installation & setup
 ---
 
-Use composer for installing the package:
+This package can be installed using Composer. In your `composer.json`  you must for add the `satis.mailcoach.app` repository.
+
+```php
+"repositories": [
+    {
+        "type": "composer",
+        "url": "https://satis.mailcoach.app"
+    }
+],
+```
+
+Next, you need to create a file called `auth.json` and place it either next to the `composer.json` file in your project, or in the composer home directory. You can determine the composer home directory on *nix machines by using this command.
 
 ```bash
-composer require "spatie/laravel-email-campaigns:^1.0.0"
+composer config --list --global | grep home
+```
+
+This is the content you should put in `auth.json`
+
+```php
+{
+    "http-basic": {
+        "satis.mailcoach.app": {
+            "username": "<YOUR mailcoach.app USERNAME HERE>",
+            "password": "<YOUR-LICENSE-KEY-HERE>"
+        }
+    }
+}
+```
+
+With the configuration above in place you'll be able to install the package into your project using this command:
+
+```bash
+composer require "spatie/laravel-mailcoach:^1.0.0"
 ```
 
 ## Choosing a mail driver
 
 Configure Laravel to use one of [the many available mail drivers](https://laravel.com/docs/master/mail#driver-prerequisites). All emails sent via the package will use that default driver.
+
+TODO: add mail service provider specific instructions here.
 
 ## Prepare the database
 
