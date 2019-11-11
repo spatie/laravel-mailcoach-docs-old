@@ -19,7 +19,7 @@ Next, you need to create a file called `auth.json` and place it either next to t
 composer config --list --global | grep home
 ```
 
-This is the content you should put in `auth.json`
+This is the content you should put in `auth.json`:
 
 ```php
 {
