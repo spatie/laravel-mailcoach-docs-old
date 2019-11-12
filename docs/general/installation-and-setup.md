@@ -49,7 +49,7 @@ TODO: add mail service provider specific instructions here.
 You need to publish and run the migration:
 
 ```bash
-php artisan vendor:publish --provider="Spatie\MailCoach\MailCoachServiceProvider" --tag="migrations"
+php artisan vendor:publish --provider="Spatie\Mailcoach\MailcoachServiceProvider" --tag="migrations"
 php artisan migrate
 ```
 
@@ -79,7 +79,7 @@ protected function schedule(Schedule $schedule)
 You must publish the config file with this command.
 
 ```bash
-php artisan vendor:publish --provider="Spatie\MailCoach\MailCoachServiceProvider" --tag="config"
+php artisan vendor:publish --provider="Spatie\Mailcoach\MailcoachServiceProvider" --tag="config"
 ```
 
 Below is the default content of the config file:
@@ -118,11 +118,11 @@ return [
        * Your custom action should always extend the one of the default ones.
        */
     'actions' => [
-        'personalize_html_action' => \Spatie\MailCoach\Actions\PersonalizeHtmlAction::class,
-        'prepare_email_html_action' => \Spatie\MailCoach\Actions\PrepareEmailHtmlAction::class,
-        'prepare_webview_html_action' => \Spatie\MailCoach\Actions\PrepareWebviewHtmlAction::class,
-        'subscribe_action' => \Spatie\MailCoach\Actions\SubscribeAction::class,
-        'confirm_subscription_action' => \Spatie\MailCoach\Actions\ConfirmSubscriptionAction::class,
+        'personalize_html_action' => \Spatie\Mailcoach\Actions\PersonalizeHtmlAction::class,
+        'prepare_email_html_action' => \Spatie\Mailcoach\Actions\PrepareEmailHtmlAction::class,
+        'prepare_webview_html_action' => \Spatie\Mailcoach\Actions\PrepareWebviewHtmlAction::class,
+        'subscribe_action' => \Spatie\Mailcoach\Actions\SubscribeAction::class,
+        'confirm_subscription_action' => \Spatie\Mailcoach\Actions\ConfirmSubscriptionAction::class,
     ],
 ];
 ```
@@ -139,6 +139,6 @@ The package queues many tasks it performs. Because of this, use [a different que
 
 You're able to run different jobs in different queues.  Specify this using the `perform_on_queue` key in the `email-campaigns` config file. The `register_click_job`, `register_open_job`, and `send_mail_job` jobs could receive a large number of jobs. Using only one queue potentially results in a long wait for other jobs. So we recommend using a separate queue for the `register_click_job`, `register_open_job`, and `send_mail_job` jobs.
 
-## Add authorization to MailCoach UI
+## Add authorization to Mailcoach UI
 
-By default you can only use the MailCoach on a local environment. To use it in other environment you need to register an gate check. Head over to [the section on authorizing users](TODO: add link) to learn more.
+By default you can only use the Mailcoach on a local environment. To use it in other environment you need to register an gate check. Head over to [the section on authorizing users](TODO: add link) to learn more.

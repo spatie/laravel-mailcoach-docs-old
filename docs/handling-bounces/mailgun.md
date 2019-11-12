@@ -39,6 +39,6 @@ In your `.env` you must add a key `MAILGUN_SIGNING_SECRET` with the Mailgun sign
 You must use this route macro somewhere in your routes file. Replace `'mailgun-feeback'` with the url you specified at Mailgun when setting up the webhook there.
 
 ```php
-Route::MailCoachMailgunFeedback('mailgun-feedback');
+Route::mailgunFeedback('mailgun-feedback');
 ```
 

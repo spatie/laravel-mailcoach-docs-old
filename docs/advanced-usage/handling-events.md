@@ -4,11 +4,11 @@ title: Handling events
 
 This package fires several events. You can listen for them firing to perform extra logic.
 
-## `Spatie\MailCoach\Events\Subscribed`
+## `Spatie\Mailcoach\Events\Subscribed`
 
 This event will be fired as soon as someone subscribes. If [double opt-in](https://docs.spatie.be/laravel-email-campaigns/v1/working-with-lists/using-double-opt-in/) is enabled on the email list someone is in the process of subscribing to, this event will be fired when the subscription is confirmed.
 
-The event has one public property: `$subscription` which is an instance of `Spatie\MailCoach\Models\Subscription`.
+The event has one public property: `$subscription` which is an instance of `Spatie\Mailcoach\Models\Subscription`.
 
 You can get the email address of the subscriber like this:
 
@@ -22,13 +22,13 @@ This is how to get the name of the email list:
 $nameOfEmailList = $event->subscription->emailList->name;
 ```
 
-## `Spatie\MailCoach\Events\Unsubscribed`
+## `Spatie\Mailcoach\Events\Unsubscribed`
 
 This event will be fired as soon as someone unsubscribes. When somebody unsubscribes, the subscription won't be deleted, but its `status` attribute will be set to `unsubscribed`.
 
 The event has two public properties:
-- `$subscription` which is an instance of `Spatie\MailCoach\Models\Subscription`.
-- `$campaignSend` an instance of `Spatie\MailCoach\Models\CampaignSend`. You can use this to determine in which campaign the unsubscribe occurred: `$campaignSend->campaign`. This properties can also be `null`.
+- `$subscription` which is an instance of `Spatie\Mailcoach\Models\Subscription`.
+- `$campaignSend` an instance of `Spatie\Mailcoach\Models\CampaignSend`. You can use this to determine in which campaign the unsubscribe occurred: `$campaignSend->campaign`. This properties can also be `null`.
 
 You can get the email address of the subscriber like this:
 
@@ -42,17 +42,17 @@ This is how to get the name of the email list:
 $nameOfEmailList = $event->subscription->emailList->name;
 ```
 
-## `Spatie\MailCoach\Events\CampaignSent`
+## `Spatie\Mailcoach\Events\CampaignSent`
 
 This event will be fired after you've sent a campaign, and all mails are queued to be sent. Keep in mind that not all your subscribers will have gotten your mail when this event is fired.
 
-The event has one public property: `$campaign`, which is an instance of the `\Spatie\MailCoach\Models\Campaign` model.
+The event has one public property: `$campaign`, which is an instance of the `\Spatie\Mailcoach\Models\Campaign` model.
 
-## `Spatie\MailCoach\Events\CampaignMailSent`
+## `Spatie\Mailcoach\Events\CampaignMailSent`
 
 This event will be fired when a mail has actually been sent to a single subscriber.
 
-The event has one public property: `$campaignSend` which is an instance of the `Spatie\MailCoach\Models\CampaignSend` model.
+The event has one public property: `$campaignSend` which is an instance of the `Spatie\Mailcoach\Models\CampaignSend` model.
 
 You can get the email the mail was sent to like this:
 
@@ -66,11 +66,11 @@ You can also retrieve the name of the campaing that this mail was part of:
 $campaignName = $event->campaignSend->campaign->name;
 ```
 
-## `Spatie\MailCoach\Events\CampaignOpened`
+## `Spatie\Mailcoach\Events\CampaignOpened`
 
 This event will be fired when somebody opens an email. Be aware that this event could be fired many times after sending a campaign to a email list with a large number of subscribers. This event will only be fired for campaigns that have [open tracking](https://docs.spatie.be/laravel-email-campaigns/v1/working-with-campaigns/tracking-opens/) enabled.
 
-It has one public property: `$campaignOpen`, which is an instance of the `Spatie\MailCoach\Models\CampaignOpen` model.
+It has one public property: `$campaignOpen`, which is an instance of the `Spatie\Mailcoach\Models\CampaignOpen` model.
 
 You can get the email address that opened your email like this:
 
@@ -84,11 +84,11 @@ This is how you can get to the name of the campaign:
 $name = $event->campaignOpen->campaign->name;
 ```
 
-## `Spatie\MailCoach\Events\CampaignLinkClicked`
+## `Spatie\Mailcoach\Events\CampaignLinkClicked`
 
 This event will be fired when somebody clicks a link in a mail. This event will only be fired for campaigns that have [click tracking](https://docs.spatie.be/laravel-email-campaigns/v1/working-with-campaigns/tracking-clicks/) enabled.
 
-It has one public property `$campaignClick`, which is an instance of the `Spatie\MailCoach\Models\CampaignClick` model.
+It has one public property `$campaignClick`, which is an instance of the `Spatie\Mailcoach\Models\CampaignClick` model.
 
 You can get to the url of the link clicked like this:
 
@@ -102,8 +102,8 @@ The email address of the subscriber who clicked the link can be retrieved like t
 $email = $event->campaignClick->subscriber->email;
 ```
 
-## `Spatie\MailCoach\Events\CampaignStatisticsCalculated`
+## `Spatie\Mailcoach\Events\CampaignStatisticsCalculated`
 
 After a campaign has been sent, statistics will [be calculated according to a schedule](https://docs.spatie.be/laravel-email-campaigns/v1/working-with-campaigns/viewing-statistics-of-a-sent-campaign/).
 
-Each time the statistics are calculated this event will be fired. It has one public property `$campaign`, which is an instance of the `Spatie\MailCoach\Models\Campaign` model.
+Each time the statistics are calculated this event will be fired. It has one public property `$campaign`, which is an instance of the `Spatie\Mailcoach\Models\Campaign` model.

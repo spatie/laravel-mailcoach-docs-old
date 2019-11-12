@@ -27,7 +27,7 @@ php artisan migrate
 You must use this route macro somewhere in your routes file. Replace `'ses-feeback'` with the url you specified at SES when setting up the webhook there.
 
 ```php
-Route::MailCoachSesFeedback('ses-feedback');
+Route::sesFeedback('ses-feedback');
 ```
 
 ### Simple Email Service

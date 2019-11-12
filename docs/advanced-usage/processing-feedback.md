@@ -23,7 +23,7 @@ class StoreTransportMessageId
             return;
         }
 
-        /** @var \Spatie\MailCoach\Models\CampaignSend $campaignSend */
+        /** @var \Spatie\Mailcoach\Models\CampaignSend $campaignSend */
         $campaignSend = $event->data['campaignSend'];
 
         $transportMessageId = $event->message->getHeaders()->get('header-name-used-by-your-email-provider')->getFieldBody();

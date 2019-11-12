@@ -20,7 +20,7 @@ When you send a campaign that has open tracking enabled, we'll add a web beacon 
 
 The last segment of the link contains the UUID of an `EmailSend` model. An `EmailSend` represents a mail that has been sent for a campaign and contains a relation to a subscriber.
 
-Each time an email client tries to display the web beacon it will send a get request to the `Spatie\MailCoach\Http\Controllers\TrackOpensController`.
+Each time an email client tries to display the web beacon it will send a get request to the `Spatie\Mailcoach\Http\Controllers\TrackOpensController`.
 
 ## Queuing open tracking
 
