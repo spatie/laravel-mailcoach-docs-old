@@ -45,10 +45,10 @@ Next, in the code that handles feedback you can get to the `MailSend` like this:
 $campaignSend = CampaignSend::findByTransportMessageId($messageId);
 ```
 
-You can mark a campaignSend as bounced.
+You can mark a `CampaignSend` as hard bounced.
 
 ```php
-$campaignSend->markAsBounced(CampaignSendBounceSeverity::PERMANENT);
+$campaignSend->markAsBounced();
 ```
 
-When a `CampaignSend` is marked as permanently bounced, the subscriber will get unsubscribed from the email list.
+When a `CampaignSend` is marked as hard bounced, the subscriber will  also get unsubscribed from the email list.
