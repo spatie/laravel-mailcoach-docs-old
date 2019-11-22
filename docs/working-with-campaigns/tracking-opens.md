@@ -6,7 +6,7 @@ The package can track when and how many times a subscriber opens a campaign.
 
 ## Enabling open tracking
 
-To use this feature, you must set `track_opens` to `true` of a campaign you're going to send. You can find an example of how to do this in the section on [how to create a campaign](https://docs.spatie.be/laravel-email-campaigns/v1/working-with-campaigns/creating-a-campaign/).
+To use this feature, you must set `track_opens` to `true` of a campaign you're going to send. You can find an example of how to do this in the section on [how to create a campaign](https://docs.spatie.be/laravel-mailcoach/v1/working-with-campaigns/creating-a-campaign/).
 
 ## How it works under the hood
 

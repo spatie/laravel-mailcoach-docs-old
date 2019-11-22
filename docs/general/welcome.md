@@ -12,7 +12,7 @@ Let’s take a quick look at how to use the package. First, create an email list
 $emailList = EmailList::create('newsletter subscribers');
 ```
 
-Next, we subscribe people to a list. There's also support for [double opt-in subscriptions](https://docs.spatie.be/laravel-email-campaigns/v1/working-with-lists/using-double-opt-in/).
+Next, we subscribe people to a list. There's also support for [double opt-in subscriptions](https://docs.spatie.be/laravel-mailcoach/v1/working-with-lists/using-double-opt-in/).
 
 ```php
 $emailList->subscribe('john@example.com');
@@ -30,12 +30,12 @@ Campaign::create()
     ->sendTo($emailList);
 ```
 
-After a campaign is sent, [interesting statistics](https://docs.spatie.be/laravel-email-campaigns/v1/working-with-campaigns/viewing-statistics-of-a-sent-campaign/) are made available.
+After a campaign is sent, [interesting statistics](https://docs.spatie.be/laravel-mailcoach/v1/working-with-campaigns/viewing-statistics-of-a-sent-campaign/) are made available.
 
 ## We have badges!
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/spatie/laravel-email-campaigns.svg?style=flat-square)](https://packagist.org/packages/spatie/laravel-email-campaigns)
-[![Build Status](https://img.shields.io/travis/spatie/laravel-email-campaigns/master.svg?style=flat-square)](https://travis-ci.org/spatie/laravel-email-campaigns)
-[![Quality Score](https://img.shields.io/scrutinizer/g/spatie/laravel-email-campaigns.svg?style=flat-square)](https://scrutinizer-ci.com/g/spatie/laravel-email-campaigns)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/spatie/laravel-mailcoach.svg?style=flat-square)](https://packagist.org/packages/spatie/laravel-mailcoach)
+[![Build Status](https://img.shields.io/travis/spatie/laravel-mailcoach/master.svg?style=flat-square)](https://travis-ci.org/spatie/laravel-mailcoach)
+[![Quality Score](https://img.shields.io/scrutinizer/g/spatie/laravel-mailcoach.svg?style=flat-square)](https://scrutinizer-ci.com/g/spatie/laravel-mailcoach)
 [![StyleCI](https://github.styleci.io/repos/210674796/shield?branch=master)](https://github.styleci.io/repos/210674796)
-[![Total Downloads](https://img.shields.io/packagist/dt/spatie/laravel-email-campaigns.svg?style=flat-square)](https://packagist.org/packages/spatie/laravel-email-campaigns)
+[![Total Downloads](https://img.shields.io/packagist/dt/spatie/laravel-mailcoach.svg?style=flat-square)](https://packagist.org/packages/spatie/laravel-mailcoach)

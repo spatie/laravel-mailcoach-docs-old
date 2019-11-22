@@ -2,4 +2,4 @@
 title: Changelog
 ---
 
-All notable changes to laravel-email-campaigns are documented [on GitHub](https://github.com/spatie/laravel-email-campaigns/blob/master/CHANGELOG.md)
+All notable changes to laravel-mailcoach are documented [on GitHub](https://github.com/spatie/laravel-mailcoach/blob/master/CHANGELOG.md)

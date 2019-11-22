@@ -6,7 +6,7 @@ This package fires several events. You can listen for them firing to perform ext
 
 ## `Spatie\Mailcoach\Events\Subscribed`
 
-This event will be fired as soon as someone subscribes. If [double opt-in](https://docs.spatie.be/laravel-email-campaigns/v1/working-with-lists/using-double-opt-in/) is enabled on the email list someone is in the process of subscribing to, this event will be fired when the subscription is confirmed.
+This event will be fired as soon as someone subscribes. If [double opt-in](https://docs.spatie.be/laravel-mailcoach/v1/working-with-lists/using-double-opt-in/) is enabled on the email list someone is in the process of subscribing to, this event will be fired when the subscription is confirmed.
 
 The event has one public property: `$subscription` which is an instance of `Spatie\Mailcoach\Models\Subscription`.
 
@@ -68,7 +68,7 @@ $campaignName = $event->campaignSend->campaign->name;
 
 ## `Spatie\Mailcoach\Events\CampaignOpened`
 
-This event will be fired when somebody opens an email. Be aware that this event could be fired many times after sending a campaign to a email list with a large number of subscribers. This event will only be fired for campaigns that have [open tracking](https://docs.spatie.be/laravel-email-campaigns/v1/working-with-campaigns/tracking-opens/) enabled.
+This event will be fired when somebody opens an email. Be aware that this event could be fired many times after sending a campaign to a email list with a large number of subscribers. This event will only be fired for campaigns that have [open tracking](https://docs.spatie.be/laravel-mailcoach/v1/working-with-campaigns/tracking-opens/) enabled.
 
 It has one public property: `$campaignOpen`, which is an instance of the `Spatie\Mailcoach\Models\CampaignOpen` model.
 
@@ -86,7 +86,7 @@ $name = $event->campaignOpen->campaign->name;
 
 ## `Spatie\Mailcoach\Events\CampaignLinkClicked`
 
-This event will be fired when somebody clicks a link in a mail. This event will only be fired for campaigns that have [click tracking](https://docs.spatie.be/laravel-email-campaigns/v1/working-with-campaigns/tracking-clicks/) enabled.
+This event will be fired when somebody clicks a link in a mail. This event will only be fired for campaigns that have [click tracking](https://docs.spatie.be/laravel-mailcoach/v1/working-with-campaigns/tracking-clicks/) enabled.
 
 It has one public property `$campaignClick`, which is an instance of the `Spatie\Mailcoach\Models\CampaignClick` model.
 
@@ -104,6 +104,6 @@ $email = $event->campaignClick->subscriber->email;
 
 ## `Spatie\Mailcoach\Events\CampaignStatisticsCalculated`
 
-After a campaign has been sent, statistics will [be calculated according to a schedule](https://docs.spatie.be/laravel-email-campaigns/v1/working-with-campaigns/viewing-statistics-of-a-sent-campaign/).
+After a campaign has been sent, statistics will [be calculated according to a schedule](https://docs.spatie.be/laravel-mailcoach/v1/working-with-campaigns/viewing-statistics-of-a-sent-campaign/).
 
 Each time the statistics are calculated this event will be fired. It has one public property `$campaign`, which is an instance of the `Spatie\Mailcoach\Models\Campaign` model.

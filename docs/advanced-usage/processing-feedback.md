@@ -5,8 +5,8 @@ title: Processing feedback
 After a mail is sent, most email providers send feedback on the result.
 
 You can handle that feedback for a certain provider by installing one of the add-on package we provide:
-- [Mailgun](https://github.com/spatie/laravel-email-campaigns-mailgun-feedback)
-- [SES](https://github.com/spatie/laravel-email-campaigns-ses-feedback)
+- [Mailgun](https://github.com/spatie/laravel-mailcoach-mailgun-feedback)
+- [SES](https://github.com/spatie/laravel-mailcoach-ses-feedback)
 
 ## Manually handling feedback
 
