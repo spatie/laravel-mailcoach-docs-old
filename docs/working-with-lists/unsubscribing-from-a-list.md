@@ -12,7 +12,7 @@ To customize this confirmation message, publish the views.
 php artisan vendor:publish --provider="Spatie\Mailcoach\MailcoachServiceProvider" --tag="views"
 ```
 
-Now we modify the following views in the `/resources/views/vendor/email-campaigns/unsubscribe/` directory:
+Now we modify the following views in the `/resources/views/vendor/mailcoach/unsubscribe/` directory:
 
 - `unsubscribed.blade.php`
 - `notFound.blade.php`

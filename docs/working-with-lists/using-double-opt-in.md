@@ -25,7 +25,7 @@ When a person clicks the email confirmation link, a simple message explaining th
 php artisan vendor:publish --provider="Spatie\Mailcoach\MailcoachServiceProvider" --tag="views"
 ```
 
-The responses of a confirmation can now be modified in the view inside the `/resources/views/vendor/email-campaigns/confirmSubscription/` directory. It will contain these blade files:
+The responses of a confirmation can now be modified in the view inside the `/resources/views/vendor/mailcoach/confirmSubscription/` directory. It will contain these blade files:
 
 - `confirmed.blade.php`
 - `couldNotFindSubscription.blade.php`
@@ -41,4 +41,4 @@ First, you must publish the views.
 php artisan vendor:publish --provider="Spatie\Mailcoach\MailcoachServiceProvider" --tag="views"
 ```
 
-After that, the content of the double opt-in mail can be modified in the `/resources/views/vendor/email-campaigns/mails/confirmSubscription.blade.php` view.
+After that, the content of the double opt-in mail can be modified in the `/resources/views/vendor/mailcoach/mails/confirmSubscription.blade.php` view.
