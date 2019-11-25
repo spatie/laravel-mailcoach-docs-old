@@ -33,7 +33,7 @@ Route::sesFeedback('ses-feedback');
 ### Simple Email Service
 1. Create a configuration set in your AWS SES console if you haven't already
 2. Add a SNS destination in the Event Destinations
-    - Make sure to check the **bounce** type
+    - Make sure to check the **bounce** and **complaint** types
 3. Create a new topic for this destination
 
 ### Simple Notification Service
