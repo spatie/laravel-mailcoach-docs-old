@@ -97,7 +97,7 @@ $subscriber->status;
 ```
 
 This property can contain three possible values:
-- `pending`: when the list uses [double opt in](https://docs.spatie.be/laravel-mailcoach/v1/working-with-lists/using-double-opt-in/) and the confirmation link wasn't clicked yet
+- `unconfirmed`: when the list uses [double opt in](https://docs.spatie.be/laravel-mailcoach/v1/working-with-lists/using-double-opt-in/) and the confirmation link wasn't clicked yet
 - `subscribed`: when the subscriber is subscribed.
 - `unsubscribed`: when the subscriber was unsubscribed.
 
@@ -115,9 +115,9 @@ To get the email address of a subscriber call `email` on a subscriber.
 $email = $subscribers->first()->email;
 ```
 
-Calling `subscribers` on an email list will only return subscribers that have a subscription with a `subscribed` status. Subscribers that have unsubscribed or are still pending (when using [double opt in](https://docs.spatie.be/laravel-mailcoach/v1/working-with-lists/using-double-opt-in/)) will not be returned.
+Calling `subscribers` on an email list will only return subscribers that have a subscription with a `subscribed` status. Subscribers that have unsubscribed or are still unconfirmed (when using [double opt in](https://docs.spatie.be/laravel-mailcoach/v1/working-with-lists/using-double-opt-in/)) will not be returned.
 
-To return all subscribers, including all pending and unsubscribed ones, use `allSubscribers`.
+To return all subscribers, including all unconfirmed and unsubscribed ones, use `allSubscribers`.
 
 ```php
 $allSubscribers = $emailList->allSubscribers;
