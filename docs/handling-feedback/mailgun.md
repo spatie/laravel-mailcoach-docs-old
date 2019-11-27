@@ -24,6 +24,17 @@ After the migration has been published, you can create the `webhook_calls` table
 php artisan migrate
 ```
 
+## Adding the webhooks route
+
+You must use this route macro in your route service provider. We recommend to not apply the `web` group middleware to this route as that would cause an unnecessary session to be started for each webhook call.
+
+You can replace `mailgun-feedback` with any url you'd like.
+
+
+```php
+Route::mailgunFeedback('mailgun-feedback');
+```
+
 ## Configuring webhooks
 
 At Mailgun you must [configure a new webhook](https://www.mailgun.com/blog/a-guide-to-using-mailguns-webhooks/).
@@ -41,10 +52,6 @@ In the `mailcoach` config file you must add this section.
 In your `.env` you must add a key `MAILGUN_SIGNING_SECRET` with the Mailgun signing secret you'll find at the Mailgun dashboard as its value. 
 
 You must use this route macro somewhere in your routes file. Replace `'mailgun-feeback'` with the url you specified at Mailgun when setting up the webhook there.
-
-```php
-Route::mailgunFeedback('mailgun-feedback');
-```
 
 ## Using the correct mail driver
 
