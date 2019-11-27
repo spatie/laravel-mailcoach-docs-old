@@ -1,5 +1,5 @@
 ---
-title: SES
+title: Amazon SES
 ---
 
 `laravel-mailcoach-ses-feedback` can handle bounce feedback coming from SES. All e-mail address that permanently bounce will be unsubscribed from all lists.

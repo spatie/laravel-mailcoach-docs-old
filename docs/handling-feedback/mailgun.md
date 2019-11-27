@@ -10,6 +10,8 @@ You can install the add-on package via composer:
 composer require spatie/laravel-mailcoach-mailgun-feedback
 ```
 
+## Migrating the database
+
 Under the hood this package uses [spatie/laravel-webhook-client](https://github.com/spatie/laravel-mailcoach) to process handle webhooks. You are required to publish its migration to create the `webhook_calls` table. You can skip this step if your project already uses the `laravel-webhook-client` package directly.
 
 ```php
@@ -21,6 +23,8 @@ After the migration has been published, you can create the `webhook_calls` table
 ```php
 php artisan migrate
 ```
+
+## Configuring webhooks
 
 At Mailgun you must [configure a new webhook](https://www.mailgun.com/blog/a-guide-to-using-mailguns-webhooks/).
 
@@ -42,3 +46,6 @@ You must use this route macro somewhere in your routes file. Replace `'mailgun-f
 Route::mailgunFeedback('mailgun-feedback');
 ```
 
+## Using the correct mail driver
+
+If you haven't done so already, you must configure Laravel to use the Mailgun driver. Follow the instruction in [the mail section of the Laravel docs](https://laravel.com/docs/master/mail#driver-prerequisites).

@@ -1,18 +1,8 @@
 ---
-title: Manually handling bounces
+title: Manually handling feedback
 ---
 
-After a mail is sent, most email providers send feedback on the result.
-
-You can handle that feedback for a certain provider by installing one of the add-on package we provide:
-- [Mailgun](https://github.com/spatie/laravel-mailcoach-mailgun-feedback)
-- [SES](https://github.com/spatie/laravel-mailcoach-ses-feedback)
-
-## Manually handling feedback
-
-You can also manually handle feedback.
-
-First you must add a transport id to a `CampaignSend` model. Here's an example listener: 
+For every mail sent you must store a transport id to a `CampaignSend` model. Here's an example listener: 
 
 ```php
 class StoreTransportMessageId
@@ -45,7 +35,8 @@ Next, in the code that handles feedback you can get to the `MailSend` like this:
 $campaignSend = CampaignSend::findByTransportMessageId($messageId);
 ```
 
-Here are the things you can register on a `CampaignSend`
+Here are the things you can perform on a `CampaignSend`:
+
 ```php
 $campaignSend->registerOpen();
 $campaignSend->registerClick($url);

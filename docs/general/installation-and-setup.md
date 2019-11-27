@@ -38,11 +38,18 @@ With the configuration above in place you'll be able to install the package into
 composer require "spatie/laravel-mailcoach:^1.0.0"
 ```
 
-## Choosing a mail driver
+## Configure an email sending service
 
-Configure Laravel to use one of [the many available mail drivers](https://laravel.com/docs/master/mail#driver-prerequisites). All emails sent via the package will use that default driver.
+Mailcoach can send out mail via various email sending services and can handle the feedback (opens, clicks, bounces, complaints) those services give.
 
-TODO: add mail service provider specific instructions here.
+Follow the instruction on the dedicated docs page of each supported service.
+
+- [Amazon SES](TODO: add link)
+- [Mailgun](TODO: add link)
+- [Sendgrid](TODO: add link)
+
+If want to use another email sending service you should manually configure it. Here are instructions on how you can [manually handle feedback](TODO: add link).
+
 
 ## Prepare the database
 
@@ -132,12 +139,6 @@ return [
 It's common for e-mail providers to limit the number of e-mails you can send within a given amount of time. The package uses Redis to throttle e-mails, so make sure it's available on your system. You must specify a valid Redis connection name in the `throttling.redis_connection_name` key.
 
 By default, we set this value to the default Laravel connection name, `default`.
-
-## Prepare the queues
-
-The package queues many tasks it performs. Because of this, use [a different queue driver](https://laravel.com/docs/master/queues#driver-prerequisites) than `sync`.
-
-You're able to run different jobs in different queues.  Specify this using the `perform_on_queue` key in the `email-campaigns` config file. The `register_click_job`, `register_open_job`, and `send_mail_job` jobs could receive a large number of jobs. Using only one queue potentially results in a long wait for other jobs. So we recommend using a separate queue for the `register_click_job`, `register_open_job`, and `send_mail_job` jobs.
 
 ## Add authorization to Mailcoach UI
 
