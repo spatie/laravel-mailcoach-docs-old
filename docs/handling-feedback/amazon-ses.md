@@ -2,7 +2,7 @@
 title: Amazon SES
 ---
 
-`laravel-mailcoach-ses-feedback` can handle bounce feedback coming from SES. All e-mail address that permanently bounce will be unsubscribed from all lists.
+`laravel-mailcoach-ses-feedback` can handle bounce feedback coming from SES. All e-mail addresses that permanently bounce will be unsubscribed from all lists.
 
 You can install the add-on package via composer:
 
@@ -36,19 +36,42 @@ Route::sesFeedback('ses-feedback');
 
 ## Configuring webhooks at Amazon SES
 
+### Simple Email Service Setup
+1. In your AWS Management Console, create a configuration set if you haven't already
 
-### Simple Email Service
-1. Create a configuration set in your AWS SES console if you haven't already
-2. Add a SNS destination in the Event Destinations
-    - Make sure to check the **bounce** and **complaint** types
+![](../images/ses-feedback/1.create-configuration-set.png)
+
+2. Add a SNS destination in the Event Destinations and make sure to check the event types you would like to receive
+
+![](../images/ses-feedback/2-1-add-destination.png)
+
+![](../images/ses-feedback/2-2-add-destination.png)
+
 3. Create a new topic for this destination
 
-### Simple Notification Service
+![](../images/ses-feedback/3-create-new-topic.png)
+
+### Simple Notification Service Setup
+
+> First, make sure your endpoint is accessible, if you're installing this locally you'll need to share your local environment using `valet share` or a service like `ngrok`
+
+![](../images/ses-feedback/4-1-create-subscription.png)
+
+![](../images/ses-feedback/4-2-create-subscription.png)
+
 1. Create a subscription for the topic you just created, use `HTTPS` as the Protocol
-2. Use the endpoint you just created the route for
+2. Enter the endpoint you just created the route for
 3. Do **not** check "Enable raw message delivery", otherwise signature validation won't work
-4. Your subscription should be automatically confirmed if the endpoint was reachable 
+4. You can leave all other settings on their defaults
+5. Your subscription should be automatically confirmed if the endpoint was reachable
+
+![](../images/ses-feedback/5-subscription-confirmed.png)
+
+## Sending emails with the configuration set header
+
+This package automatically adds the correct `X-Configuration-Set` header for Amazon SES to process feedback. Make sure the name of your configuration set is available under the `mailcoach.ses_feedback.configuration_set` configuration key.
 
 ## Using the correct mail driver
 
 If you haven't done so already, you must configure Laravel to use the Amazon SES driver. Follow the instruction in [the mail section of the Laravel docs](https://laravel.com/docs/master/mail#driver-prerequisites).
+
