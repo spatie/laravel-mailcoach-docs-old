@@ -39,6 +39,24 @@ Here's an example form you can embed on an external site to accept subscriptions
 </form>
 ```
 
+## Attaching tags
+
+You can specify one or more tags in an input field named `tags` that should be attached to the subscriber when it gets created.
+
+```html
+<!-- somewhere in your form -->
+<input type="hidden" name="tags" value="tagA;tagB"
+```
+
+Only tags that were added on the `allowedFormSubscriptionTags` relation of the email list you're subscribing someone to will be attached. Here's you can attach tags to that relation.
+
+```php
+$tagA = $emailList->tags()->where('name', 'tagA')->first();
+$tagB = $emailList->tags()->where('name', 'tagB')->first();
+
+$emailList->allowedFormSubscriptionTags([$tagA->id, $tagB->id]);
+```
+
 ## A word to the wise
 
 We highly recommend that you turn on [double opt in](TODO: add link) for email lists that allow form subscriptions. This will keep your list healthy. Also consider adding a honeypot to the form to avoid bots from trying to subscribe. When using Laravel, you could opt to use [the spatie/laravel-honeypot package](https://github.com/spatie/laravel-honeypot).
