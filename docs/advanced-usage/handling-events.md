@@ -22,7 +22,7 @@ This is how to get the name of the email list:
 $nameOfEmailList = $event->emailList->name;
 ```
 
-## `Spatie\Mailcoach\Events\UnconfirmedSubscriberCreatedEvent`
+## `Spatie\Mailcoach\Events\SubscribedConfirmedEvent`
 
 This event will be fired as soon as tries subscribes when [double opt-in](https://docs.spatie.be/laravel-mailcoach/v1/working-with-lists/using-double-opt-in/) is enabled on the email list.
 
