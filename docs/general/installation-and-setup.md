@@ -70,14 +70,15 @@ Route::mailcoach('mailcoach');
 
 ## Schedule the calculate statistics command
 
-In the console kernel, you should schedule the `email-campaigns:calculate-statistics` to run every minute.
+In the console kernel, you should schedule these commands.
 
 ```php
 // in app/Console/Kernel.php
 protected function schedule(Schedule $schedule)
 {
     // ...
-    $schedule->command('email-campaigns:calculate-statistics')->everyMinute();
+    $schedule->command('mailcoach:calculate-statistics')->everyMinute();
+    $schedule->command('mailcoach:send-campaign-summary-mails')->hourly();
 }
 ```
 
