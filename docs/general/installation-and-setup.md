@@ -68,7 +68,7 @@ You must register the routes needed to handle subscription confirmations, open, 
 Route::mailcoach('mailcoach');
 ```
 
-## Schedule the calculate statistics command
+## Schedule the commands
 
 In the console kernel, you should schedule these commands.
 
@@ -80,6 +80,24 @@ protected function schedule(Schedule $schedule)
     $schedule->command('mailcoach:calculate-statistics')->everyMinute();
     $schedule->command('mailcoach:send-campaign-summary-mails')->hourly();
 }
+```
+
+## Publish the assets
+
+You must publish the JavaScript and CSS assets using this command:
+
+```php
+php artisan vendor:publish --tag mailcoach-assets --force
+```
+
+To ensure that these assets get republished each time Mailcoach is updated, we highly recommand add the command to the `post-update-cmd` of the `scripts` section of your `composer.json`.
+
+```php
+    "scripts": {
+        "post-update-cmd": [
+            "@php artisan vendor:publish --tag mailcoach-assets --force"
+        ]
+    }
 ```
 
 ## Publish the config file
