@@ -2,23 +2,23 @@
 title: Manually handling feedback
 ---
 
-For every mail sent you must store a transport id to a `CampaignSend` model. Here's an example listener: 
+For every mail sent you must store a transport id to a `Send` model. Here's an example listener: 
 
 ```php
 class StoreTransportMessageId
 {
     public function handle(MessageSent $event)
     {
-        if (! isset($event->data['campaignSend'])) {
+        if (! isset($event->data['send'])) {
             return;
         }
 
-        /** @var \Spatie\Mailcoach\Models\CampaignSend $campaignSend */
-        $campaignSend = $event->data['campaignSend'];
+        /** @var \Spatie\Mailcoach\Models\Send $send */
+        $send = $event->data['send'];
 
         $transportMessageId = $event->message->getHeaders()->get('header-name-used-by-your-email-provider')->getFieldBody();
 
-        $campaignSend->storeTransportMessageId($transportMessageId);
+        $send->storeTransportMessageId($transportMessageId);
     }
 }
 ```
@@ -32,16 +32,16 @@ Event::listen(Illuminate\Mail\Events\MessageSent::class, StoreTransportMessageId
 Next, in the code that handles feedback you can get to the `MailSend` like this:
 
 ```php
-$campaignSend = CampaignSend::findByTransportMessageId($messageId);
+$send = Send::findByTransportMessageId($messageId);
 ```
 
-Here are the things you can perform on a `CampaignSend`:
+Here are the things you can perform on a `Send`:
 
 ```php
-$campaignSend->registerOpen();
-$campaignSend->registerClick($url);
-$campaignSend->registerBounce();
-$campaignSend->registerComplaint();
+$send->registerOpen();
+$send->registerClick($url);
+$send->registerBounce();
+$send->registerComplaint();
 ```
 
 When calling `registerBounce` or `registerComplaint`, the subscriber will get unsubscribed from the email list.

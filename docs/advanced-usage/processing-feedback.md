@@ -12,23 +12,23 @@ You can handle that feedback for a certain provider by installing one of the add
 
 You can also manually handle feedback.
 
-First you must add a transport id to a `CampaignSend` model. Here's an example listener: 
+First you must add a transport id to a `Send` model. Here's an example listener: 
 
 ```php
 class StoreTransportMessageId
 {
     public function handle(MessageSent $event)
     {
-        if (! isset($event->data['campaignSend'])) {
+        if (! isset($event->data['send'])) {
             return;
         }
 
-        /** @var \Spatie\Mailcoach\Models\CampaignSend $campaignSend */
-        $campaignSend = $event->data['campaignSend'];
+        /** @var \Spatie\Mailcoach\Models\Send $send */
+        $send = $event->data['send'];
 
         $transportMessageId = $event->message->getHeaders()->get('header-name-used-by-your-email-provider')->getFieldBody();
 
-        $campaignSend->storeTransportMessageId($transportMessageId);
+        $send->storeTransportMessageId($transportMessageId);
     }
 }
 ```
@@ -42,13 +42,13 @@ Event::listen(Illuminate\Mail\Events\MessageSent::class, StoreTransportMessageId
 Next, in the code that handles feedback you can get to the `MailSend` like this:
 
 ```php
-$campaignSend = CampaignSend::findByTransportMessageId($messageId);
+$send = Send::findByTransportMessageId($messageId);
 ```
 
-You can mark a campaignSend as bounced.
+You can mark a send as bounced.
 
 ```php
-$campaignSend->markAsBounced(CampaignSendBounceSeverity::PERMANENT);
+$send->markAsBounced(SendBounceSeverity::PERMANENT);
 ```
 
-When a `CampaignSend` is marked as permanently bounced, the subscriber will get unsubscribed from the email list.
+When a `Send` is marked as permanently bounced, the subscriber will get unsubscribed from the email list.

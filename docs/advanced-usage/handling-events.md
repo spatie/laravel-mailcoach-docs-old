@@ -34,7 +34,7 @@ This event will be fired as soon as someone unsubscribes. When somebody unsubscr
 
 The event has two public properties:
 - `$subscriber` which is an instance of `Spatie\Mailcoach\Models\Subscriber`.
-- `$campaignSend` an instance of `Spatie\Mailcoach\Models\CampaignSend`. You can use this to determine in which campaign the unsubscribe occurred: `$campaignSend->campaign`.
+- `$send` an instance of `Spatie\Mailcoach\Models\Send`. You can use this to determine in which campaign the unsubscribe occurred: `$send->campaign`.
 
 You can get the email address of the subscriber like this:
 
@@ -45,7 +45,7 @@ $email = $event->subcriber->email;
 This is how to get the name of the email list:
 
 ```php
-$nameOfEmailList = $event->campaignSend->campaign->emailList->name;
+$nameOfEmailList = $event->send->campaign->emailList->name;
 ```
 
 ## `Spatie\Mailcoach\Events\CampaignSentEvent`
@@ -58,18 +58,18 @@ The event has one public property: `$campaign`, which is an instance of the `\Sp
 
 This event will be fired when a mail has actually been sent to a single subscriber.
 
-The event has one public property: `$campaignSend` which is an instance of the `Spatie\Mailcoach\Models\CampaignSend` model.
+The event has one public property: `$send` which is an instance of the `Spatie\Mailcoach\Models\Send` model.
 
 You can get the email the mail was sent to like this:
 
 ```php
-$email = $event->campaignSend->subscription->subscriber->email;
+$email = $event->send->subscription->subscriber->email;
 ```
 
 You can also retrieve the name of the campaing that this mail was part of:
 
 ```php
-$campaignName = $event->campaignSend->campaign->name;
+$campaignName = $event->send->campaign->name;
 ```
 
 ## `Spatie\Mailcoach\Events\CampaignOpenedEvent`
