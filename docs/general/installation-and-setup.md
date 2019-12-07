@@ -78,7 +78,9 @@ protected function schedule(Schedule $schedule)
 {
     // ...
     $schedule->command('mailcoach:calculate-statistics')->everyMinute();
-    $schedule->command('mailcoach:send-campaign-summary-mails')->hourly();
+    $schedule->command('mailcoach:send-campaign-summary-mail')->hourly();
+    $schedule->command('mailcoach:send-email-list-mail')->hourly();
+
     $schedule->command('mailcoach:delete-old-unconfirmed-subscribers')->daily();
 }
 ```
