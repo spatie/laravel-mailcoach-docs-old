@@ -67,7 +67,7 @@ Route::sesFeedback('ses-feedback');
 
 ![](../images/ses-feedback/5-subscription-confirmed.png)
 
-## Setting the configuration name
+## Setting the configuration name in your Laravel app
 
 This package automatically adds the correct `X-Configuration-Set` header for Amazon SES to process feedback. Make sure the name of your configuration set is available under the `mailcoach.ses_feedback.configuration_set` configuration key.
 
