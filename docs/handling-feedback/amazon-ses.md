@@ -71,6 +71,17 @@ Route::sesFeedback('ses-feedback');
 
 This package automatically adds the correct `X-Configuration-Set` header for Amazon SES to process feedback. Make sure the name of your configuration set is available under the `mailcoach.ses_feedback.configuration_set` configuration key.
 
+Here's an example for a configuration set that is named `mailcoach`:
+
+```php
+// in config/mailcoach.php
+
+'ses_feedback' => [
+    'configuration_set' => 'mailcoach',
+]
+
+```
+
 ## Using the correct mail driver
 
 If you haven't done so already, you must configure Laravel to use the Amazon SES driver. Follow the instruction in [the mail section of the Laravel docs](https://laravel.com/docs/master/mail#driver-prerequisites).
