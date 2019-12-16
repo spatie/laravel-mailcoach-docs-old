@@ -10,17 +10,17 @@ This page shows an overview of all the email addresses that have subscribed to t
 
 There are a couple of different statuses that a subscriber can have: _unconfirmed_, _subscribed_ and _unsubscribed_.
 
-### Unconfirmed
+**Unconfirmed**
 
 When people have signed up for your list, but have not yet confirmed their subscription, they will be _unconfirmed_. You will only see this status when you have double opt-in (_Require confirmation_) enabled for this list.
 
 You can manually confirm email addresses using the action menu next to their name, but we don't suggest doing this without consent of the person this account belongs to.
 
-### Subscribed
+**Subscribed**
 
 These are the email addresses that will actually receive your emails.
 
-### Unsubscribed
+**Unsubscribed**
 
 If people have clicked the "unsubscribe" link in an email campaign, they will not receive any new emails from this list. Their email address will keep showing in this list until you manually remove them. You can easily remove all the unsubscribed addresses by using the action menu at the top.
 
