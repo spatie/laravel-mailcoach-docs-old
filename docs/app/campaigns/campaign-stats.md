@@ -2,7 +2,7 @@
 title: Campaign stats
 ---
 
---> Progress-bar na “send” tonen in screenshot
+--> Progress-bar na “send" tonen in screenshot
 
 ## Summary
 
