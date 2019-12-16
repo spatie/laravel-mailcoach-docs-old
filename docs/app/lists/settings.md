@@ -116,9 +116,9 @@ Finally, Mailcoach can also redirect users after they subscribe. There are some 
 
 These are the different pages that users will be sent to upon different interactions with your mailing list. We provide some default landing pages for these, but you can configure your own.
 
-You don't need to provide any actions on these landing pages, they are simply the place users will be redirected to after visiting one of your list's links (confirmation/subscribed/unsubscribe).
+When creating custom landing pages, you don't need to provide any actions or buttons on these landing pages. They are simply the place users will be redirected to after performing an action on your list.
 
-These values will not be used if you created hidden fields for redirections in your form during the previous step.
+These values can be overridden by the values from the hidden redirect fields created in the previous step.
 
 // TODO // screenshot of default landing page with caption "The default landing page for new subscribers"
 
@@ -136,6 +136,6 @@ Mailcoach can send welcome mails after people subscribe (or confirm) to your mai
 
 This email will be sent to new subscribers if you have the "_Require confirmation_" option enabled.
 
-Again, you can use the default that we created for you, or you can use your own email and use some of the available placeholders. Make sure to include the `::confirmUrl::` in this email, so people can actually confirm their subscription to your mailing list. After clicking this link, they will be redirected to your "_Confirm subscription_" landing page.
+Again, you can use the default that we created for you, or you can use your own email and use some of the available placeholders. Make sure to include the `::confirmUrl::` in this email, so people can actually confirm their subscription to your mailing list. After clicking this link, they will be redirected to your "_Someone subscribed_" landing page.
 
 // TODO // screenshot default welcome mail
