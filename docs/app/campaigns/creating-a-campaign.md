@@ -11,7 +11,7 @@ Segments: kunnen aangemaakt worden in lists, hiernaar verwijzen in docs
 Tracking
 --> Hoe werkt tracking? Verwijzen naar "campaign stats" in docs
 
-## HTML
+## Content
 
 - Evt uit template
 - Placeholders uitleggen

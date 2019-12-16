@@ -4,7 +4,8 @@ title: Introduction and Overview
 
 ## Introduction
 
-What are campaigns, what are they used for etc
+Email campaigns are a set of identical emails that are sent to an email list.
+
 
 ## Overview
 
