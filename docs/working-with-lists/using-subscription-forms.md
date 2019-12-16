@@ -45,7 +45,7 @@ You can specify one or more tags in an input field named `tags` that should be a
 
 ```html
 <!-- somewhere in your form -->
-<input type="hidden" name="tags" value="tagA;tagB"
+<input type="hidden" name="tags" value="tagA;tagB">
 ```
 
 Only tags that were added on the `allowedFormSubscriptionTags` relation of the email list you're subscribing someone to will be attached. Here's you can attach tags to that relation.
