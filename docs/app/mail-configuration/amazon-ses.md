@@ -6,7 +6,7 @@ To send mails with Amazon SES, you need to do some configuration in the AWS dash
 
 Firstly, you need to verify your domain and the email address mails will come from (your _From email_ in Mailcoach lists). Both of these are out of the scope of this tutorial, so we refer you to [SES' documentation](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/setting-up-email.html). You can send campaigns from SES without verifying your domain, however, this might cause your mails to be flagged as spam by mail clients, and you will not be able to track any statistics from your campaigns.
 
-### Key and Secret
+### Key and Secret (sending emails)
 
 Your SES key and secret, or _Access Key ID_ and _Secret Access Key_ as they are called in AWS, are the credentials Mailcoach needs to be able to send emails using SES. To know more about these keys, read about them in the [AWS documentation](https://docs.aws.amazon.com/general/latest/gr/aws-sec-cred-types.html#access-keys-and-secret-access-keys).
 
@@ -34,7 +34,9 @@ Go to the Mailcoach Mail Configuration page (in the user menu in the top right),
 
 ![](https://mailcoach.app/images/docs/app/mail-configuration/amazon-ses-key-and-secret-in-mailcoach.png)
 
-### Configuration Set
+The amount of mails per second depends on your AWS account and settings. A good starting point is 5 mails per second.
+
+### Configuration Set (tracking events)
 
 Amazon SES requires users to track any bounced messages, you need to create an SES Configuration Set so Mailcoach can track these.
 
@@ -70,4 +72,4 @@ To complete you Amazon SES configuration, you need to enter your configuration s
 
 ![](https://mailcoach.app/images/docs/app/mail-configuration/amazon-ses-final-mailcoach-mail-config.png)
 
-The amount of mails per second depends on your AWS account and settings. A good starting point is 5 mails per second.
+Your Amazon SES configuration should now be complete, and you can go ahead and try sending a test mail. It may go to your spam if you have not set up your domain settings.
