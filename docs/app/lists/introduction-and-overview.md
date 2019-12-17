@@ -14,6 +14,6 @@ On the lists index page, you get an overview of all the email lists you can mana
 
 // TODO // Screenshot "create list"
 
-When creating a new list, you must enter a name for the list, and the email and name that campaigns will be sent from. The _From email_ will be the sender for any email campaigns that target this list. This will usually be an email address that you configured while setting up your mail configuration with MailGun / Amazon SES / … .
+When creating a new list, you must enter a name for the list, and the email and name that campaigns will be sent from. The _From email_ will be the sender for any email campaigns that target this list. This will usually be an email address that you configured while setting up your mail configuration with Mailgun / Amazon SES / SendGrid / … .
 
 The _From name_ value is used as the sender's name in received emails. If you leave this field empty, the subscribers' mail client will fill this in according to their defaults. We suggest using the name of your organisation for this field.
