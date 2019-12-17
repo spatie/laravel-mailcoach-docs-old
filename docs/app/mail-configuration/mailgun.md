@@ -2,13 +2,11 @@
 title: Mailgun
 ---
 
-https://github.com/spatie/laravel-mailcoach-docs/blob/master/docs/handling-feedback/mailgun.md
-
 ## Configuring Mailgun
 
 First off, make sure you have created an account with Mailgun and that you have verified your domain with them. Setting up your domain with Mailgun is out of the scope of this tutorial, we refer you to [Mailgun's documentation](https://documentation.mailgun.com/en/latest/user_manual.html#verifying-your-domain) for this. You can optionally use the sandbox domain that is provided by Mailgun if you're just trying things out.
 
-Next, go to your _Domain settings_ in Mailgun and make sure the _Click tracking_ and _Open tracking_ options are enabled:
+Go to your _Domain settings_ in Mailgun and make sure the _Click tracking_ and _Open tracking_ options are enabled:
 
 ![](https://mailcoach.app/images/docs/mailgun-domain-settings.png)
 
