@@ -166,7 +166,9 @@ By default, we set this value to the default Laravel connection name, `default`.
 
 This package handles various tasks in a queued way via [Laravel Horizon](https://laravel.com/docs/master/horizon). If your application doesn't have Horizon installed yet, follow [their installation instructions](https://laravel.com/docs/master/horizon#installation).
 
-After Horizon is installed `config/horizon.php` should have been created in your project. In this config file you must add a block named `mailcoach` to both the `production` and `local` environment.
+After Horizon is installed, don't forget to set `QUEUE_CONNECTION` in your `.env` file to `redis`.
+
+`config/horizon.php` should have been created in your project. In this config file you must add a block named `mailcoach` to both the `production` and `local` environment.
 
 ```php
 'environments' => [
@@ -209,7 +211,21 @@ After Horizon is installed `config/horizon.php` should have been created in your
 ],
 ```
 
-Do not forget to set `QUEUE_CONNECTION` in your `.env` file to `redis`.
+In the `config/queue.php` file you must add the `mailcoach-redis` connection:
+
+```php
+'connections' => [
+
+    // ...
+
+    'mailcoach-redis' => [
+        'driver' => 'redis',
+        'connection' => 'default',
+        'queue' => env('REDIS_QUEUE', 'default'),
+        'retry_after' => 11 * 60,
+        'block_for' => null,
+    ],
+```
 
 ## Add authorization to Mailcoach UI
 
