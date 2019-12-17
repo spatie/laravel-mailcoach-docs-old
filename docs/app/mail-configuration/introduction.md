@@ -10,12 +10,8 @@ Mailcoach can't send out emails by itself. To do this, Mailcoach needs a mail co
 
 - [Mailgun setup](todo:link)
 
-- [SMTP setup](todo:link)
-
 ## Sending test mails
 
-// TODO // Screenshot "send test mail" screen
+![](https://mailcoach.app/images/docs/app/mail-configuration/successful-test-mail.png)
 
-To make sure Mailcoach is happy with your mail configuration, send a test mail to your own email address. It should arrive in your mailbox not long after, and should look a bit like this:
-
-// TODO // Screenshot of the test mail
+To make sure Mailcoach is happy with your mail configuration, send a test mail to your own email address. It should arrive in your mailbox not long after. If this test mail ends up in your spam, there may be something wrong with your domain or DNS settings.

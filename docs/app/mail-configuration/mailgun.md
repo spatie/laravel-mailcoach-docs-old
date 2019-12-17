@@ -2,13 +2,11 @@
 title: Mailgun
 ---
 
-https://github.com/spatie/laravel-mailcoach-docs/blob/master/docs/handling-feedback/mailgun.md
-
 ## Configuring Mailgun
 
 First off, make sure you have created an account with Mailgun and that you have verified your domain with them. Setting up your domain with Mailgun is out of the scope of this tutorial, we refer you to [Mailgun's documentation](https://documentation.mailgun.com/en/latest/user_manual.html#verifying-your-domain) for this. You can optionally use the sandbox domain that is provided by Mailgun if you're just trying things out.
 
-Next, go to your _Domain settings_ in Mailgun and make sure the _Click tracking_ and _Open tracking_ options are enabled:
+Go to your _Domain settings_ in Mailgun and make sure the _Click tracking_ and _Open tracking_ options are enabled:
 
 ![](https://mailcoach.app/images/docs/mailgun-domain-settings.png)
 
@@ -46,6 +44,4 @@ Go to your _Mail configuration_ page in Mailcoach, and fill in the fields:
 
 - Endpoint: the _API base URL_ that you copied in the last step, but without the `https://` and everything after the top-level domain (`.net` in my case)
 
-Save your configuration, and go over to the _Send test mail_ tab to test your configuration. Fill in your email address and press the _Send test mail_ button. If everything was set up correctly, you should see a positive message, and receive the test mail in a couple of seconds. If you have not yet set up your DNS settings, it may have gone to your spam.
-
-![](https://mailcoach.app/images/docs/app/mail-configuration/successful-test-mail.png)
+Save your configuration and [try sending a test mail](todo:link-to-introduction#sending-test-mails).
