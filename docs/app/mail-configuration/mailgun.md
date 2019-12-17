@@ -44,6 +44,4 @@ Go to your _Mail configuration_ page in Mailcoach, and fill in the fields:
 
 - Endpoint: the _API base URL_ that you copied in the last step, but without the `https://` and everything after the top-level domain (`.net` in my case)
 
-Save your configuration, and go over to the _Send test mail_ tab to test your configuration. Fill in your email address and press the _Send test mail_ button. If everything was set up correctly, you should see a positive message, and receive the test mail in a couple of seconds. If you have not yet set up your DNS settings, it may have gone to your spam.
-
-![](https://mailcoach.app/images/docs/app/mail-configuration/successful-test-mail.png)
+Save your configuration and [try sending a test mail](todo:link-to-introduction#sending-test-mails).
