@@ -162,6 +162,53 @@ It's common for e-mail providers to limit the number of e-mails you can send wit
 
 By default, we set this value to the default Laravel connection name, `default`.
 
+## Install Horizon
+
+This package handles various tasks in a queued way via [Laravel Horizon](https://laravel.com/docs/master/horizon). If your application doesn't have Horizon installed yet, follow [their installation instructions](https://laravel.com/docs/master/horizon#installation).
+
+After Horizon is installed `config/horizon.php` should have been created in your project. In this config file you must add a block named `mailcoach` to both the `production` and `local` environment.
+
+```php
+'environments' => [
+    'production' => [
+        'supervisor-1' => [
+            'connection' => 'redis',
+            'queue' => ['default'],
+            'balance' => 'simple',
+            'processes' => 10,
+            'tries' => 2,
+        ],
+        'mailcoach' => [
+            'connection' => 'mailcoach-redis',
+            'queue' => ['send-campaign', 'send-mail', 'mailcoach-feedback', 'mailcoach'],
+            'balance' => 'auto',
+            'processes' => 3,
+            'tries' => 1,
+            'timeout' => 60 * 10,
+        ],
+    ],
+
+    'local' => [
+        'supervisor-1' => [
+            'connection' => 'redis',
+            'queue' => ['default'],
+            'balance' => 'simple',
+            'processes' => 10,
+            'tries' => 2,
+        ],
+
+        'mailcoach' => [
+            'connection' => 'mailcoach-redis',
+            'queue' => ['send-campaign', 'send-mail', 'mailcoach-feedback', 'mailcoach'],
+            'balance' => 'auto',
+            'processes' => 3,
+            'tries' => 1,
+            'timeout' => 60 * 10,
+        ],
+    ],
+],
+```
+
 ## Add authorization to Mailcoach UI
 
 By default you can only use the Mailcoach on a local environment. To use it in other environment you need to register an gate check. Head over to [the section on authorizing users](TODO: add link) to learn more.
