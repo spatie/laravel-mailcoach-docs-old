@@ -209,6 +209,8 @@ After Horizon is installed `config/horizon.php` should have been created in your
 ],
 ```
 
+Do not forget to set `QUEUE_CONNECTION` in your `.env` file to `redis`.
+
 ## Add authorization to Mailcoach UI
 
 By default you can only use the Mailcoach on a local environment. To use it in other environment you need to register an gate check. Head over to [the section on authorizing users](TODO: add link) to learn more.
