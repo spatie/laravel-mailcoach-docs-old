@@ -6,7 +6,7 @@ This page contains all the statistics for a campaign that was sent. These statis
 
 ## Summary
 
-// TODO // screenshot of summary of sent campaign
+![](https://mailcoach.app/images/docs/app/campaigns/campaign-statistics-overview.png)
 
 This page shows, unsurprisingly, a summary of the statistics for your campaign. At a glance, you can see how many people opened your email and clicked any links you included, and also how many people unsubscribed from your mailing list as a result of this campaign and how often the emails bounced.
 
@@ -14,23 +14,23 @@ A bounce means that an email could not be delivered to a certain email address, 
 
 ## Opens and clicks
 
-// TODO // screenshot of opens
+![](https://mailcoach.app/images/docs/app/campaigns/campaign-statistics-opens.png)
 
 In the _Opens_ tab, you can see which subscribers have already opened your email, and when.
 
-// TODO // screenshot of clicks
+![](https://mailcoach.app/images/docs/app/campaigns/campaign-statistics-clicks.png)
 
 The _Clicks_ tab has information on which links were opened and how many times. The _Unique clicks_ column concerns how many unique users have clicked your link.
 
 ## Unsubscribes
 
-// TODO // screenshot of unsubscribes
+![](https://mailcoach.app/images/docs/app/campaigns/campaign-statistics-unsubscribes.png)
 
 You can also see how many people, regrettably, clicked the unsubscribe link in this campaign.
 
 ## Outbox
 
-// TODO // screenshot of outbox
+![](https://mailcoach.app/images/docs/app/campaigns/campaign-statistics-outbox.png)
 
 Here, you can see a collection of all the individual emails that were sent to your subscribers, and whether they encountered any issues upon arriving at their destination.
 

@@ -4,13 +4,13 @@ title: Creating a campaign
 
 When creating a campaign, you can either create a new one from scratch, or duplicate an existing one to copy most of its settings:
 
-// TODO // Screenshot campaign index page with "create campaign" highlighted && action menu by a campaign open and "duplicate" highlighted
+![](https://mailcoach.app/images/docs/app/campaigns/creating-a-campaign-index.png)
 
 When creating a new campaign, you can choose which of your templates, if any, you want to use as a base for your email's content. You can also choose to duplicate an existing campaign. Use these actions to save time when creating a new campaign.
 
 ## Settings
 
-// TODO // Screenshot "Settings" page
+![](https://mailcoach.app/images/docs/app/campaigns/creating-a-campaign-settings.png)
 
 Most of the settings for creating a new campaign are pretty self explanatory:
 
@@ -24,7 +24,7 @@ Finally, the tracking options allow you to track how many subscribers have opene
 
 ## Content
 
-// TODO // Screenshot "Content" page. Placeholders visible. Body with a generic campaign email (using the placeholders).
+![](https://mailcoach.app/images/docs/app/campaigns/creating-a-campaign-content.png)
 
 This is the content of the email that will be sent to your subscribers. If you selected a template while creating your campaign, the field will be prefilled with that template. If you duplicated another campaign, this field will be the same as that campaign's content.
 
@@ -34,7 +34,7 @@ While editing your email, you can see what it will look like for subscribers by 
 
 ## Delivery
 
-// TODO // Screenshot "Delivery" page, with "unsubscribeUrl" warning
+![](https://mailcoach.app/images/docs/app/campaigns/creating-a-campaign-delivery.png)
 
 This page provides a final checklist that you should go over before sending a campaign. It shows a summary of the campaign's settings, like how many people will be sent an email, the subject and any issues we found with your email's content.
 
