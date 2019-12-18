@@ -6,7 +6,7 @@ Tags and segments are used to divide a subscriber list into parts that can be ta
 
 ## Tags
 
-// TODO // Screenshot tags index page
+![](https://mailcoach.app/images/docs/app/lists/tags.png)
 
 Tags describe something about the user the tag is attached to.
 
@@ -14,12 +14,14 @@ Tags only need a name, that should describe what the tag says about a user. For 
 
 Tags can be assigned to users manually by clicking their email address in the subscribers list, or automatically by [using the package (advanced)](todo:link-to-tags-in-other-docs?).
 
-## Segments
+![](https://mailcoach.app/images/docs/app/lists/tags-on-subscriber.png)
 
-// TODO // Screenshot segment detail page with some tags included
+## Segments
 
 A segment is a group of tags that can be targeted by an email campaign. An example for a segment could be "_bought-any-product_" or, when using negative selectors "_have-not-bought-any-product_".
 
+![](https://mailcoach.app/images/docs/app/lists/segments.png)
+
 When creating a campaign, you can choose to send it to an entire mailing list, or one of its segments:
 
-// TODO // Screenshot of campaign creation page with a segment selected & highlighted in screenshot
+![](https://mailcoach.app/images/docs/app/lists/segments-on-campaign.png)

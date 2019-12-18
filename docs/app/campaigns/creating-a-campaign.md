@@ -44,6 +44,6 @@ Finally, you can set the timing for this campaign: whether to send it right now,
 
 When sending a campaign, all the emails that need to be sent out will be placed in a queue, and you will be redirected to a page where you can track the progress and see your campaign's statistics trickling in:
 
-// TODO // Screenshot campaign stats summary (with progress bar?)
+![](https://mailcoach.app/images/docs/app/campaigns/campaign-statistics-sending.png)
 
 For more information on what these statistics mean, continue reading in the [campaign's statistics](todo:link) section of the documentation.
