@@ -12,8 +12,8 @@ You can preview what this template will look like in a user's email client by cr
 
 You can use placeholders for certain Mailcoach actions in your links:
 
-- `::unsubscribeUrl::` The url where users can unsubscribe
-- `::webViewUrl::` This url will display the html of the campaign
+- `::unsubscribeUrl::` The URL where users can unsubscribe
+- `::webViewUrl::` This URL will display the HTML of the campaign
 - `::subscriber.first_name::` The first name of the subscriber
 
 // TODO // How to create nice looking templates, links to apps/websites… ?
