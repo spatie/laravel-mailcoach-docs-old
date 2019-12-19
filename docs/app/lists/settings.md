@@ -32,8 +32,6 @@ You and your colleagues can receive some statistics about this list and any camp
 
 ![](https://mailcoach.app/images/docs/app/lists/reports-list-summary.png)
 
-// TODO // screenshot examples of report emails?
-
 ## Subscriptions
 
 ### Require confirmation (double opt-in)
