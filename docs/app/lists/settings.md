@@ -22,11 +22,17 @@ You and your colleagues can receive some statistics about this list and any camp
 
 - "Confirmation when a campaign gets sent to this list": Receive an email when a campaign is **sent**. If you scheduled a campaign, this report will be sent when the scheduled date is reached.
 
+![](https://mailcoach.app/images/docs/app/lists/reports-campaign-sent.png)
+
 - "Summary of opens, clicks & bounces a day after a campaign to this list has been sent": 24 hours after sending a campaign, you will receive an email report with the opens, clicks, and bounces.
+
+![](https://mailcoach.app/images/docs/app/lists/reports-campaign-summary.png)
 
 - "Weekly summary on the subscriber growth of this list": Every Monday morning you will receive an email report with the changes in subscribers to your list.
 
-// TODO // examples of report emails?
+![](https://mailcoach.app/images/docs/app/lists/reports-list-summary.png)
+
+// TODO // screenshot examples of report emails?
 
 ## Subscriptions
 
@@ -128,8 +134,6 @@ These values can be overridden by the values from the hidden redirect fields cre
 
 Mailcoach can send welcome emails after people subscribe (or confirm) to your mailing list. We provide a default, but you can create your own by checking the _Send customized welcome mail_ option. In your custom mail, you can enter some placeholders, that Mailcoach will fill upon sending your email.
 
-// TODO // screenshot default welcome mail
-
 ## Confirmation mail (double opt-in)
 
 ![](https://mailcoach.app/images/docs/app/lists/settings-confirmation-mail.png)
@@ -138,4 +142,4 @@ This email will be sent to new subscribers if you have the _Require confirmation
 
 Again, you can use the default that we created for you, or you can create a custom mail and use some of the available placeholders. Make sure to include the `::confirmUrl::` in this email, so people can confirm their subscription to your mailing list. After clicking this link, they will be redirected to your _Someone subscribed_ landing page.
 
-// TODO // screenshot default confirmation mail
+![](https://mailcoach.app/images/docs/app/lists/settings-default-confirmation-mail.png)

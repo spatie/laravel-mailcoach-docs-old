@@ -36,6 +36,10 @@ You can easily import a list of subscribers into an existing list. Upload a CSV 
 
 Email addresses that have the _unsubscribed_ status will not be resubscribed when running an import. Confirmation mails will not be sent out to users, even if you have enabled double opt-in for this list. Imported email addresses that had not already unsubscribed, will receive the _Confirmed_ status and will receive any subsequently sent campaigns.
 
+Because these lists can get quite large and an import might take a while, we send you an email to inform you when Mailcoach has finished importing the subscribers:
+
+![](https://mailcoach.app/images/docs/app/lists/subscribers-import-report.png)
+
 ## Exporting subscribers
 
 You can also export the entire list or parts of it. By filtering by name email address, status or tags, you can choose which lines will be included in an export. An export will create a CSV file with email addresses, first names, last names, and tags.
