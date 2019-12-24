@@ -132,7 +132,7 @@ These values can be overridden by the values from the hidden redirect fields cre
 
 Mailcoach can send welcome emails after people subscribe (or confirm) to your mailing list. We provide a default, but you can create your own by checking the _Send customized welcome mail_ option. In your custom mail, you can enter some placeholders, that Mailcoach will fill upon sending your email.
 
-## Confirmation mail (double opt-in)
+## Confirmation mail
 
 ![](https://mailcoach.app/images/docs/app/lists/settings-confirmation-mail.png)
 

@@ -12,7 +12,7 @@ There are a couple of different statuses that a subscriber can have: _unconfirme
 
 **Unconfirmed**
 
-When people have signed up for your list, but have not yet confirmed their subscription, they will be _unconfirmed_. You will only see this status when you have double opt-in (_Require confirmation_) enabled for this list.
+When people have signed up for your list, but have not yet confirmed their subscription, they will be _unconfirmed_. You will only see this status the list requires confirmation.
 
 You can manually confirm email addresses using the action menu next to their name, but we don't suggest doing this without the consent of the person this account belongs to.
 

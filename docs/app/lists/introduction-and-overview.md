@@ -8,7 +8,7 @@ Email lists are used to group a collection of subscribers. You can use tags and 
 
 ![](https://mailcoach.app/images/docs/app/lists/index.png)
 
-On the lists index page, you get an overview of all the email lists you can manage, with the number of active subscribers shown. If you have double opt-in enabled, this number only includes subscribers that have confirmed their subscription. People that have unsubscribed, or don't have a valid email address (anymore), will not be counted in the "active" subscribers amount.
+On the lists index page, you get an overview of all the email lists you can manage, with the number of active subscribers shown. If the list requires confirmation, this number only includes subscribers that have confirmed their subscription. People that have unsubscribed, or don't have a valid email address (anymore), will not be counted in the "active" subscribers amount.
 
 ## Creating a list
 

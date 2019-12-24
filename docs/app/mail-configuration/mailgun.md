@@ -4,7 +4,7 @@ title: Mailgun
 
 ## Configuring Mailgun
 
-First off, make sure you have created an account with Mailgun and that you have verified your domain with them. Setting up your domain with Mailgun is out of the scope of this tutorial, we refer you to [Mailgun's documentation](https://documentation.mailgun.com/en/latest/user_manual.html#verifying-your-domain) for this. You can optionally use the sandbox domain that is provided by Mailgun if you're just trying things out.
+First off, make sure you have created an account with Mailgun and that you have verified your domain with them. Check [Mailgun's documentation](https://documentation.mailgun.com/en/latest/user_manual.html#verifying-your-domain) on how to do this.
 
 Go to your _Domain settings_ in Mailgun and make sure the _Click tracking_ and _Open tracking_ options are enabled:
 
@@ -37,11 +37,8 @@ Go to your _Mail configuration_ page in Mailcoach, and fill in the fields:
 ![](https://mailcoach.app/images/docs/app/mail-configuration/mailgun-setup-mail-config.png)
 
 - Mails per second: this will be different according to your Mailgun plan, you can find an appropriate value for this in your Mailgun dashboard
-
 - Domain: the same domain you did the setup for in Mailgun
-
 - Secret: the _API key_ you copied in the last step
-
 - Endpoint: the _API base URL_ that you copied in the last step, but without the `https://` and everything after the top-level domain (`.net` in my case)
 
 Save your configuration and [try sending a test mail](todo:link-to-introduction#sending-test-mails).
