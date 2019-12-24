@@ -2,7 +2,7 @@
 title: SendGrid
 ---
 
-To get started, make sure your SendGrid account is completely set up and your domain has been verified. The verification steps are outside of the scope of this tutorial, so we refer you to [SendGrid's docs](https://sendgrid.com/docs/ui/account-and-settings/how-to-set-up-domain-authentication/) to get these steps done. Sending out emails without a verified domain is possible, but not recommended, as the chances of your mails being flagged as spam are very high.
+To get started, make sure your SendGrid account is completely set up and your domain has been verified. The verification steps are outside of the scope of this tutorial, so we refer you to [SendGrid's docs](https://sendgrid.com/docs/ui/account-and-settings/how-to-set-up-domain-authentication/) to get these steps done. Sending out emails without a verified domain is possible, but not recommended, as the chances of your emails being flagged as spam are very high.
 
 ## Email configuration
 
@@ -28,7 +28,7 @@ If you are not there already, go to your Mailcoach Mail configuration page (unde
 
 ![](https://mailcoach.app/images/docs/app/mail-configuration/sendgrid-webhook-signing-key.png)
 
-Also copy the webhook URL that is mentioned on the same page and save your configuration.
+Also, copy the webhook URL that is mentioned on the same page and save your configuration.
 
 Go to your SendGrid dashboard, open the _Settings_ menu and go to your [_Mail Settings_](https://app.sendgrid.com/settings/mail_settings). Open and enable the _Event Notification_ setting. In the _HTTP POST URL_ field, paste the webhook URL that you just copied, and replace _YOUR-WEBHOOK-SIGNING-SECRET_ by the webhook signing secret that you chose in the last step.
 

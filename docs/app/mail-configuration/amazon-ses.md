@@ -22,7 +22,7 @@ Go to the next page, and set the permissions for the user. Since we won't be cre
 
 ![](https://mailcoach.app/images/docs/app/mail-configuration/amazon-ses-permissions.png)
 
-Go over to the next page. We are skipping tags for now and continuing to the _Review_ page. Make sure the details are correct, and verify creating the user.
+Go over to the next page. We are skipping tags for now and continuing to the _Review_ page. Make sure the details are correct and verify creating the user.
 
 ![](https://mailcoach.app/images/docs/app/mail-configuration/amazon-ses-review.png)
 
@@ -68,7 +68,7 @@ Scroll down and press the _Create subscription_ button. If everything was config
 
 ![](https://mailcoach.app/images/docs/app/mail-configuration/amazon-ses-sns-subscription-confirmed.png)
 
-To complete you Amazon SES configuration, you need to enter your configuration set's name and AWS region in your Mailcoach Mail configuration:
+To complete your Amazon SES configuration, you need to enter your configuration set's name and AWS region in your Mailcoach Mail configuration:
 
 ![](https://mailcoach.app/images/docs/app/mail-configuration/amazon-ses-final-mailcoach-mail-config.png)
 
