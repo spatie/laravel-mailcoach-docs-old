@@ -105,7 +105,7 @@ To ensure that these assets get republished each time Mailcoach is updated, we h
 
 ## Publish the config file
 
-You must publish the config file with this command.
+Optionally, You can publish the config file with this command.
 
 ```bash
 php artisan vendor:publish --provider="Spatie\Mailcoach\MailcoachServiceProvider" --tag="config"
