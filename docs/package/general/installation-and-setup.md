@@ -234,3 +234,5 @@ By default you can only use the Mailcoach on a local environment. To use it in o
 ## Visit the UI
 
 After performing all these steps, you should be able to vist the Mailcoach UI at `/mailcoach`.
+
+Before sending out a real campaign, we highly recommend creating a small email list with a couple of test email addresses and send a campaign to it. This way, you can verify that sending mails, and the open & click tracking are all working correctly.
