@@ -56,7 +56,7 @@ If want to use another email sending service you should manually configure it. H
 You need to publish and run the migration:
 
 ```bash
-php artisan vendor:publish --provider="Spatie\Mailcoach\MailcoachServiceProvider" --tag="migrations"
+php artisan vendor:publish --provider="Spatie\Mailcoach\MailcoachServiceProvider" --tag="mailcoach-migrations"
 php artisan migrate
 ```
 
@@ -108,7 +108,7 @@ To ensure that these assets get republished each time Mailcoach is updated, we h
 Optionally, You can publish the config file with this command.
 
 ```bash
-php artisan vendor:publish --provider="Spatie\Mailcoach\MailcoachServiceProvider" --tag="config"
+php artisan vendor:publish --provider="Spatie\Mailcoach\MailcoachServiceProvider" --tag="mailcoach-config"
 ```
 
 Below is the default content of the config file:
