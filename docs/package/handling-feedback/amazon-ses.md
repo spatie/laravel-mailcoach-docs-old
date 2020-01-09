@@ -62,8 +62,9 @@ Route::sesFeedback('ses-feedback');
 1. Create a subscription for the topic you just created, use `HTTPS` as the Protocol
 2. Enter the endpoint you just created the route for
 3. Do **not** check "Enable raw message delivery", otherwise signature validation won't work
-4. You can leave all other settings on their defaults
-5. Your subscription should be automatically confirmed if the endpoint was reachable
+4. In **Delivery retry policy (HTTP/S)** make sure to set a limit in the **Maximum receive rate** setting, `5` / second is a good default as that is the default php-fpm pool size.
+5. You can leave all other settings on their defaults
+6. Your subscription should be automatically confirmed if the endpoint was reachable
 
 ![](../images/ses-feedback/5-subscription-confirmed.png)
 
