@@ -42,9 +42,9 @@ This option can be enabled to prevent spam, both to and from your mailing list. 
 
 You can also configure Mailcoach to use a custom page and/or send out custom confirmation emails that you created yourself. Refer to the 2 options that become available when checking this box:
 
-- [Confirm subscription](TODO:link) in the _Landing pages_ section.
+- [Confirm subscription](https://mailcoach.app/docs/app/lists/settings#landing-pages) in the _Landing pages_ section.
 
-- [Confirmation mail](TODO:link) at the bottom of the settings page.
+- [Confirmation mail](https://mailcoach.app/docs/app/lists/settings#confirmation-mail) at the bottom of the page.
 
 ### Allow POST from an external form
 
