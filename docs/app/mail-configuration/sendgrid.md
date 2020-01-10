@@ -4,6 +4,8 @@ title: SendGrid
 
 To get started, make sure your SendGrid account is completely set up and your domain has been verified. The verification steps are outside of the scope of this tutorial, so we refer you to [SendGrid's docs](https://sendgrid.com/docs/ui/account-and-settings/how-to-set-up-domain-authentication/) to get these steps done. Sending out emails without a verified domain is possible, but not recommended, as the chances of your emails being flagged as spam are very high.
 
+The value for the _mails per second_ field depends on your SendGrid account and settings. A good starting point is 5 mails per second.
+
 ## Email configuration
 
 Setting up your email configuration with SendGrid is very easy. Open your SendGrid dashboard on the [API keys page](https://app.sendgrid.com/settings/api_keys) and press the _Create API Key_ button in the top right corner:
