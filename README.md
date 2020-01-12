@@ -1,6 +1,6 @@
 # laravel-mailcoach docs
 
-This repository contains the content of [the documentation section of the Mailcoach website](https://xxxx/docs). Feel free to PR improvements and typo fixes.
+This repository contains the content of [the documentation section of the Mailcoach website](https://mailcoach.app/docs). Feel free to PR improvements and typo fixes.
 
 ## Contributing
 
