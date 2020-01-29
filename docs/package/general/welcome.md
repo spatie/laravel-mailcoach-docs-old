@@ -32,10 +32,3 @@ Campaign::create()
 
 After a campaign is sent, [interesting statistics](https://docs.spatie.be/laravel-mailcoach/v1/working-with-campaigns/viewing-statistics-of-a-sent-campaign/) are made available.
 
-## We have badges!
-
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/spatie/laravel-mailcoach.svg?style=flat-square)](https://packagist.org/packages/spatie/laravel-mailcoach)
-[![Build Status](https://img.shields.io/travis/spatie/laravel-mailcoach/master.svg?style=flat-square)](https://travis-ci.org/spatie/laravel-mailcoach)
-[![Quality Score](https://img.shields.io/scrutinizer/g/spatie/laravel-mailcoach.svg?style=flat-square)](https://scrutinizer-ci.com/g/spatie/laravel-mailcoach)
-[![StyleCI](https://github.styleci.io/repos/210674796/shield?branch=master)](https://github.styleci.io/repos/210674796)
-[![Total Downloads](https://img.shields.io/packagist/dt/spatie/laravel-mailcoach.svg?style=flat-square)](https://packagist.org/packages/spatie/laravel-mailcoach)
