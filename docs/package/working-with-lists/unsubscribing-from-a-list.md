@@ -8,7 +8,7 @@ When a subscriber visits the actual unsubscribe URL, a simple message will be di
 
 To customize this confirmation message, publish the views.
 
-```php
+```bash
 php artisan vendor:publish --provider="Spatie\Mailcoach\MailcoachServiceProvider" --tag="views"
 ```
 
