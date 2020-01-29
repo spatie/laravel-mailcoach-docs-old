@@ -2,7 +2,7 @@
 title: Welcome
 ---
 
-//TODO: add screenshot
+![](https://mailcoach.app/images/docs/package/welcome.png)
 
 This package allows you to send out email campaigns to a list of subscribers effortlessly. It also provides a UI to manage campaigns, email lists and subscribers.
 
