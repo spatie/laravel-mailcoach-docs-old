@@ -48,9 +48,6 @@ Follow the instruction on the dedicated docs page of each supported service.
 - [Mailgun](/docs/package/handling-feedback/mailgun)
 - [Sendgrid](/docs/package/handling-feedback/sendgrid)
 
-If want to use another email sending service you should manually configure it. Here are instructions on how you can [manually handle feedback](TODO: add link).
-
-
 ## Prepare the database
 
 You need to publish and run the migration:
@@ -268,10 +265,10 @@ In the `config/queue.php` file you must add the `mailcoach-redis` connection:
 
 ## Add authorization to Mailcoach UI
 
-By default you can only use the Mailcoach on a local environment. To use it in other environment you need to register an gate check. Head over to [the section on authorizing users](TODO: add link) to learn more.
+By default you can only use the Mailcoach on a local environment. To use it in other environment you need to register an gate check. Head over to [the section on authorizing users](docs/package/using-the-ui/authorizing-users) to learn more.
 
 ## Visit the UI
 
-After performing all these steps, you should be able to vist the Mailcoach UI at `/mailcoach`.
+After performing all these steps, you should be able to visit the Mailcoach UI at `/mailcoach`.
 
 Before sending out a real campaign, we highly recommend creating a small email list with a couple of test email addresses and send a campaign to it. This way, you can verify that sending mails, and the open & click tracking are all working correctly.
