@@ -12,7 +12,7 @@ Let’s take a quick look at how to use the package. First, create an email list
 $emailList = EmailList::create('newsletter subscribers');
 ```
 
-Next, we subscribe people to a list. There's also support for [double opt-in subscriptions](https://docs.spatie.be/laravel-mailcoach/v1/working-with-lists/using-double-opt-in/).
+Next, we subscribe people to a list. There's also support for [double opt-in subscriptions](/docs/package/working-with-lists/using-double-opt-in).
 
 ```php
 $emailList->subscribe('john@example.com');
@@ -30,5 +30,5 @@ Campaign::create()
     ->sendTo($emailList);
 ```
 
-After a campaign is sent, [interesting statistics](https://docs.spatie.be/laravel-mailcoach/v1/working-with-campaigns/viewing-statistics-of-a-sent-campaign/) are made available.
+After a campaign is sent, [interesting statistics](/docs/package/working-with-campaigns/viewing-statistics-of-a-sent-campaign) are made available.
 

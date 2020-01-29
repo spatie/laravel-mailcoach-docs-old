@@ -10,4 +10,4 @@ There are three ways of installing Mailcoach.
 
 2. If you have no experience with Laravel or PHP, the easiest way to get started is our 1-click-installer. This installer will provision a new server at Digital Ocean, install Mailcoach and all it's dependencies on it.
 
-3. If you have experience with Laravel and PHP, and want to use Mailcoach as a standalone application, you can [use composer to create a new Laravel project with Mailcoach preinstalled](https://mailcoach.app.test/docs/app/installation/using-composer).
+3. If you have experience with Laravel and PHP, and want to use Mailcoach as a standalone application, you can [use composer to create a new Laravel project with Mailcoach preinstalled](https://mailcoach.app/docs/app/installation/using-composer).

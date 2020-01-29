@@ -2,7 +2,7 @@
 title: Installation & setup
 ---
 
-Mailcoach can be installed as a package inside an existing Laravel application. This version of mailcoach does not come with any user management, instead your can [use a gate check to determine who can access Mailcoach](https://mailcoach.app.test/docs/package/using-the-ui/authorizing-users).
+Mailcoach can be installed as a package inside an existing Laravel application. This version of mailcoach does not come with any user management, instead your can [use a gate check to determine who can access Mailcoach](https://mailcoach.app/docs/package/using-the-ui/authorizing-users).
 
 In order to install Mailcoach you'll need to [get a license](/docs/app/general/getting-a-license) first.
  
