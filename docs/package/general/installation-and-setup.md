@@ -88,7 +88,7 @@ protected function schedule(Schedule $schedule)
 
 You must publish the JavaScript and CSS assets using this command:
 
-```php
+```bash
 php artisan vendor:publish --tag mailcoach-assets --force
 ```
 

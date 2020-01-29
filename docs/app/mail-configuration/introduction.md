@@ -2,11 +2,11 @@
 title: Introduction
 ---
 
-Mailcoach can't send out emails by itself. To do this, Mailcoach needs a mail configuration with a third party email delivery platform. We currently provide support these three:
+Mailcoach can't send out emails by itself. To do this, Mailcoach needs a mail configuration with a third party email delivery platform. We support these three:
 
-- [Amazon SES setup](/docs/app/mail-configuration/amazon-ses)
-- [SendGrid setup](/docs/app/mail-configuration/sendgrid)
-- [Mailgun setup](/docs/app/mail-configuration/mailgun)
+- [Amazon SES](/docs/app/mail-configuration/amazon-ses)
+- [SendGrid](/docs/app/mail-configuration/sendgrid)
+- [Mailgun](/docs/app/mail-configuration/mailgun)
 
 ## Sending test mails
 
