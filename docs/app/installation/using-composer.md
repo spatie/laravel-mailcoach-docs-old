@@ -6,13 +6,13 @@ You can create a new Laravel application with Mailcoach preinstalled into using 
 
 ### Creating the application
 
-You can create the application with Mailcoach preinstalled using this command
+You can create the application with Mailcoach pre-installed using this command
 
 ```bash
 composer create-project spatie/Mailcoach
 ```
 
-During the execution of this command Composer will ask for a user and a password. The user is the email address you used when registering at [mailcoach.app](https://mailcoach.app). The password is the key of a mailcoach license.
+During the execution of this command Composer will ask for a user and a password. The user is the email address you used when registering at [mailcoach.app](https://mailcoach.app). The password is the key of [a Mailcoach license](/docs/app/general/getting-a-license).
 
 ### Creating the database
 
@@ -21,6 +21,8 @@ Next, you must update the values of the `DB_*` entries in `.env` so they match y
 ### Creating the first user
 
 After that you can create an initial user by executing `php artisan make:user`. You can use the created user to login at `/mailcoach`. New user can be made on the users screen in mailcoach.
+
+![Users screen](https://mailcoach.app/images/docs/app/getting-started/users.png)
 
 ### Configure the email sending service
 
