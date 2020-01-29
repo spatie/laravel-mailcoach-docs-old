@@ -1,5 +1,5 @@
 ---
-title: Installation the 1-click installer
+title: Installation using the 1-click installer
 ---
 
 You can use a one click installer to provision a new server at Digital Ocean. This new server will have Mailcoach and all it's dependencies preinstalled. You don't need any Laravel or PHP knowledge to get started.
