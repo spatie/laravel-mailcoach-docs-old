@@ -44,9 +44,9 @@ Mailcoach can send out mail via various email sending services and can handle th
 
 Follow the instruction on the dedicated docs page of each supported service.
 
-- [Amazon SES](TODO: add link)
-- [Mailgun](TODO: add link)
-- [Sendgrid](TODO: add link)
+- [Amazon SES](/docs/package/handling-feedback/amazon-ses)
+- [Mailgun](/docs/package/handling-feedback/mailgun)
+- [Sendgrid](/docs/package/handling-feedback/sendgrid)
 
 If want to use another email sending service you should manually configure it. Here are instructions on how you can [manually handle feedback](TODO: add link).
 
