@@ -12,7 +12,7 @@ Tags describe something about the user the tag is attached to.
 
 Tags only need a name, that should describe what the tag says about a user. For example, a tag's name could be "_bought-product-A_", which would be assigned to subscribers that have bought a certain item in your (web)shop. Users can be assigned multiple tags. Tags by themselves are not used for anything in Mailcoach as long as they are not grouped into a segment.
 
-Tags can be assigned to users manually by clicking their email address in the subscriber list, or automatically when they subscribe through a form, read about this [here](https://mailcoach.app/docs/app/lists/settings#subscriptions).
+Tags can be assigned to users manually by clicking their email address in the subscriber list, or automatically when they subscribe through a form, read about this [here](/docs/app/lists/settings#subscriptions).
 
 ![](https://mailcoach.app/images/docs/app/lists/tags-on-subscriber.png)
 

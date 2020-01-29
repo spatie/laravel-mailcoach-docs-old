@@ -6,7 +6,7 @@ Welcome to the Mailcoach app documentation! These pages are here to guide you th
 
 - Make sure you have a valid license key when using Mailcoach. You need to buy a license key for each domain. Keys stay valid for one year, during which you get all the updates we make to Mailcoach.
 
-- You should make sure you have a valid [mail configuration](https://mailcoach.app/docs/app/mail-configuration/introduction)
+- You should make sure you have a valid [mail configuration](/docs/app/mail-configuration/introduction)
 
 - If your colleagues should also be able to create campaigns and view their stats, create a user for them to use in the dashboard by going over to the _Users_ page:
 
