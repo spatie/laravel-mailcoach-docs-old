@@ -6,6 +6,8 @@ To send mails with Amazon SES, you need to do some configuration in the AWS dash
 
 Firstly, you need to verify your domain and the email address mails will come from (your _From email_ in Mailcoach lists). Both of these are out of the scope of this tutorial, so we refer you to [SES' documentation](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/setting-up-email.html). You can send campaigns from SES without verifying your domain, however, this might cause your mails to be flagged as spam by mail clients, and you will not be able to track any statistics from your campaigns.
 
+The value for the _mails per second_ field depends on your AWS account and settings. A good starting point is 5 mails per second.
+
 ### Key and Secret (sending emails)
 
 Your SES key and secret, or _Access Key ID_ and _Secret Access Key_ as they are called in AWS, are the credentials Mailcoach needs to be able to send emails using SES. To know more about these keys, read about them in the [AWS documentation](https://docs.aws.amazon.com/general/latest/gr/aws-sec-cred-types.html#access-keys-and-secret-access-keys).
@@ -33,8 +35,6 @@ If everything went OK, you should now be able to see your user's Access Key ID a
 Go to the Mailcoach Mail Configuration page (in the user menu in the top right), make sure you have selected the _Amazon SES_ driver and enter the Key and Secret:
 
 ![](https://mailcoach.app/images/docs/app/mail-configuration/amazon-ses-key-and-secret-in-mailcoach.png)
-
-The amount of mails per second depends on your AWS account and settings. A good starting point is 5 mails per second.
 
 ### Configuration Set (tracking events)
 
@@ -72,4 +72,4 @@ To complete your Amazon SES configuration, you need to enter your configuration 
 
 ![](https://mailcoach.app/images/docs/app/mail-configuration/amazon-ses-final-mailcoach-mail-config.png)
 
-Your Amazon SES configuration should now be complete, and you can go ahead and try sending a test mail. It may go to your spam if you have not set up your domain settings.
+Your Amazon SES configuration should now be complete, you can go ahead and try sending a test mail. It may go to your spam if you have not set up your domain settings.

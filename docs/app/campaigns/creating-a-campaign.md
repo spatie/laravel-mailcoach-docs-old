@@ -18,9 +18,9 @@ The name of a campaign is only used within your Mailcoach UI. Subscribers will n
 
 The value for the _Subject_ field is used as the subject for sent emails.
 
-The _List_ menu allows you to pick one of your lists, which you can further narrow down by picking one of its _Segments_ right below it. You can read more about list segments [here](todo:link-to-segment-docs).
+The _List_ menu allows you to pick one of your lists, which you can further narrow down by picking one of its _Segments_ right below it. You can read more about tags and segments [here](https://mailcoach.app/docs/app/lists/tags-and-segments).
 
-Finally, the tracking options allow you to track how many subscribers have opened your email and whether they clicked any of the links you included. You can see what the result of this tracking looks like in the [Campaign statistics](todo:link-to-campaign-stats-docs) section of the documentation.
+Finally, the tracking options allow you to track how many subscribers have opened your email and whether they clicked any of the links you included. You can see what the result of this tracking looks like in the [Campaign statistics](https://mailcoach.app/docs/app/campaigns/campaign-statistics) section of the documentation.
 
 ## Content
 
@@ -46,4 +46,4 @@ When sending a campaign, all the emails that need to be sent out will be placed 
 
 ![](https://mailcoach.app/images/docs/app/campaigns/campaign-statistics-sending.png)
 
-For more information on what these statistics mean, continue reading in the [campaign's statistics](todo:link) section of the documentation.
+For more information on what these statistics mean, continue reading in the [campaign's statistics](https://mailcoach.app/docs/app/campaigns/campaign-statistics) section of the documentation.

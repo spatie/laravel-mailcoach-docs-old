@@ -40,5 +40,3 @@ Go to your _Mail configuration_ page in Mailcoach, and fill in the fields:
 - Domain: the same domain you did the setup for in Mailgun
 - Secret: the _API key_ you copied in the last step
 - Endpoint: the _API base URL_ that you copied in the last step, but without the `https://` and everything after the top-level domain (`.net` in my case)
-
-Save your configuration and [try sending a test mail](todo:link-to-introduction#sending-test-mails).

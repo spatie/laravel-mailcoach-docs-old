@@ -2,7 +2,7 @@
 title: Installation & setup
 ---
 
-This package can be installed using Composer. In your `composer.json`  you must for add the `satis.mailcoach.app` repository.
+This package can be installed using Composer. First, add the `satis.mailcoach.app` repository in your `composer.json`.
 
 ```php
 "repositories": [
