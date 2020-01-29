@@ -2,4 +2,4 @@
 title: Installation using Composer
 ---
 
-TODO.
+Coming soon.
