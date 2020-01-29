@@ -2,7 +2,7 @@
 title: Mailgun
 ---
 
-`laravel-mailcoach-mailgun-feedback` can handle bounce feedback coming from Mailgun. All e-mail address that permanently bounce will be unsubscribed from all lists.
+The `spatie/laravel-mailcoach-mailgun-feedback` package can handle bounce feedback coming from Mailgun. All e-mail address that permanently bounce will be unsubscribed from all lists.
 
 You can install the add-on package via composer:
 
