@@ -44,7 +44,7 @@ Open your AWS Dashboard and make sure you still have the same AWS region selecte
 
 ![](https://mailcoach.app/images/docs/app/mail-configuration/amazon-ses-configuration-set.png)
 
-Choose a name for your configuration set and create it, then click the newly created item in the list to add some events destinations. Click the _<Select a destination type>_ dropdown and select the _SNS_ option:
+Choose a name for your configuration set and create it, then click the newly created item in the list to add some events destinations. Click the _Select a destination type_ dropdown and select the _SNS_ option:
 
 ![](https://mailcoach.app/images/docs/app/mail-configuration/amazon-ses-destination-type.png)
 
