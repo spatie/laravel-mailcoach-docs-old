@@ -115,8 +115,6 @@ php artisan vendor:publish --provider="Spatie\Mailcoach\MailcoachServiceProvider
 Below is the default content of the config file:
 
 ```php
-<?php
-
 return [
     /*
      * The date format used on all screens of the UI
@@ -193,6 +191,13 @@ return [
      * Unauthorized users will get redirected to this route.
      */
     'redirect_unauthorized_users_to_route' => 'login',
+
+    /*
+     *  This configuration option defines the authentication guard that will
+     *  be used to protect your the Mailcoach UI. This option should match one
+     *  of the authentication guards defined in the "auth" config file.
+     */
+    'guard' => env('MAILCOACH_GUARD', null),
 ];
 ```
 
