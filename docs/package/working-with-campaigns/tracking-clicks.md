@@ -10,12 +10,6 @@ To use this feature, you must set `track_clicks` to `true` on a campaign you're 
 
 ## How it works under the hood
 
-When you send a campaign that has click tracking enabled, we'll replace each link in the mail with a link that points to the `Spatie\Mailcoach\Http\Controllers\TrackClicksController`. A route to this controller has been set up by the `Route::MailCoach` you used when [configuring the package](/docs/package/general/installation-and-setup/#add-the-route-macro).
+When you send a campaign that has click tracking enabled, the email service provider you use will replace each link in your mail by a unique link on it's own domain. When somebody clicks that link, the email service provider will get a request, and it will know that the link was clicked. Next the request will be redirected to the original link.
 
-Here's an example: a link with `href` `https://spatie.be` will be replaced with `https://yourapp.com/email-campaigns/track-clicks/<campaign-link-uuid>/<subscriber-uuid>?redirect=https://spatie.be`.
-
-## Queuing click tracking
-
-When sending a campaign to a large list, that endpoint could be hit a lot over a short timespan. To ensure a fast response time, when the `TrackClicksController` is hit, it will not update the database, but dispatch a job named `RegisterClickJob`. The controller will respond with a redirect to the url that is the `redirect` URL parameter. The dispatch `RegisterClickJob` job update the database.
-
-Because there's the potential for a great many of these jobs to be scheduled, we recommend using a separate queue for handling them. You can configure the queue to be used in the `perform_on_queue.register_click_job` key of the `email-campaigns` config file.
+Via a web hook, the email service provider will let Mailcoach know that a link has been clicked.
