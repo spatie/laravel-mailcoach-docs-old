@@ -94,7 +94,7 @@ You must publish the JavaScript and CSS assets using this command:
 php artisan vendor:publish --tag mailcoach-assets --force
 ```
 
-To ensure that these assets get republished each time Mailcoach is updated, we highly recommand add the command to the `post-update-cmd` of the `scripts` section of your `composer.json`.
+To ensure that these assets get republished each time Mailcoach is updated, we highly recommend you add the following command to the `post-update-cmd` of the `scripts` section of your `composer.json`.
 
 ```php
     "scripts": {
