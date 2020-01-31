@@ -43,7 +43,7 @@ Route::sesFeedback('ses-feedback');
 
 2. Add a SNS destination in the Event Destinations and make sure to check the event types you would like to receive
 
-![](../images/ses-feedback/2-1-add-destination.png)
+![](/images/ses-feedback/2-1-add-destination.png)
 
 ![](../images/ses-feedback/2-2-add-destination.png)
 
