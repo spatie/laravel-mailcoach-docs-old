@@ -198,6 +198,17 @@ return [
      *  of the authentication guards defined in the "auth" config file.
      */
     'guard' => env('MAILCOACH_GUARD', null),
+
+    /*
+     *  These middleware will be assigned to every Mailcoach UI route, giving you the chance
+     *  to add your own middleware to this stack or override any of the existing middleware.
+     */
+    'middleware' => [
+        'web',
+        Spatie\Mailcoach\Http\App\Middleware\Authenticate::class,
+        Spatie\Mailcoach\Http\App\Middleware\Authorize::class,
+        Spatie\Mailcoach\Http\App\Middleware\SetMailcoachDefaults::class,
+    ]
 ];
 ```
 
