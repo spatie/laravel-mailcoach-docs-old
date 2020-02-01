@@ -39,7 +39,7 @@ Emails sent have the ```List-Unsubscribe``` header included. This allows for use
 
 Behind the scenes, the subscriber won't be deleted. Instead, the status of the subscription will be updated to `unsubscribed`.
 
-If you want to delete a the subscription/subscriber entirely, you can call `delete` on it.
+If you want to delete the subscription/subscriber entirely, you can call `delete` on it.
 
 ```php
 Subscriber::findForEmail('john@example.com')->delete();
