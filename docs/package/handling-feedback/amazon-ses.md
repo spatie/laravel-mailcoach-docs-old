@@ -39,25 +39,25 @@ Route::sesFeedback('ses-feedback');
 ### Simple Email Service Setup
 1. In your AWS Management Console, create a configuration set if you haven't already
 
-![](../images/ses-feedback/1.create-configuration-set.png)
+![](/images/docs/package/ses-feedback/1.create-configuration-set.png)
 
 2. Add a SNS destination in the Event Destinations and make sure to check the event types you would like to receive
 
-![](../images/ses-feedback/2-1-add-destination.png)
+![](/images/docs/package/ses-feedback/2-1-add-destination.png)
 
-![](../images/ses-feedback/2-2-add-destination.png)
+![](/images/docs/package/ses-feedback/2-2-add-destination.png)
 
 3. Create a new topic for this destination
 
-![](../images/ses-feedback/3-create-new-topic.png)
+![](/images/docs/package/ses-feedback/3-create-new-topic.png)
 
 ### Simple Notification Service Setup
 
 > First, make sure your endpoint is accessible, if you're installing this locally you'll need to share your local environment using `valet share` or a service like `ngrok`
 
-![](../images/ses-feedback/4-1-create-subscription.png)
+![](/images/docs/package/ses-feedback/4-1-create-subscription.png)
 
-![](../images/ses-feedback/4-2-create-subscription.png)
+![](/images/docs/package/ses-feedback/4-2-create-subscription.png)
 
 1. Create a subscription for the topic you just created, use `HTTPS` as the Protocol
 2. Enter the endpoint you just created the route for
@@ -66,7 +66,7 @@ Route::sesFeedback('ses-feedback');
 5. You can leave all other settings on their defaults
 6. Your subscription should be automatically confirmed if the endpoint was reachable
 
-![](../images/ses-feedback/5-subscription-confirmed.png)
+![](/images/docs/package/ses-feedback/5-subscription-confirmed.png)
 
 ## Setting the configuration name in your Laravel app
 
