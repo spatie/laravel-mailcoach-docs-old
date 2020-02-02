@@ -11,7 +11,7 @@ $emailList->subscribe('john@example.com');
 Alternatively you can create a subscriber via the `Subscriber` model.
 
 ```
-Subscriber::createFromEmail('john@example.com')->subscribeTo($emailList);
+Subscriber::createWithEmail('john@example.com')->subscribeTo($emailList);
 ```
 
 ## Specifying first name and last name
@@ -28,12 +28,12 @@ $subscriber = $emailList->subscribe('john@example.com', [
 Alternatively you can create a subscriber with attributes via the `Subscriber` model.
 
 ```
-Subscriber::createFromEmail('john@example.com')
-   ->withAttributes()
-   ->subscribeTo([
+Subscriber::createWithEmail('john@example.com')
+   ->withAttributes([
        'first_name' => 'John', 
        'last_name' => 'Doe'
-   ]);
+   ])
+   ->subscribeTo($emailList);
 ```
 
 ## Adding regular attributes
@@ -136,7 +136,7 @@ $emailList->subscribeskippingConfirmation('john@example.com');
 Alternatively you can use this syntax:
 
 ```php
-Subscriber::createForEmail('john@example.com')
-   ->skipDoubleOptIn()
-   ->toEmailList($emailList);
+Subscriber::createWithEmail('john@example.com')
+   ->skipConfirmation()
+   ->subscribeTo($emailList);
 ```
