@@ -66,7 +66,7 @@ You can get the email the mail was sent to like this:
 $email = $event->send->subscription->subscriber->email;
 ```
 
-You can also retrieve the name of the campaing that this mail was part of:
+You can also retrieve the name of the campaign that this mail was part of:
 
 ```php
 $campaignName = $event->send->campaign->name;
@@ -114,3 +114,38 @@ After a campaign has been sent, statistics will [be calculated according to a sc
 
 Each time the statistics are calculated this event will be fired. It has one public property `$campaign`, which is an instance of the `Spatie\Mailcoach\Models\Campaign` model.
 
+## `Spatie\Mailcoach\Events\BounceRegisteredEvent`
+
+This event will fire when a complaint has bounced hard.
+
+The event has one public property: `$send` which is an instance of the `Spatie\Mailcoach\Models\Send` model.
+
+You can get the email the mail was sent to like this:
+
+```php
+$email = $event->send->subscription->subscriber->email;
+```
+
+You can also retrieve the name of the campaign that this mail was part of:
+
+```php
+$campaignName = $event->send->campaign->name;
+```
+
+## `Spatie\Mailcoach\Events\ComplaintRegisteredEvent`
+
+This event will fire when a complaint has been received about a sent mail. In many cases this means that the receiver marked it as spam.
+
+The event has one public property: `$send` which is an instance of the `Spatie\Mailcoach\Models\Send` model.
+
+You can get the email the mail was sent to like this:
+
+```php
+$email = $event->send->subscription->subscriber->email;
+```
+
+You can also retrieve the name of the campaign that this mail was part of:
+
+```php
+$campaignName = $event->send->campaign->name;
+```
