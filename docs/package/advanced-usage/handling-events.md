@@ -22,11 +22,11 @@ This is how to get the name of the email list:
 $nameOfEmailList = $event->emailList->name;
 ```
 
-## `Spatie\Mailcoach\Events\SubscribedConfirmedEvent`
+## `Spatie\Mailcoach\Events\UnconfirmedSubscriberCreatedEvent`
 
-This event will be fired as soon as tries subscribes when [double opt-in](/docs/package/working-with-lists/using-double-opt-in) is enabled on the email list.
+This event will fire after a new email address is added to an email list that requires confirmation.
 
-The event has one public property: `$subscriber` which is an instance of `Spatie\Mailcoach\Models\Subscriber`.
+It has one public property: `subscriber`.
 
 ## `Spatie\Mailcoach\Events\UnsubscribedEvent`
 
@@ -113,3 +113,4 @@ $email = $event->campaignClick->subscriber->email;
 After a campaign has been sent, statistics will [be calculated according to a schedule](/docs/package/working-with-campaigns/viewing-statistics-of-a-sent-campaign).
 
 Each time the statistics are calculated this event will be fired. It has one public property `$campaign`, which is an instance of the `Spatie\Mailcoach\Models\Campaign` model.
+
