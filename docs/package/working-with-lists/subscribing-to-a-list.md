@@ -127,7 +127,7 @@ $allSubscribers = $emailList->allSubscribers;
 
 If [double opt-in](/docs/package/working-with-lists/using-double-opt-in) is enabled on a list, then `subscribeTo` won't result in an immediate subscription. Instead, the user must first confirm, by clicking a link in a mail, before their subscription to the new list is completed.
 
-To immediately confirm someone, and skipping sending the confirmation mail, use `subscribeskippingConfirmation`:
+To immediately confirm someone, and skipping sending the confirmation mail, use `subscribeSkippingConfirmation`:
 
 ```php
 $emailList->subscribeskippingConfirmation('john@example.com');
