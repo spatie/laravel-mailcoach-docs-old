@@ -39,7 +39,7 @@ Route::mailgunFeedback('mailgun-feedback');
 
 At Mailgun you must [configure a new webhook](https://www.mailgun.com/blog/a-guide-to-using-mailguns-webhooks/).
 
-At the webhooks settings screen at mailgun you must add the `clicked`, `complained`, `opened` and `permanent_fail` webhooks and point them to the route your configured. In the screenshot below we configured the webhooks using a `ngrok.io` domain.
+At the webhooks settings screen, on mailgun, you must add the `clicked`, `complained`, `opened` and `permanent_fail` webhooks and point them to the route you configured. In the screenshot below we configured the webhooks using a `ngrok.io` domain.
 
 ![Mailgun webhooks](https://mailcoach.app/images/docs/mailgun-webhooks.png)
 
