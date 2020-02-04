@@ -12,7 +12,7 @@ composer require spatie/laravel-mailcoach-mailgun-feedback
 
 ## Migrating the database
 
-Under the hood this package uses [spatie/laravel-webhook-client](https://github.com/spatie/laravel-mailcoach) to process handle webhooks. You are required to publish its migration to create the `webhook_calls` table. You can skip this step if your project already uses the `laravel-webhook-client` package directly.
+Under the hood this package uses [spatie/laravel-webhook-client](https://github.com/spatie/laravel-webhook-client) to process handle webhooks. You are required to publish its migration to create the `webhook_calls` table. You can skip this step if your project already uses the `laravel-webhook-client` package directly.
 
 ```php
 php artisan vendor:publish --provider="Spatie\WebhookClient\WebhookClientServiceProvider" --tag="migrations"
