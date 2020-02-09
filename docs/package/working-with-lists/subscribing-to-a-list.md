@@ -11,7 +11,7 @@ $emailList->subscribe('john@example.com');
 Alternatively you can create a subscriber via the `Subscriber` model.
 
 ```
-Subscriber::createFromEmail('john@example.com')->subscribeTo($emailList);
+Subscriber::createWithEmail('john@example.com')->subscribeTo($emailList);
 ```
 
 ## Specifying first name and last name
@@ -28,12 +28,12 @@ $subscriber = $emailList->subscribe('john@example.com', [
 Alternatively you can create a subscriber with attributes via the `Subscriber` model.
 
 ```
-Subscriber::createFromEmail('john@example.com')
-   ->withAttributes()
-   ->subscribeTo([
+Subscriber::createWithEmail('john@example.com')
+   ->withAttributes([
        'first_name' => 'John', 
        'last_name' => 'Doe'
-   ]);
+   ])
+   ->subscribeTo($emailList);
 ```
 
 ## Adding regular attributes
@@ -41,7 +41,7 @@ Subscriber::createFromEmail('john@example.com')
 If you need more attributes on a subscriber you can create [a migration](https://laravel.com/docs/master/migrations) that adds a field.
 
 ```php
-Schema::table('email_list_subscribers', function (Blueprint $table) {
+Schema::table('mailcoach_subscribers', function (Blueprint $table) {
     $table->string('job_title')->nullable();
 });
 ```
@@ -127,7 +127,7 @@ $allSubscribers = $emailList->allSubscribers;
 
 If [double opt-in](/docs/package/working-with-lists/using-double-opt-in) is enabled on a list, then `subscribeTo` won't result in an immediate subscription. Instead, the user must first confirm, by clicking a link in a mail, before their subscription to the new list is completed.
 
-To immediately confirm someone, and skipping sending the confirmation mail, use `subscribeskippingConfirmation`:
+To immediately confirm someone, and skipping sending the confirmation mail, use `subscribeSkippingConfirmation`:
 
 ```php
 $emailList->subscribeskippingConfirmation('john@example.com');
@@ -136,7 +136,7 @@ $emailList->subscribeskippingConfirmation('john@example.com');
 Alternatively you can use this syntax:
 
 ```php
-Subscriber::createForEmail('john@example.com')
-   ->skipDoubleOptIn()
-   ->toEmailList($emailList);
+Subscriber::createWithEmail('john@example.com')
+   ->skipConfirmation()
+   ->subscribeTo($emailList);
 ```
