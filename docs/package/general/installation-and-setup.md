@@ -287,6 +287,11 @@ In the `config/queue.php` file you must add the `mailcoach-redis` connection:
 
 By default you can only use the Mailcoach on a local environment. To use it in other environment you need to register an gate check. Head over to [the section on authorizing users](/docs/package/using-the-ui/authorizing-users) to learn more.
 
+
+## Specifying a timezone
+
+By default all dates in Mailcoach are in UTC. If you want to use another timezone, you can change the `timezone` setting in the `config/app.php` config file.
+
 ## Visit the UI
 
 After performing all these steps, you should be able to visit the Mailcoach UI at `/mailcoach`.
