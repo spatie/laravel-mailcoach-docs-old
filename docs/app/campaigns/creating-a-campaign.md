@@ -32,6 +32,13 @@ You can -_and should_- use placeholders in your emails. We strongly suggest incl
 
 While editing your email, you can see what it will look like for subscribers by clicking the _Preview_ button.
 
+Since we are sending out mails in UTF-8, it's good practice to include following charset definition in the `<head>` of your HTML as well. This way, special characters will also correctly show up in your preview.
+
+```HTML
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+```
+
+
 ## Delivery
 
 ![](https://mailcoach.app/images/docs/app/campaigns/creating-a-campaign-delivery.png)
