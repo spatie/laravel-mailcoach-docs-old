@@ -9,13 +9,13 @@ When a subscriber visits the actual unsubscribe URL, a simple message will be di
 To customize this confirmation message, publish the views.
 
 ```bash
-php artisan vendor:publish --provider="Spatie\Mailcoach\MailcoachServiceProvider" --tag="views"
+php artisan vendor:publish --provider="Spatie\Mailcoach\MailcoachServiceProvider" --tag="mailcoach-views"
 ```
 
-Now we modify the following views in the `/resources/views/vendor/mailcoach/unsubscribe/` directory:
+Now we modify the following views in the `/resources/views/vendor/mailcoach/landingPages/` directory:
 
 - `unsubscribed.blade.php`
-- `notFound.blade.php`
+- `couldNotFindSubscription.blade.php`
 
 ## Unsubscribing manually
 
