@@ -48,7 +48,7 @@ Choose a name for your configuration set and create it, then click the newly cre
 
 ![](https://mailcoach.app/images/docs/app/mail-configuration/amazon-ses-destination-type.png)
 
-In the window that pops up, choose a name and select the following event types: _Reject_, _Bounce_, and _Complaint_. Next, press the _Topic_ dropdown and choose _Create SNS Topic_:
+In the window that pops up, choose a name and select the following event types: _Reject_, _Bounce_,  _Complaint_, _Click_ and _Open_. Next, press the _Topic_ dropdown and choose _Create SNS Topic_:
 
 ![](https://mailcoach.app/images/docs/app/mail-configuration/amazon-ses-sns-destination.png)
 
