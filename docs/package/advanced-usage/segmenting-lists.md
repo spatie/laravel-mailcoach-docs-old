@@ -27,6 +27,39 @@ Campaign::create()
    ->sentTo($emailList);
 ```
 
+## Using an instantiated Segment object
+
+> Since 1.7.0, make sure the `segment_class` field in your `mailcoach_campaigns` table is a `text` field and not a  `varchar`
+
+Here's the same segment that will only select subscriber whose email address begin with a configurable character 'b'
+
+```php
+class OnlyEmailAddressesStartingWith extends Segment
+{
+    public string $character;
+
+    public function __construct(string $character) {
+        $this->character = $character;
+    }
+
+    public function shouldSend(Subscription $subscription, Campaign $campaign): bool
+    {
+        return Str::startsWith($subscription->email, $this->character);
+    }
+}
+```
+
+When sending a campaign this is how the segment can be used:
+
+```php
+Campaign::create()
+   ->html($yourHtml)
+   ->useSegment(new OnlyEmailAddressesStartingWith('b'))
+   ->sentTo($emailList);
+```
+
+The object will be serialized when saved to the campaign, and unserialized when used for segmenting.
+
 ## Using a query
 
 If you have a very large list, it might be better to use a query to select the subscribers of your segment. This can be done with the `getSubscriptionsQuery` method on a segment.
