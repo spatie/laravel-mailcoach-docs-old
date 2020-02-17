@@ -29,7 +29,7 @@ Campaign::create()
 
 ## Using an instantiated Segment object
 
-> **Since 1.7.1**
+> **Since 1.7.1**  
 > make sure the `segment_class` field in your `mailcoach_campaigns` table is a `text` field and not a  `varchar`
 
 Here's the same segment that will only select subscriber whose email address begin with a configurable character 'b'
