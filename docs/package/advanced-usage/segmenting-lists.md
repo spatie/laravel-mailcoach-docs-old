@@ -63,23 +63,18 @@ The object will be serialized when saved to the campaign, and unserialized when 
 
 ## Using a query
 
-If you have a very large list, it might be better to use a query to select the subscribers of your segment. This can be done with the `getSubscriptionsQuery` method on a segment.
+If you have a very large list, it might be better to use a query to select the subscribers of your segment. This can be done with the `subscribersQuery` method on a segment.
 
 Here's an example:
 
 ```php
 class OnlyEmailAddressesStartingWithA extends Segment
 {
-    public function getSubscriptionsQuery(Subscription $subscription, Campaign $campaign): bool
+    public function subscribersQuery(Builder $subscribersQuery): void
     {
-        return Subscription::query()
-            ->where('status', SubscriptionStatus::SUBSCRIBED)
-            ->whereHas('subscriber', function(Builder $query) {
-                $query->where('email','like', 'a%');
-            })
-            ->where('email_list_id', $campaign->emailList->id);
+        return $subscribersQuery->where('email','like', 'a%');
     }
 }
 ```
 
-No matter what you do in `getSubscriptionsQuery`, the package will never mail people that haven't subscribed to the email list you're sending the campaign to.
+No matter what you do in `subscribersQuery`, the package will never mail people that haven't subscribed to the email list you're sending the campaign to.
