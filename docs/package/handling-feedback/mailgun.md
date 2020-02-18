@@ -68,4 +68,4 @@ If you haven't done so already, you must configure Laravel to use the Mailgun dr
 
 ## Informing Mailgun 
 
-Before start sending campaigns via Mailgun we highly recommend getting in touch with their support and let them now the amount of mails your email list contains. Usually they will adjust the sending limits of your account so it's not a problem to send a large volumes in a short amount of time.
+Before start sending campaigns via Mailgun we highly recommend getting in touch with their support and let them know the amount of mails your email list contains. Usually they will adjust the sending limits of your account so it's not a problem to send a large volumes in a short amount of time.
