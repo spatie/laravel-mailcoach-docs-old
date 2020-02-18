@@ -26,7 +26,7 @@ Go to your _Mail configuration_ page in Mailcoach, and fill in the fields:
 
 ![](https://mailcoach.app/images/docs/app/mail-configuration/mailgun-setup-mail-config.png)
 
-- Mails per second: to not overwhelm Postmark with mail request, send this to a sensible value. In many cases `10` will be sufficient
+- Mails per second: to not overwhelm Postmark with mail requests, send this to a sensible value. In many cases `10` will be sufficient
 - Server token: you can get the right value on the [Postmark account details screen](https://account.postmarkapp.com/account/edit)
 - SMTP user
 - SMTP password
