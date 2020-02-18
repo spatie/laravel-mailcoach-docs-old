@@ -2,7 +2,7 @@
 title: Postmark
 ---
 
-The `spatie/laravel-mailcoach-postmark-feedback` package can handle bounce feedback coming from Postmark. All e-mail address that permanently bounce will be unsubscribed from all lists.
+The `spatie/laravel-mailcoach-postmark-feedback` package can handle bounce feedback coming from Postmark. All e-mail addresses that permanently bounce will be unsubscribed from all lists.
 
 You can install the add-on package via composer:
 
