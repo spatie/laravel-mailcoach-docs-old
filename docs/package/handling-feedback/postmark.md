@@ -32,7 +32,7 @@ You can replace `postmark-feedback` with any url you'd like.
 
 
 ```php
-Route::postmark('postmark-feedback');
+Route::postmarkFeedback('postmark-feedback');
 ```
 
 ## Configuring webhooks
