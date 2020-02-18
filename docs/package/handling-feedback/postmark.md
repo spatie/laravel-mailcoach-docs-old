@@ -37,7 +37,7 @@ Route::postmarkFeedback('postmark-feedback');
 
 ## Configuring webhooks
 
-At Post you must [configure a new webhook](https://postmarkapp.com/support/article/1067-how-do-i-enable-delivery-webhooks).
+At Postmark you must [configure a new webhook](https://postmarkapp.com/support/article/1067-how-do-i-enable-delivery-webhooks).
 
 At the webhooks settings screen, on Postmark, you must add the `Open`, `Bounce`, `Spam Complaint` and `Link Click` webhooks and point them to the route you configured. 
 

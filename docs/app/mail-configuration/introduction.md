@@ -7,6 +7,7 @@ Mailcoach can't send out emails by itself. To do this, Mailcoach needs a mail co
 - [Amazon SES](/docs/app/mail-configuration/amazon-ses)
 - [SendGrid](/docs/app/mail-configuration/sendgrid)
 - [Mailgun](/docs/app/mail-configuration/mailgun)
+- [Postmark](/docs/app/mail-configuration/postmark)
 
 ## Sending test mails
 
