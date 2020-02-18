@@ -72,7 +72,7 @@ class OnlyEmailAddressesStartingWithA extends Segment
 {
     public function subscribersQuery(Builder $subscribersQuery): void
     {
-        return $subscribersQuery->where('email','like', 'a%');
+        $subscribersQuery->where('email','like', 'a%');
     }
 }
 ```
