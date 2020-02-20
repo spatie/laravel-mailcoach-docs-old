@@ -1,8 +1,8 @@
 ---
-title: Mailgun
+title: Postmark
 ---
 
-## Configuring Mailgun
+## Configuring Postmark
 
 First off, make sure you have created an account with [Postmark](https://postmarkapp.com). 
 
@@ -18,13 +18,7 @@ The webhook should be sent to `https://<your-domain>/postmark-feedback`
 
 ## Configuring Mailcoach
 
-Mailcoach still needs to know where to send its emails, so go to _Overview_ page in your Mailgun dashboard, select the _API_ option, then _cURL_ and take note of the _API key_ and _API base URL_ that are now visible:
-
-![](https://mailcoach.app/images/docs/app/mail-configuration/mailgun-api-key.png)
-
-Go to your _Mail configuration_ page in Mailcoach, and fill in the fields:
-
-![](https://mailcoach.app/images/docs/app/mail-configuration/mailgun-setup-mail-config.png)
+On the Mail configuration settings screen in Mailcoach, you'll have to have to fill in these settings.
 
 - Mails per second: to not overwhelm Postmark with mail requests, send this to a sensible value. In many cases `10` will be sufficient
 - Server token: you can get the right value on the [Postmark account details screen](https://account.postmarkapp.com/account/edit)
