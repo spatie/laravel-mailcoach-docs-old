@@ -37,7 +37,8 @@ Now that you are logged in you must configure the email sending service you'd li
 This package handles various tasks in a queued way via [Laravel Horizon](https://laravel.com/docs/master/horizon). The `horizon.php` config is already preconfigured. You only need to [make sure that Horizon runs](https://laravel.com/docs/master/horizon#running-horizon).
 
 ### Running The Scheduler
-This package relies on the laravel scheduler, be sure to run `php artisan schedule:run` to send out any scheduled campaigns. 
+
+This package relies on the laravel scheduler, be sure to schedule the execution of `php artisan schedule:run` to run every minute.
 
 ### Making sure everything works
 
