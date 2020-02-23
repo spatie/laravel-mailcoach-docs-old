@@ -30,7 +30,7 @@ You can manually revert an unsubscribe by using the action menu, but we strongly
 
 ![](https://mailcoach.app/images/docs/app/lists/subscribers-import.png)
 
-You can easily import a list of subscribers into an existing list. Upload a CSV file with these columns: `email`, `first_name`, `last_name` and `tags`, and Mailcoach will start importing these into the list. You can follow the progress of the import, see any errors that occurred during the process, and download the uploaded file by using the action menu on the right.
+You can easily import a list of subscribers into an existing list. Upload a CSV file with these columns: `email`, `first_name`, `last_name` and `tags`, and Mailcoach will start importing these into the list. When you want to attach multiple tags to a subscribe, use `;` as the delimiter.  You can follow the progress of the import, see any errors that occurred during the process, and download the uploaded file by using the action menu on the right.
 
 ![](https://mailcoach.app/images/docs/app/lists/subscribers-import-page.png)
 
