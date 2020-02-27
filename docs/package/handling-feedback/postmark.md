@@ -39,25 +39,34 @@ Route::postmarkFeedback('postmark-feedback');
 
 At Postmark you must [configure a new webhook](https://postmarkapp.com/support/article/1067-how-do-i-enable-delivery-webhooks).
 
-At the webhooks settings screen, on Postmark, you must add the `Open`, `Bounce`, `Spam Complaint` and `Link Click` webhooks and point them to the route you configured. 
+At the webhooks settings screen on Postmark, you must specify the webhook URL. That url should start with the domain you installed mailcoach on, followed by `/postmark-feedback`.
+
+You should add a custom header named `mailcoach-signature`, and you can choose a value that you should keep secret.
+ 
+ you must add the `Open`, `Bounce`, `Spam Complaint` and `Link Click` webhooks and point them to the route you configured. 
+
+![](https://mailcoach.app/images/docs/package/postmark/postmark-webhooks.png)
+
+On the settings screen in Postmark, you should also enable open and link tracking
+
+![](https://mailcoach.app/images/docs/package/postmark/postmark-tracking.png)
+
 
 In the `mailcoach` config file you must add this section.
 
 ```php
 // in config/mailcoach.php
 
-    'post_feedback' => [
+    'postmark_feedback' => [
         'signing_secret' => env('POSTMARK_SIGNING_SECRET'),
    ],
 ```
 
-In your `.env` you must add a key `POSTMARK_SIGNING_SECRET` the value should be set in the format: `<username>:<password>`. Here's an example:
+In your `.env` you must add a key `POSTMARK_SIGNING_SECRET` the value should be set to the value you specified in the `mailcoach-signature` on the Postmark webhook settings screen:
 
 ```
-POSTMARK_SIGNING_SECRET=your-user:your-password
+POSTMARK_SIGNING_SECRET=
 ```
-
-You must use this route macro somewhere in your routes file. Replace `'postmark-feeback'` with the url you specified at Postmark when setting up the webhook there.
 
 ## Using the correct mail driver
 
