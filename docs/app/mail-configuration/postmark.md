@@ -28,4 +28,9 @@ On the Mail configuration settings screen in Mailcoach, you'll have to have to f
 
 - Mails per second: to not overwhelm Postmark with mail requests, send this to a sensible value. In many cases `10` will be sufficient
 - Server token: you can get the right value on the [Postmark account details screen](https://account.postmarkapp.com/account/edit)
-- Signing secret: this should be set to the value you specified for the `mailcoach-signature` header
+- Signing secret: this should be set to the value you specified for the `mailcoach-signature` header.
+
+## Informing Postmark 
+
+Using Postmark for bulk mail is currently in beta. Before start sending campaigns via Postmark we highly recommend getting in touch with their support and let them know you want to start sending bulk emails.
+
