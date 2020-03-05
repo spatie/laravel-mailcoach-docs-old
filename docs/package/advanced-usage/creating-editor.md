@@ -1,5 +1,5 @@
 ---
-title: Creating an editor
+title: Creating a custom editor
 ---
 **Since v2**
 
