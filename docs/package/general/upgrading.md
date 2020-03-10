@@ -8,9 +8,15 @@ title: Upgrading
 
 Mailcoach v2 requires Laravel 7, make sure to [upgrade your project](https://laravel.com/docs/7.x/upgrade#upgrade-7.0) first.
 
-### Mediliabrary v8
+### Media library v8
 
 Medialibrary has been upgraded to v8, please read the [upgrade guide](https://github.com/spatie/laravel-medialibrary/blob/master/UPGRADING.md#from-v7-to-v8) to make any changes necessary to your project.
+
+If you were not using media library in any way in your own code, you only need to create and run a migration to add this column to the `media` table.
+
+```php
+$table->string('conversions_disk')->nullable();
+```
 
 ### View changes
 All the views have changed, if you have published views that you've modified, make sure to republish them and port your changes.
@@ -44,15 +50,22 @@ Add the following new configuration keys to your `mailcoach.php` config file and
 'editor' => \Spatie\Mailcoach\Support\Editor\TextEditor::class,
 ```
 
+### Update the feed back package.
+
+If you're tracking opens and links you need to update the feedback package you are using to v2.
+
+Update `^1.0` for `^2.0` for the `spatie/laravel-mailcoach-<your email provider>-feedback` you have installed
+
 ### Database changes
 
-Make sure to add the following changed columns to your database table.
+Create and run a migration to add the following changed columns to your database table.
 
 #### mailcoach_email_lists
 Added:
 ```
 $table->string('campaign_mailer');
 $table->string('transactional_mailer');
+$table->integer('welcome_mail_delay_in_minutes')->default(0);
 ```
 
 #### mailcoach_campaigns

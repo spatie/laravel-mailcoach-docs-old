@@ -15,7 +15,7 @@ $emailList = EmailList::create(['name' => 'my email list name']);
 You can set a default email address and from name.
 
 ```php
-$emailList->default_from_email = 'john@example.com'
+$emailList->default_from_email = 'john@example.com';
 $emailList->default_from_name = 'John Doe';
 
 $emailList->save();
