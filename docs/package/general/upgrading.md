@@ -8,6 +8,10 @@ title: Upgrading
 
 Mailcoach v2 requires Laravel 7, make sure to [upgrade your project](https://laravel.com/docs/7.x/upgrade#upgrade-7.0) first.
 
+### Mediliabrary v8
+
+Medialibrary has been upgraded to v8, please read the [upgrade guide](https://github.com/spatie/laravel-medialibrary/blob/master/UPGRADING.md#from-v7-to-v8) to make any changes necessary to your project.
+
 ### View changes
 All the views have changed, if you have published views that you've modified, make sure to republish them and port your changes.
 
