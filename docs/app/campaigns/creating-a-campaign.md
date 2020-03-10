@@ -4,13 +4,13 @@ title: Creating a campaign
 
 When creating a campaign, you can either create a new one from scratch or duplicate an existing one to copy most of its settings:
 
-![](https://mailcoach.app/images/docs/app/campaigns/creating-a-campaign-index.png)
+![](https://mailcoach.app/images/docs/v1/app/campaigns/creating-a-campaign-index.png)
 
 When creating a new campaign, you can choose which of your templates, if any, you want to use as a base for your email's content. You can also choose to duplicate an existing campaign. Use these actions to save time when creating a new campaign.
 
 ## Settings
 
-![](https://mailcoach.app/images/docs/app/campaigns/creating-a-campaign-settings.png)
+![](https://mailcoach.app/images/docs/v1/app/campaigns/creating-a-campaign-settings.png)
 
 Most of the settings for creating a new campaign are pretty self-explanatory:
 
@@ -18,13 +18,13 @@ The name of a campaign is only used within your Mailcoach UI. Subscribers will n
 
 The value for the _Subject_ field is used as the subject for sent emails.
 
-The _List_ menu allows you to pick one of your lists, which you can further narrow down by picking one of its _Segments_ right below it. You can read more about tags and segments [here](/docs/app/lists/tags-and-segments).
+The _List_ menu allows you to pick one of your lists, which you can further narrow down by picking one of its _Segments_ right below it. You can read more about tags and segments [here](/docs/v1/app/lists/tags-and-segments).
 
-Finally, the tracking options allow you to track how many subscribers have opened your email and whether they clicked any of the links you included. You can see what the result of this tracking looks like in the [Campaign statistics](/docs/app/campaigns/campaign-statistics) section of the documentation.
+Finally, the tracking options allow you to track how many subscribers have opened your email and whether they clicked any of the links you included. You can see what the result of this tracking looks like in the [Campaign statistics](/docs/v1/app/campaigns/campaign-statistics) section of the documentation.
 
 ## Content
 
-![](https://mailcoach.app/images/docs/app/campaigns/creating-a-campaign-content.png)
+![](https://mailcoach.app/images/docs/v1/app/campaigns/creating-a-campaign-content.png)
 
 This is the content of the email that will be sent to your subscribers. If you selected a template while creating your campaign, the field will be prefilled with that template. If you duplicated another campaign, this field will be the same as that campaign's content.
 
@@ -41,7 +41,7 @@ Since we are sending out mails in UTF-8, it's good practice to include following
 
 ## Delivery
 
-![](https://mailcoach.app/images/docs/app/campaigns/creating-a-campaign-delivery.png)
+![](https://mailcoach.app/images/docs/v1/app/campaigns/creating-a-campaign-delivery.png)
 
 This page provides a final checklist that you should go over before sending a campaign. It shows a summary of the campaign's settings, like how many people will be sent an email, the subject and any issues we found with your email's content.
 
@@ -51,6 +51,6 @@ Finally, you can set the timing for this campaign: whether to send it right now 
 
 When sending a campaign, all the emails that need to be sent out will be placed in a queue, and you will be redirected to a page where you can track the progress and see your campaign's statistics trickling in:
 
-![](https://mailcoach.app/images/docs/app/campaigns/campaign-statistics-sending.png)
+![](https://mailcoach.app/images/docs/v1/app/campaigns/campaign-statistics-sending.png)
 
-For more information on what these statistics mean, continue reading in the [campaign's statistics](/docs/app/campaigns/campaign-statistics) section of the documentation.
+For more information on what these statistics mean, continue reading in the [campaign's statistics](/docs/v1/app/campaigns/campaign-statistics) section of the documentation.

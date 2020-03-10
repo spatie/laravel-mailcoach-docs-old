@@ -16,11 +16,11 @@ The webhook should be sent to `https://<your-domain>/postmark-feedback`
 
 You should add a custom header named `mailcoach-signature`, and you can choose a value that you should keep secret. You must turn on the `Open`, `Bounce`, `Spam Complaint` and `Link Click`.
 
-![](https://mailcoach.app/images/docs/package/postmark/postmark-webhooks.png)
+![](https://mailcoach.app/images/docs/v1/package/postmark/postmark-webhooks.png)
 
 On the settings screen in Postmark, you should also enable open and link tracking.
 
-![](https://mailcoach.app/images/docs/package/postmark/postmark-tracking.png)
+![](https://mailcoach.app/images/docs/v1/package/postmark/postmark-tracking.png)
 
 ## Configuring Mailcoach
 

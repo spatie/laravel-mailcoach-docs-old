@@ -4,7 +4,7 @@ title: Settings
 
 ## General settings
 
-![](https://mailcoach.app/images/docs/app/lists/settings-general.png)
+![](https://mailcoach.app/images/docs/v1/app/lists/settings-general.png)
 
 The first field, _name_, is simply the name of this mailing list. Subscribers will see it in places like the subscription confirmation page and when unsubscribing, so make sure the name is not too technical and that it explains well what the purpose of the list is.
 
@@ -16,21 +16,21 @@ You can also publish the mailing list to a public URL, to be consumed by an RSS 
 
 ## Reports
 
-![](https://mailcoach.app/images/docs/app/lists/settings-reports.png)
+![](https://mailcoach.app/images/docs/v1/app/lists/settings-reports.png)
 
 You and your colleagues can receive some statistics about this list and any campaigns sent to it. Fill in all the email addresses you want to send these reports to in the "To…" field, each separated by a comma.
 
 - "Confirmation when a campaign gets sent to this list": Receive an email when a campaign is **sent**. If you scheduled a campaign, this report will be sent when the scheduled date is reached.
 
-![](https://mailcoach.app/images/docs/app/lists/reports-campaign-sent.png)
+![](https://mailcoach.app/images/docs/v1/app/lists/reports-campaign-sent.png)
 
 - "Summary of opens, clicks & bounces a day after a campaign to this list has been sent": 24 hours after sending a campaign, you will receive an email report with the opens, clicks, and bounces.
 
-![](https://mailcoach.app/images/docs/app/lists/reports-campaign-summary.png)
+![](https://mailcoach.app/images/docs/v1/app/lists/reports-campaign-summary.png)
 
 - "Weekly summary on the subscriber growth of this list": Every Monday morning you will receive an email report with the changes in subscribers to your list.
 
-![](https://mailcoach.app/images/docs/app/lists/reports-list-summary.png)
+![](https://mailcoach.app/images/docs/v1/app/lists/reports-list-summary.png)
 
 ## Subscriptions
 
@@ -42,13 +42,13 @@ This option can be enabled to prevent spam, both to and from your mailing list. 
 
 You can also configure Mailcoach to use a custom page and/or send out custom confirmation emails that you created yourself. Refer to the 2 options that become available when checking this box:
 
-- [Confirm subscription](/docs/app/lists/settings#landing-pages) in the _Landing pages_ section.
+- [Confirm subscription](/docs/v1/app/lists/settings#landing-pages) in the _Landing pages_ section.
 
-- [Confirmation mail](/docs/app/lists/settings#confirmation-mail) at the bottom of the page.
+- [Confirmation mail](/docs/v1/app/lists/settings#confirmation-mail) at the bottom of the page.
 
 ### Allow POST from an external form
 
-![](https://mailcoach.app/images/docs/app/lists/settings-subscriptions-external-form.png)
+![](https://mailcoach.app/images/docs/v1/app/lists/settings-subscriptions-external-form.png)
 
 By enabling this option, you can create forms on your website that allow people to subscribe themselves to your list. Simply set the action (endpoint) of your form to the URL that was generated for this mailing list, and make sure to send at least a value for the "email" field in form submits, like so:
 
@@ -116,11 +116,11 @@ Finally, Mailcoach can also redirect users after they subscribe. There are some 
 
 ## Landing pages
 
-![](https://mailcoach.app/images/docs/app/lists/settings-landing-pages.png)
+![](https://mailcoach.app/images/docs/v1/app/lists/settings-landing-pages.png)
 
 These are the different pages that users will be sent to upon different interactions with your mailing list. We provide some default landing pages for these, but you can configure your own.
 
-![](https://mailcoach.app/images/docs/app/lists/settings-default-confirmation.png)
+![](https://mailcoach.app/images/docs/v1/app/lists/settings-default-confirmation.png)
 
 When creating custom landing pages, you don't need to provide any actions or buttons on these landing pages. They are simply the place users will be redirected to after performing an action on your list.
 
@@ -128,16 +128,16 @@ These values can be overridden by the values from the hidden redirect fields cre
 
 ## Welcome mail
 
-![](https://mailcoach.app/images/docs/app/lists/settings-welcome-mail.png)
+![](https://mailcoach.app/images/docs/v1/app/lists/settings-welcome-mail.png)
 
 Mailcoach can send welcome emails after people subscribe (or confirm) to your mailing list. We provide a default, but you can create your own by checking the _Send customized welcome mail_ option. In your custom mail, you can enter some placeholders, that Mailcoach will fill upon sending your email.
 
 ## Confirmation mail
 
-![](https://mailcoach.app/images/docs/app/lists/settings-confirmation-mail.png)
+![](https://mailcoach.app/images/docs/v1/app/lists/settings-confirmation-mail.png)
 
 This email will be sent to new subscribers if you have the _Require confirmation_ option enabled.
 
 Again, you can use the default that we created for you, or you can create a custom mail and use some of the available placeholders. Make sure to include the `::confirmUrl::` in this email, so people can confirm their subscription to your mailing list. After clicking this link, they will be redirected to your _Someone subscribed_ landing page.
 
-![](https://mailcoach.app/images/docs/app/lists/settings-default-confirmation-mail.png)
+![](https://mailcoach.app/images/docs/v1/app/lists/settings-default-confirmation-mail.png)

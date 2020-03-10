@@ -45,11 +45,11 @@ You should add a custom header named `mailcoach-signature`, and you can choose a
  
  you must add the `Open`, `Bounce`, `Spam Complaint` and `Link Click` webhooks and point them to the route you configured. 
 
-![](https://mailcoach.app/images/docs/package/postmark/postmark-webhooks.png)
+![](https://mailcoach.app/images/docs/v1/package/postmark/postmark-webhooks.png)
 
 On the settings screen in Postmark, you should also enable open and link tracking
 
-![](https://mailcoach.app/images/docs/package/postmark/postmark-tracking.png)
+![](https://mailcoach.app/images/docs/v1/package/postmark/postmark-tracking.png)
 
 
 In the `mailcoach` config file you must add this section.
@@ -70,7 +70,7 @@ POSTMARK_SIGNING_SECRET=
 
 ## Using the correct mail driver
 
-If you haven't done so already, you must configure Laravel to use the Postmark driver. Follow the instruction in [the mail section of the Laravel docs](https://laravel.com/docs/master/mail#driver-prerequisites).
+If you haven't done so already, you must configure Laravel to use the Postmark driver. Follow the instruction in [the mail section of the Laravel docs](https://laravel.com/docs/v1/master/mail#driver-prerequisites).
 
 ## Informing Postmark 
 

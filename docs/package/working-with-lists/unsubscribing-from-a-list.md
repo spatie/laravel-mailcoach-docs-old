@@ -2,7 +2,7 @@
 title: Unsubscribing from a list
 ---
 
-You can add an unsubscribe link by [adding an `::unsubscribeUrl::` placeholder](/docs/package/working-with-campaigns/creating-a-campaign/#setting-the-content-and-using-placeholders) to the HTML of your campaign.
+You can add an unsubscribe link by [adding an `::unsubscribeUrl::` placeholder](/docs/v1/package/working-with-campaigns/creating-a-campaign/#setting-the-content-and-using-placeholders) to the HTML of your campaign.
 
 When a subscriber visits the actual unsubscribe URL, a simple message will be displayed to confirming that they have  successfully unsubscribed.
 

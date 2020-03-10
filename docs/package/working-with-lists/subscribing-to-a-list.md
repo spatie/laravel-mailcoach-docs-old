@@ -38,7 +38,7 @@ Subscriber::createWithEmail('john@example.com')
 
 ## Adding regular attributes
 
-If you need more attributes on a subscriber you can create [a migration](https://laravel.com/docs/master/migrations) that adds a field.
+If you need more attributes on a subscriber you can create [a migration](https://laravel.com/docs/v1/master/migrations) that adds a field.
 
 ```php
 Schema::table('mailcoach_subscribers', function (Blueprint $table) {
@@ -72,7 +72,7 @@ $subscriber->extra_attributes->get('key 1'); // returns 'value 1';
 $subscriber->extra_attributes->get('key 2'); // returns 'value 2';
 ```
 
-You can read more on extra attributes in [this section of the docs](/docs/package/advanced-usage/working-with-extra-attributes-on-subscribers).
+You can read more on extra attributes in [this section of the docs](/docs/v1/package/advanced-usage/working-with-extra-attributes-on-subscribers).
 
 ## Checking if someone is subscribed
 
@@ -97,7 +97,7 @@ $subscriber->status;
 ```
 
 This property can contain three possible values:
-- `unconfirmed`: when the list uses [double opt in](/docs/package/working-with-lists/using-double-opt-in) and the confirmation link wasn't clicked yet
+- `unconfirmed`: when the list uses [double opt in](/docs/v1/package/working-with-lists/using-double-opt-in) and the confirmation link wasn't clicked yet
 - `subscribed`: when the subscriber is subscribed.
 - `unsubscribed`: when the subscriber was unsubscribed.
 
@@ -115,7 +115,7 @@ To get the email address of a subscriber call `email` on a subscriber.
 $email = $subscribers->first()->email;
 ```
 
-Calling `subscribers` on an email list will only return subscribers that have a subscription with a `subscribed` status. Subscribers that have unsubscribed or are still unconfirmed (when using [double opt in](/docs/package/working-with-lists/using-double-opt-in)) will not be returned.
+Calling `subscribers` on an email list will only return subscribers that have a subscription with a `subscribed` status. Subscribers that have unsubscribed or are still unconfirmed (when using [double opt in](/docs/v1/package/working-with-lists/using-double-opt-in)) will not be returned.
 
 To return all subscribers, including all unconfirmed and unsubscribed ones, use `allSubscribers`.
 
@@ -125,7 +125,7 @@ $allSubscribers = $emailList->allSubscribers;
 
 ## Skipping opt in when subscribing
 
-If [double opt-in](/docs/package/working-with-lists/using-double-opt-in) is enabled on a list, then `subscribeTo` won't result in an immediate subscription. Instead, the user must first confirm, by clicking a link in a mail, before their subscription to the new list is completed.
+If [double opt-in](/docs/v1/package/working-with-lists/using-double-opt-in) is enabled on a list, then `subscribeTo` won't result in an immediate subscription. Instead, the user must first confirm, by clicking a link in a mail, before their subscription to the new list is completed.
 
 To immediately confirm someone, and skipping sending the confirmation mail, use `subscribeSkippingConfirmation`:
 

@@ -6,7 +6,7 @@ Templates provide a starting point for a campaign's email content.
 
 ## Creating a template
 
-![](https://mailcoach.app/images/docs/app/templates/create.png)
+![](https://mailcoach.app/images/docs/v1/app/templates/create.png)
 
 You can preview what this template will look like in a user's email client by creating a campaign based on this template, and visiting the campaign's _Content_ tab.
 

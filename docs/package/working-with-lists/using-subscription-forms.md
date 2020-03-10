@@ -59,4 +59,4 @@ $emailList->allowedFormSubscriptionTags([$tagA->id, $tagB->id]);
 
 ## A word to the wise
 
-We highly recommend that you turn on [confirmation](/docs/package/working-with-lists/using-double-opt-in) for email lists that allow form subscriptions. This will keep your list healthy. Also consider adding a honeypot to the form to avoid bots from trying to subscribe. When using Laravel, you could opt to use [the spatie/laravel-honeypot package](https://github.com/spatie/laravel-honeypot).
+We highly recommend that you turn on [confirmation](/docs/v1/package/working-with-lists/using-double-opt-in) for email lists that allow form subscriptions. This will keep your list healthy. Also consider adding a honeypot to the form to avoid bots from trying to subscribe. When using Laravel, you could opt to use [the spatie/laravel-honeypot package](https://github.com/spatie/laravel-honeypot).

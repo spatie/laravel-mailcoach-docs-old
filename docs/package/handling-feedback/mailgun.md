@@ -41,11 +41,11 @@ At Mailgun you must [configure a new webhook](https://www.mailgun.com/blog/a-gui
 
 At the webhooks settings screen, on mailgun, you must add the `clicked`, `complained`, `opened` and `permanent_fail` webhooks and point them to the route you configured. In the screenshot below we configured the webhooks using a `ngrok.io` domain.
 
-![Mailgun webhooks](https://mailcoach.app/images/docs/mailgun-webhooks.png)
+![Mailgun webhooks](https://mailcoach.app/images/docs/v1/mailgun-webhooks.png)
 
 At the domain settings you must enable click and open tracking
 
-![Mailgun webhooks](https://mailcoach.app/images/docs/mailgun-domain-settings.png)
+![Mailgun webhooks](https://mailcoach.app/images/docs/v1/mailgun-domain-settings.png)
 
 
 In the `mailcoach` config file you must add this section.
@@ -64,7 +64,7 @@ You must use this route macro somewhere in your routes file. Replace `'mailgun-f
 
 ## Using the correct mail driver
 
-If you haven't done so already, you must configure Laravel to use the Mailgun driver. Follow the instruction in [the mail section of the Laravel docs](https://laravel.com/docs/master/mail#driver-prerequisites).
+If you haven't done so already, you must configure Laravel to use the Mailgun driver. Follow the instruction in [the mail section of the Laravel docs](https://laravel.com/docs/v1/master/mail#driver-prerequisites).
 
 ## Informing Mailgun 
 
