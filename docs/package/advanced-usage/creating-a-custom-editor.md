@@ -1,7 +1,6 @@
 ---
 title: Creating a custom editor
 ---
-**Since v2**
 
 By default, Mailcoach ships with a standard HTML field as editor. If you want some more wysiwyg functionality, we also provide an [Unlayer editor package](https://github.com/spatie/laravel-mailcoach-unlayer).
 
