@@ -2,9 +2,9 @@
 title: Installation & setup
 ---
 
-Mailcoach can be installed as a package inside an existing Laravel application. This version of mailcoach does not come with any user management, instead your can [use a gate check to determine who can access Mailcoach](https://mailcoach.app/docs/v2/package/using-the-ui/authorizing-users).
+Mailcoach can be installed as a package inside an existing Laravel application. This version of mailcoach does not come with any user management, instead you can [use a gate check to determine who can access Mailcoach](https://mailcoach.app/docs/package/using-the-ui/authorizing-users).
 
-In order to install Mailcoach you'll need to [get a license](/docs/v2/app/general/getting-a-license) first.
+In order to install Mailcoach, you'll need to [get a license](/docs/app/general/getting-a-license) first.
  
  First, add the `satis.mailcoach.app` repository in your `composer.json`.
 
@@ -36,7 +36,7 @@ This is the content you should put in `auth.json`:
 }
 ```
 
-With the configuration above in place you'll be able to install the package into your project using this command:
+With the configuration above in place, you'll be able to install the package into your project using this command:
 
 ```bash
 composer require "spatie/laravel-mailcoach:^1.0.0"
@@ -224,7 +224,7 @@ This package handles various tasks in a queued way via [Laravel Horizon](https:/
 
 After Horizon is installed, don't forget to set `QUEUE_CONNECTION` in your `.env` file to `redis`.
 
-`config/horizon.php` should have been created in your project. In this config file you must add a block named `mailcoach` to both the `production` and `local` environment.
+`config/horizon.php` should have been created in your project. In this config file, you must add a block named `mailcoach` to both the `production` and `local` environment.
 
 ```php
 'environments' => [
@@ -285,12 +285,11 @@ In the `config/queue.php` file you must add the `mailcoach-redis` connection:
 
 ## Add authorization to Mailcoach UI
 
-By default you can only use the Mailcoach on a local environment. To use it in other environment you need to register an gate check. Head over to [the section on authorizing users](/docs/v2/package/using-the-ui/authorizing-users) to learn more.
-
+By default, you can only use the Mailcoach on a local environment. To use it in other environment, you need to register an gate check. Head over to [the section on authorizing users](/docs/package/using-the-ui/authorizing-users) to learn more.
 
 ## Specifying a timezone
 
-By default all dates in Mailcoach are in UTC. If you want to use another timezone, you can change the `timezone` setting in the `config/app.php` config file.
+By default, all dates in Mailcoach are in UTC. If you want to use another timezone, you can change the `timezone` setting in the `config/app.php` config file.
 
 ## Visit the UI
 
