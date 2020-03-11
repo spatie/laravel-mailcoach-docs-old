@@ -48,9 +48,9 @@ Mailcoach can send out mail via various email sending services and can handle th
 
 Follow the instruction on the dedicated docs page of each supported service.
 
-- [Amazon SES](/docs/package/handling-feedback/amazon-ses)
-- [Mailgun](/docs/package/handling-feedback/mailgun)
-- [Sendgrid](/docs/package/handling-feedback/sendgrid)
+- [Amazon SES](/docs/v2/package/handling-feedback/amazon-ses)
+- [Mailgun](/docs/v2/package/handling-feedback/mailgun)
+- [Sendgrid](/docs/v2/package/handling-feedback/sendgrid)
 
 ## Prepare the database
 
@@ -220,7 +220,7 @@ By default, we set this value to the default Laravel connection name, `default`.
 
 ## Install Horizon
 
-This package handles various tasks in a queued way via [Laravel Horizon](https://laravel.com/docs/master/horizon). If your application doesn't have Horizon installed yet, follow [their installation instructions](https://laravel.com/docs/master/horizon#installation).
+This package handles various tasks in a queued way via [Laravel Horizon](https://laravel.com/docs/v2/master/horizon). If your application doesn't have Horizon installed yet, follow [their installation instructions](https://laravel.com/docs/v2/master/horizon#installation).
 
 After Horizon is installed, don't forget to set `QUEUE_CONNECTION` in your `.env` file to `redis`.
 
@@ -286,7 +286,6 @@ In the `config/queue.php` file you must add the `mailcoach-redis` connection:
 ## Add authorization to Mailcoach UI
 
 By default, you can only use the Mailcoach on a local environment. To use it in other environment, you need to register an gate check. Head over to [the section on authorizing users](/docs/package/using-the-ui/authorizing-users) to learn more.
-
 
 ## Specifying a timezone
 

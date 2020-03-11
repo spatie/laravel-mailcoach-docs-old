@@ -37,15 +37,15 @@ Route::sendgridFeedback('sendgrid-feedback');
 
 ## Configuring webhooks
 
-At Sendgrid you must [configure a new webhook](https://sendgrid.com/docs/for-developers/tracking-events/getting-started-event-webhook/).
+At Sendgrid you must [configure a new webhook](https://sendgrid.com/docs/v2/for-developers/tracking-events/getting-started-event-webhook/).
 
 At the webhooks settings screen at sendgrid you must add the `Bounced`, `Opened`, `Clicked` and `Mark as Spam` webhooks and point them to the route your configured. In the screenshot below we configured the webhooks using a `ngrok.io` domain with a `?secret=yolo-no-real-signature` appended to the webhook url.
 
-![Sendgrid webhooks](https://mailcoach.app/images/docs/sendgrid-webhooks.png)
+![Sendgrid webhooks](https://mailcoach.app/images/docs/v2/sendgrid-webhooks.png)
 
 At the Tracking settings you must enable click and open tracking
 
-![Mailgun webhooks](https://mailcoach.app/images/docs/sendgrid-tracking-settings.png)
+![Mailgun webhooks](https://mailcoach.app/images/docs/v2/sendgrid-tracking-settings.png)
 
 In the `mailcoach` config file you must add this section.
 
@@ -61,7 +61,7 @@ In your `.env` you must add a key `SENDGRID_SIGNING_SECRET` with the Sendgrid si
 
 ## Using the correct mail driver
 
-If you haven't done so already, you must configure Laravel to use the Sendgrid driver. Follow the instruction in [the mail section of the Laravel docs](https://laravel.com/docs/master/mail#driver-prerequisites).
+If you haven't done so already, you must configure Laravel to use the Sendgrid driver. Follow the instruction in [the mail section of the Laravel docs](https://laravel.com/docs/v2/master/mail#driver-prerequisites).
 
 ## Informing Sendgrid 
 

@@ -6,7 +6,7 @@ The package can track when and how many times a subscriber opens a campaign.
 
 ## Enabling open tracking
 
-To use this feature, you must set `track_opens` to `true` of a campaign you're going to send. You can find an example of how to do this in the section on [how to create a campaign](/docs/package/working-with-campaigns/creating-a-campaign).
+To use this feature, you must set `track_opens` to `true` of a campaign you're going to send. You can find an example of how to do this in the section on [how to create a campaign](/docs/v2/package/working-with-campaigns/creating-a-campaign).
 
 ## How it works under the hood
 
