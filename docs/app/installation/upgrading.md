@@ -37,4 +37,4 @@ In your database you should add a few columns:
 
 ## Upgrading settings
 
-You could opt to re-enter your mailer settings in the mail configuration section. You'll can find your old settings in the `mailConfiguration.json` of your old Mailcoach app.
+You should enter your mailer settings in the mail configuration section. You'll can find your old settings in the `mailConfiguration.json` of your old Mailcoach app.
