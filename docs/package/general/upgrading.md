@@ -16,6 +16,7 @@ If you were not using media library in any way in your own code, you only need t
 
 ```php
 $table->string('conversions_disk')->nullable();
+$table->uuid('uuid')->nullable();
 ```
 
 ### View changes
@@ -63,8 +64,8 @@ Create and run a migration to add the following changed columns to your database
 #### mailcoach_email_lists
 Added:
 ```
-$table->string('campaign_mailer');
-$table->string('transactional_mailer');
+$table->string('campaign_mailer')->nullable();
+$table->string('transactional_mailer')->nullable();
 $table->integer('welcome_mail_delay_in_minutes')->default(0);
 ```
 
