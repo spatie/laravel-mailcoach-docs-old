@@ -7,7 +7,7 @@ The `spatie/laravel-mailcoach-sendgrid-feedback` package can handle bounce feedb
 You can install the add-on package via composer:
 
 ```bash
-composer require spatie/laravel-mailcoach-sendgrid-feedback
+composer require spatie/laravel-mailcoach-sendgrid-feedback:^1.0
 ```
 
 ## Migrating the database

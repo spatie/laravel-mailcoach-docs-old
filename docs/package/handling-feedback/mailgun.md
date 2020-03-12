@@ -7,7 +7,7 @@ The `spatie/laravel-mailcoach-mailgun-feedback` package can handle bounce feedba
 You can install the add-on package via composer:
 
 ```bash
-composer require spatie/laravel-mailcoach-mailgun-feedback
+composer require spatie/laravel-mailcoach-mailgun-feedback:^1.0
 ```
 
 ## Migrating the database
