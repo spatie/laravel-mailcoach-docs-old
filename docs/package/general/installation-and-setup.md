@@ -116,6 +116,23 @@ Below is the default content of the config file:
 
 ```php
 return [
+
+    /*
+     * The mailer used by Mailcoach for password resets and summary emails.
+     * Mailcoach will use the default Laravel mailer if this is not set.
+     */
+    'mailer' => null,
+
+    /*
+     * The default mailer used by Mailcoach for sending campaigns.
+     */
+    'campaign_mailer' => null,
+
+    /*
+     * The default mailer used by Mailcoach for confirmation and welcome mails.
+     */
+    'transactional_mailer' => null,
+
     /*
      * The date format used on all screens of the UI
      */
@@ -132,6 +149,12 @@ return [
         \Spatie\Mailcoach\Support\Replacers\EmailListReplacer::class,
         \Spatie\Mailcoach\Support\Replacers\UnsubscribeUrlReplacer::class,
     ],
+
+    /**
+     * Here you can configure which template editor Mailcoach uses.
+     * By default this is a text editor that highlights HTML.
+     */
+    'editor' => \Spatie\Mailcoach\Support\Editor\TextEditor::class,
 
     /*
      * Here you can specify which jobs should run on which queues.
@@ -210,6 +233,7 @@ return [
         Spatie\Mailcoach\Http\App\Middleware\SetMailcoachDefaults::class,
     ]
 ];
+
 ```
 
 ## Install and configure redis
