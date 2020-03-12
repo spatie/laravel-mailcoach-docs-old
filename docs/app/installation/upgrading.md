@@ -24,7 +24,7 @@ In your database you should add a few columns:
 #### mailcoach_email_lists
 
 - `campaign_mailer`: string, nullable
-- `transaction_mailer`: string, nullable
+- `transactional_mailer`: string, nullable
 - `welcome_mail_delay_in_minutes`: integer, default value `0`
 
 #### mailcoach_campaigns
