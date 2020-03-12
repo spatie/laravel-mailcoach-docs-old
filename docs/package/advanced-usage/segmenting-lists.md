@@ -24,7 +24,7 @@ When sending a campaign this is how the segment can be used:
 Campaign::create()
    ->content($yourHtml)
    ->segment(OnlyEmailAddressesStartingWithA::class)
-   ->sentTo($emailList);
+   ->sendTo($emailList);
 ```
 
 ## Using an instantiated Segment object
@@ -56,7 +56,7 @@ When sending a campaign this is how the segment can be used:
 Campaign::create()
    ->content($yourHtml)
    ->segment(new OnlyEmailAddressesStartingWith('b'))
-   ->sentTo($emailList);
+   ->sendTo($emailList);
 ```
 
 The object will be serialized when saved to the campaign, and unserialized when used for segmenting.
