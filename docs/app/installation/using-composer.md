@@ -34,7 +34,7 @@ Now that you are logged in you must configure the email sending service you'd li
 
 ### Running Horizon
 
-This package handles various tasks in a queued way via [Laravel Horizon](https://laravel.com/docs/v2/master/horizon). The `horizon.php` config is already preconfigured. You only need to [make sure that Horizon runs](https://laravel.com/docs/v2/master/horizon#running-horizon).
+This package handles various tasks in a queued way via [Laravel Horizon](https://laravel.com/docs/master/horizon). The `horizon.php` config is already preconfigured. You only need to [make sure that Horizon runs](https://laravel.com/docs/master/horizon#running-horizon).
 
 ### Running The Scheduler
 
