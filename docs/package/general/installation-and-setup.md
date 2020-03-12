@@ -42,68 +42,6 @@ With the configuration above in place, you'll be able to install the package int
 composer require "spatie/laravel-mailcoach:^2.0.0"
 ```
 
-## Configure an email sending service
-
-Mailcoach can send out mail via various email sending services and can handle the feedback (opens, clicks, bounces, complaints) those services give.
-
-Follow the instruction on the dedicated docs page of each supported service.
-
-- [Amazon SES](/docs/v2/package/handling-feedback/amazon-ses)
-- [Mailgun](/docs/v2/package/handling-feedback/mailgun)
-- [Sendgrid](/docs/v2/package/handling-feedback/sendgrid)
-
-## Prepare the database
-
-You need to publish and run the migration:
-
-```bash
-php artisan vendor:publish --provider="Spatie\Mailcoach\MailcoachServiceProvider" --tag="mailcoach-migrations"
-php artisan migrate
-```
-
-## Add the route macro
-
-You must register the routes needed to handle subscription confirmations, open, and click tracking. We recommend that you don't put this in your routes file, but in the `map` method of `RouteServiceProvider`
-
-```php
-Route::mailcoach('mailcoach');
-```
-
-## Schedule the commands
-
-In the console kernel, you should schedule these commands.
-
-```php
-// in app/Console/Kernel.php
-protected function schedule(Schedule $schedule)
-{
-    // ...
-    $schedule->command('mailcoach:calculate-statistics')->everyMinute();
-    $schedule->command('mailcoach:send-scheduled-campaigns')->everyMinute();
-    $schedule->command('mailcoach:send-campaign-summary-mail')->hourly();
-    $schedule->command('mailcoach:send-email-list-summary-mail')->mondays()->at('9:00');
-    $schedule->command('mailcoach:delete-old-unconfirmed-subscribers')->daily();
-}
-```
-
-## Publish the assets
-
-You must publish the JavaScript and CSS assets using this command:
-
-```bash
-php artisan vendor:publish --tag mailcoach-assets --force
-```
-
-To ensure that these assets get republished each time Mailcoach is updated, we highly recommend you add the following command to the `post-update-cmd` of the `scripts` section of your `composer.json`.
-
-```php
-    "scripts": {
-        "post-update-cmd": [
-            "@php artisan vendor:publish --tag mailcoach-assets --force"
-        ]
-    }
-```
-
 ## Publish the config file
 
 Optionally, You can publish the config file with this command.
@@ -233,7 +171,75 @@ return [
         Spatie\Mailcoach\Http\App\Middleware\SetMailcoachDefaults::class,
     ]
 ];
+```
 
+## Configure an email sending service
+
+Mailcoach can send out mail via various email sending services and can handle the feedback (opens, clicks, bounces, complaints) those services give.
+
+Head over to the Laravel documentation to learn [how to set up a mailer](https://laravel.com/docs/7.x/mail#configuration).
+
+Mailcoach can use a different mailers for sending confirmation & welcome mails and campaign mails. This way you can keep a very good reputations with the mailer service you use for campaign mails, as the confirmation mails might bounce.
+
+To use different mailers, fill in the name of configured mailers in the `campaign_mailer` and `transactional_mailers` of the `mailcoach.php` config file.
+
+To configure tracking open, clicks, bounces & complaints, follow the instruction on the dedicated docs page of each supported service.
+
+- [Amazon SES](/docs/v2/package/handling-feedback/amazon-ses)
+- [Mailgun](/docs/v2/package/handling-feedback/mailgun)
+- [Sendgrid](/docs/v2/package/handling-feedback/sendgrid)
+- [Postmark](/docs/v2/package/handling-feedback/postmark)
+
+## Prepare the database
+
+You need to publish and run the migration:
+
+```bash
+php artisan vendor:publish --provider="Spatie\Mailcoach\MailcoachServiceProvider" --tag="mailcoach-migrations"
+php artisan migrate
+```
+
+## Add the route macro
+
+You must register the routes needed to handle subscription confirmations, open, and click tracking. We recommend that you don't put this in your routes file, but in the `map` method of `RouteServiceProvider`
+
+```php
+Route::mailcoach('mailcoach');
+```
+
+## Schedule the commands
+
+In the console kernel, you should schedule these commands.
+
+```php
+// in app/Console/Kernel.php
+protected function schedule(Schedule $schedule)
+{
+    // ...
+    $schedule->command('mailcoach:calculate-statistics')->everyMinute();
+    $schedule->command('mailcoach:send-scheduled-campaigns')->everyMinute();
+    $schedule->command('mailcoach:send-campaign-summary-mail')->hourly();
+    $schedule->command('mailcoach:send-email-list-summary-mail')->mondays()->at('9:00');
+    $schedule->command('mailcoach:delete-old-unconfirmed-subscribers')->daily();
+}
+```
+
+## Publish the assets
+
+You must publish the JavaScript and CSS assets using this command:
+
+```bash
+php artisan vendor:publish --tag mailcoach-assets --force
+```
+
+To ensure that these assets get republished each time Mailcoach is updated, we highly recommend you add the following command to the `post-update-cmd` of the `scripts` section of your `composer.json`.
+
+```php
+    "scripts": {
+        "post-update-cmd": [
+            "@php artisan vendor:publish --tag mailcoach-assets --force"
+        ]
+    }
 ```
 
 ## Install and configure redis
