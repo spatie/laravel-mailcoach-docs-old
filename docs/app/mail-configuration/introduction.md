@@ -2,7 +2,7 @@
 title: Introduction
 ---
 
-Mailcoach can't send out emails by itself. To do this, Mailcoach needs a mail configuration with a third party email delivery platform. We support these services:
+Mailcoach sends out mail using a third party email delivery platform.
 
 - [Amazon SES](/docs/v2/app/mail-configuration/amazon-ses)
 - [SendGrid](/docs/v2/app/mail-configuration/sendgrid)
@@ -16,3 +16,11 @@ We also support sending via SMTP. When you select this driver, open and click tr
 To make sure Mailcoach is happy with your mail configuration, send a test mail to your own email address. It should arrive in your mailbox not long after. If this test mail ends up in your spam, there may be something wrong with your domain or DNS settings.
 
 ![](https://mailcoach.app/images/docs/v2/app/mail-configuration/successful-test-mail.png)
+
+### Sending confirmation and welcome mails with a different account
+
+Some email providers have very strict rules on sending mails. There require to keep a low bounce rate at all times. Confirmation mails have a higher chance of bouncing because they are sent to unverified email addresses.
+
+To keep your primary email service happy, you can opt to use a different account to send out confirmation and welcome mails. To do so, configure a transactional mailer in the "Transaction mail" section of the settings.
+
+![](https://mailcoach.app/images/docs/v2/app/mail-configuration/transactional.png)
