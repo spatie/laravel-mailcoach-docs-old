@@ -12,7 +12,7 @@ provides code highlighting, auto completion and much more.
 You can install the package via composer:
 
 ```bash
-composer require spatie/laravel-mailcoach-monaco
+composer require spatie/laravel-mailcoach-monaco:^1.0
 ```
 
 ### Publish the assets

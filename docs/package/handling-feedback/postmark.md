@@ -7,7 +7,7 @@ The `spatie/laravel-mailcoach-postmark-feedback` package can handle bounce feedb
 You can install the add-on package via composer:
 
 ```bash
-composer require spatie/laravel-mailcoach-postmark-feedback
+composer require spatie/laravel-mailcoach-postmark-feedback:^2.0
 ```
 
 ## Migrating the database

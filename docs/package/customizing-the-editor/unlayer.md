@@ -11,7 +11,7 @@ title: Unlayer
 You can install the add on package via composer:
 
 ```bash
-composer require spatie/laravel-mailcoach-unlayer
+composer require spatie/laravel-mailcoach-unlayer:^1.0
 ```
 
 ### Publish and run the migration

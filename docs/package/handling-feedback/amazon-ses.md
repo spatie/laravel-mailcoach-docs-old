@@ -7,7 +7,7 @@ title: Amazon SES
 You can install the add-on package via composer:
 
 ```bash
-composer require spatie/laravel-mailcoach-ses-feedback
+composer require spatie/laravel-mailcoach-ses-feedback:^2.0
 ```
 
 ## Migrating the database
