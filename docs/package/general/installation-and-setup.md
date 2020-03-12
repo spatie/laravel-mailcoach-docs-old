@@ -321,6 +321,10 @@ By default, you can only use the Mailcoach on a local environment. To use it in 
 
 By default, all dates in Mailcoach are in UTC. If you want to use another timezone, you can change the `timezone` setting in the `config/app.php` config file.
 
+## Choosing an editor
+
+By default, Mailcoach uses a plain textarea field to edit campaigns and templates. If you'd like to use a feature rich editor, you can [use one of the add-on packages](/docs/v2/package/customizing-the-editor/introduction).
+
 ## Visit the UI
 
 After performing all these steps, you should be able to visit the Mailcoach UI at `/mailcoach`.
