@@ -8,7 +8,7 @@ title: Unlayer
 
 ## Installation
 
-You can install th add on package via composer:
+You can install the add on package via composer:
 
 ```bash
 composer require spatie/laravel-mailcoach-unlayer
