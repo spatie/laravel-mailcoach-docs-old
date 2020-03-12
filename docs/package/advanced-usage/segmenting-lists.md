@@ -22,8 +22,8 @@ When sending a campaign this is how the segment can be used:
 
 ```php
 Campaign::create()
-   ->html($yourHtml)
-   ->useSegment(OnlyEmailAddressesStartingWithA::class)
+   ->content($yourHtml)
+   ->segment(OnlyEmailAddressesStartingWithA::class)
    ->sentTo($emailList);
 ```
 
@@ -54,8 +54,8 @@ When sending a campaign this is how the segment can be used:
 
 ```php
 Campaign::create()
-   ->html($yourHtml)
-   ->useSegment(new OnlyEmailAddressesStartingWith('b'))
+   ->content($yourHtml)
+   ->segment(new OnlyEmailAddressesStartingWith('b'))
    ->sentTo($emailList);
 ```
 
