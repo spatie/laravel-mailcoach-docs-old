@@ -19,7 +19,7 @@ To make sure Mailcoach is happy with your mail configuration, send a test mail t
 
 ### Sending confirmation and welcome mails with a different account
 
-Some email providers have very strict rules on sending mails. There require to keep a low bounce rate at all times. Confirmation mails have a higher chance of bouncing because they are sent to unverified email addresses.
+Some email providers have very strict rules on sending mails. They require to keep a low bounce rate at all times. Confirmation mails have a higher chance of bouncing because they are sent to unverified email addresses.
 
 To keep your primary email service happy, you can opt to use a different account to send out confirmation and welcome mails. To do so, configure a transactional mailer in the "Transaction mail" section of the settings.
 
