@@ -315,7 +315,7 @@ In the `config/queue.php` file you must add the `mailcoach-redis` connection:
 
 ## Add authorization to Mailcoach UI
 
-By default, you should only use Mailcoach (as package) on a local environment. To use it in another environment, you need to register a gate check. Head over to [the section on authorizing users](/docs/v2/package/using-the-ui/authorizing-users) to learn more.
+By default, you can only use Mailcoach (as package) on a local environment. To use it in another environment, you need to register a gate check. Head over to [the section on authorizing users](/docs/v2/package/using-the-ui/authorizing-users) to learn more.
 
 ## Specifying a timezone
 
