@@ -2,9 +2,9 @@
 title: Installation & setup
 ---
 
-Mailcoach can be installed as a package inside an existing Laravel application. This version of Mailcoach does not come with any user management, instead you can [use a gate check to determine who can access Mailcoach](https://mailcoach.app/docs/package/using-the-ui/authorizing-users).
+Mailcoach can be installed as a package inside an existing Laravel application. This version of Mailcoach does not come with any user management, instead you can [use a gate check to determine who can access Mailcoach](https://mailcoach.app/docs/v2/package/using-the-ui/authorizing-users).
 
-In order to install Mailcoach, you'll need to [get a license](/docs/app/general/getting-a-license) first.
+In order to install Mailcoach, you'll need to [get a license](/docs/v2/app/general/getting-a-license) first.
  
  First, add the `satis.mailcoach.app` repository in your `composer.json`.
 
