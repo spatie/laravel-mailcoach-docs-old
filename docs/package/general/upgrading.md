@@ -6,7 +6,7 @@ title: Upgrading
 
 ### Laravel 7
 
-Mailcoach v2 requires Laravel 7, make sure to [upgrade your project](https://laravel.com/docs/v2/7.x/upgrade#upgrade-7.0) first.
+Mailcoach v2 requires Laravel 7, make sure to [upgrade your project](https://laravel.com/docs/7.x/upgrade#upgrade-7.0) first.
 
 ### Media library v8
 
