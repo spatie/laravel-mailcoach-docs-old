@@ -103,8 +103,15 @@ return [
         'send_campaign_job' => 'send-campaign',
         'send_mail_job' => 'send-mail',
         'send_test_mail_job' => 'mailcoach',
-        'process_feedback_job' => 'mailcoach-feedback'
+        'process_feedback_job' => 'mailcoach-feedback',
+        'import_subscribers_job' => 'mailcoach',
     ],
+
+    /*
+     * Here you can specify on which connection Mailcoach's jobs will be dispatched.
+     * Leave empty to use the app default's env('QUEUE_CONNECTION')
+     */
+    'queue_connection' => '',
 
     /*
      * By default only 10 mails per second will be sent to avoid overwhelming your
@@ -169,7 +176,7 @@ return [
         Spatie\Mailcoach\Http\App\Middleware\Authenticate::class,
         Spatie\Mailcoach\Http\App\Middleware\Authorize::class,
         Spatie\Mailcoach\Http\App\Middleware\SetMailcoachDefaults::class,
-    ]
+    ],
 ];
 ```
 
