@@ -2,9 +2,9 @@
 title: Installation & setup
 ---
 
-Mailcoach can be installed as a package inside an existing Laravel application. This version of mailcoach does not come with any user management, instead you can [use a gate check to determine who can access Mailcoach](https://mailcoach.app/docs/package/using-the-ui/authorizing-users).
+Mailcoach can be installed as a package inside an existing Laravel application. This version of Mailcoach does not come with any user management, instead you can [use a gate check to determine who can access Mailcoach](https://mailcoach.app/docs/v2/package/using-the-ui/authorizing-users).
 
-In order to install Mailcoach, you'll need to [get a license](/docs/app/general/getting-a-license) first.
+In order to install Mailcoach, you'll need to [get a license](/docs/v2/app/general/getting-a-license) first.
  
  First, add the `satis.mailcoach.app` repository in your `composer.json`.
 
@@ -257,7 +257,7 @@ By default, we set this value to the default Laravel connection name, `default`.
 
 ## Install Horizon
 
-This package handles various tasks in a queued way via [Laravel Horizon](https://laravel.com/docs/v2/master/horizon). If your application doesn't have Horizon installed yet, follow [their installation instructions](https://laravel.com/docs/v2/master/horizon#installation).
+This package handles various tasks in a queued way via [Laravel Horizon](https://laravel.com/docs/master/horizon). If your application doesn't have Horizon installed yet, follow [their installation instructions](https://laravel.com/docs/master/horizon#installation).
 
 After Horizon is installed, don't forget to set `QUEUE_CONNECTION` in your `.env` file to `redis`.
 
@@ -322,7 +322,7 @@ In the `config/queue.php` file you must add the `mailcoach-redis` connection:
 
 ## Add authorization to Mailcoach UI
 
-By default, you can only use the Mailcoach on a local environment. To use it in other environment, you need to register an gate check. Head over to [the section on authorizing users](/docs/package/using-the-ui/authorizing-users) to learn more.
+By default, you can only use Mailcoach UI on a local environment. To use it in another environment, you need to register a gate check. Head over to [the section on authorizing users](/docs/v2/package/using-the-ui/authorizing-users) to learn more.
 
 ## Specifying a timezone
 
