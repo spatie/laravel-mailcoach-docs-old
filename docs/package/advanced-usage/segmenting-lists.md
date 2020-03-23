@@ -11,9 +11,9 @@ Here's a silly segment that will only select subscriber whose email address begi
 ```php
 class OnlyEmailAddressesStartingWithA extends Segment
 {
-    public function shouldSend(Subscription $subscription, Campaign $campaign): bool
+    public function shouldSend(Subscriber $subscriber): bool
     {
-        return Str::startsWith($subscription->email, 'a');
+        return Str::startsWith($subscriber->email, 'a');
     }
 }
 ```
@@ -43,9 +43,9 @@ class OnlyEmailAddressesStartingWith extends Segment
         $this->character = $character;
     }
 
-    public function shouldSend(Subscription $subscription, Campaign $campaign): bool
+    public function shouldSend(Subscriber $subscriber): bool
     {
-        return Str::startsWith($subscription->email, $this->character);
+        return Str::startsWith($subscriber->email, $this->character);
     }
 }
 ```
@@ -78,3 +78,18 @@ class OnlyEmailAddressesStartingWithA extends Segment
 ```
 
 No matter what you do in `subscribersQuery`, the package will never mail people that haven't subscribed to the email list you're sending the campaign to.
+
+## Segment description
+
+`Spatie\Mailcoach\Support\Segments\Segment` allows us to give our custom segment a unique name. This is required by the interface and can be done very simple:
+
+```php
+    public function description(): string
+    {
+        return 'My cool segment';
+    }
+```
+
+## Accessing the Campaign model
+
+If you need to get any `campaign` details somewhere in your segment logic, you can use `$this->campaign` to access the model object of the campaign that is being sent.
