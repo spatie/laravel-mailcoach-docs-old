@@ -177,6 +177,11 @@ return [
         Spatie\Mailcoach\Http\App\Middleware\Authorize::class,
         Spatie\Mailcoach\Http\App\Middleware\SetMailcoachDefaults::class,
     ],
+
+    /*
+     * This disk will be used to store files regarding importing subscribers.
+     */
+    'import_subscribers_disk' => 'public',
 ];
 ```
 
