@@ -64,7 +64,7 @@ You must use this route macro somewhere in your routes file. Replace `'mailgun-f
 
 ## Using the correct mail driver
 
-If you haven't done so already, you must configure Laravel to use the Mailgun driver. Follow the instruction in [the mail section of the Laravel docs](https://laravel.com/docs/v1/master/mail#driver-prerequisites).
+If you haven't done so already, you must configure Laravel to use the Mailgun driver. Follow the instruction in [the mail section of the Laravel docs](https://laravel.com/docs/6.x/mail#driver-prerequisites).
 
 ## Informing Mailgun 
 

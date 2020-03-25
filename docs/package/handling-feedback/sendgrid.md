@@ -61,7 +61,7 @@ In your `.env` you must add a key `SENDGRID_SIGNING_SECRET` with the Sendgrid si
 
 ## Using the correct mail driver
 
-If you haven't done so already, you must configure Laravel to use the Sendgrid driver. Follow the instruction in [the mail section of the Laravel docs](https://laravel.com/docs/v1/master/mail#driver-prerequisites).
+If you haven't done so already, you must configure Laravel to use the Sendgrid driver. Follow the instruction in [the mail section of the Laravel docs](https://laravel.com/docs/6.x/mail#driver-prerequisites).
 
 ## Informing Sendgrid 
 

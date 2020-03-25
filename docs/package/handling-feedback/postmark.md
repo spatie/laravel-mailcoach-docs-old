@@ -70,7 +70,7 @@ POSTMARK_SIGNING_SECRET=
 
 ## Using the correct mail driver
 
-If you haven't done so already, you must configure Laravel to use the Postmark driver. Follow the instruction in [the mail section of the Laravel docs](https://laravel.com/docs/v1/master/mail#driver-prerequisites).
+If you haven't done so already, you must configure Laravel to use the Postmark driver. Follow the instruction in [the mail section of the Laravel docs](https://laravel.com/docs/6.x/mail#driver-prerequisites).
 
 ## Informing Postmark 
 

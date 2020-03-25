@@ -38,7 +38,7 @@ Subscriber::createWithEmail('john@example.com')
 
 ## Adding regular attributes
 
-If you need more attributes on a subscriber you can create [a migration](https://laravel.com/docs/v1/master/migrations) that adds a field.
+If you need more attributes on a subscriber you can create [a migration](https://laravel.com/docs/6.x/migrations) that adds a field.
 
 ```php
 Schema::table('mailcoach_subscribers', function (Blueprint $table) {
