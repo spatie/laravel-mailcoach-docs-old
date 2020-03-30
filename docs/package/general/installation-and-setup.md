@@ -284,7 +284,7 @@ After Horizon is installed, don't forget to set `QUEUE_CONNECTION` in your `.env
             'balance' => 'auto',
             'processes' => 3,
             'tries' => 1,
-            'timeout' => 60 * 10,
+            'timeout' => 60 * 60,
         ],
     ],
 
