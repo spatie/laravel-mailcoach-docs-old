@@ -296,6 +296,7 @@ After Horizon is installed, don't forget to set `QUEUE_CONNECTION` in your `.env
             'balance' => 'simple',
             'processes' => 10,
             'tries' => 2,
+            'timeout' => 60 * 60,
         ],
 
         'mailcoach' => [
