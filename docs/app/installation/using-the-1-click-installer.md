@@ -12,8 +12,11 @@ Here's a video that walks you through the process.
 
 After the server is set up, you are responsible for maintaining it. We highly recommend [enabling automatic backups at Digital Ocean](https://www.digitalocean.com/docs/images/backups/quickstart/).
  
- Automatic security updates are enabled by default.
-The database credentials can be found in `/root/.digitalocean_password`. You might want to copy that password to a safe place and delete the file.
+ Automatic security updates are enabled by default. The database credentials can be found in `/root/.digitalocean_password`. You might want to copy that password to a safe place and delete the file.
+
+### Making sure everything works
+
+Before sending out a real campaign, we highly recommend creating a small email list with a couple of test email addresses and send a campaign to it. This way, you can verify that sending mails, and the open & click tracking are all working correctly.
 
 ## Troubleshooting
 
