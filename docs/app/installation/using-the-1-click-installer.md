@@ -4,7 +4,7 @@ title: Installation using the 1-click installer
 
 You can use a one click installer to provision a new server at DigitalOcean. This new server will have Mailcoach and all its dependencies pre-installed. You don't need any Laravel or PHP knowledge to get started.
 
-You can start the Mailcoach 1-click installer at [the market place of Digital Ocean](https://marketplace.digitalocean.com/apps/mailcoach).
+You can start the Mailcoach 1-click installer at [the market place of Digital Ocean](https://marketplace.digitalocean.com/apps/mailcoach?refcode=daf998eae49e).
 
 Here's a video that walks you through the process.
 
