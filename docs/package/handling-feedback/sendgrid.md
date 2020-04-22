@@ -12,7 +12,7 @@ composer require spatie/laravel-mailcoach-sendgrid-feedback:^1.0
 
 ## Migrating the database
 
-Under the hood this package uses [spatie/laravel-webhook-client](https://github.com/spatie/laravel-mailcoach) to process handle webhooks. You are required to publish its migration to create the `webhook_calls` table. You can skip this step if your project already uses the `laravel-webhook-client` package directly.
+Under the hood this package uses [spatie/laravel-webhook-client](https://github.com/spatie/laravel-webhook-client) to process handle webhooks. You are required to publish its migration to create the `webhook_calls` table. You can skip this step if your project already uses the `laravel-webhook-client` package directly.
 
 ```php
 php artisan vendor:publish --provider="Spatie\WebhookClient\WebhookClientServiceProvider" --tag="migrations"
@@ -37,7 +37,7 @@ Route::sendgridFeedback('sendgrid-feedback');
 
 ## Configuring webhooks
 
-At Sendgrid you must [configure a new webhook](https://sendgrid.com/docs/v1/for-developers/tracking-events/getting-started-event-webhook/).
+At Sendgrid you must [configure a new webhook](https://sendgrid.com/docs/for-developers/tracking-events/getting-started-event-webhook/).
 
 At the webhooks settings screen at sendgrid you must add the `Bounced`, `Opened`, `Clicked` and `Mark as Spam` webhooks and point them to the route your configured. In the screenshot below we configured the webhooks using a `ngrok.io` domain with a `?secret=yolo-no-real-signature` appended to the webhook url.
 
