@@ -37,7 +37,7 @@ Route::sendgridFeedback('sendgrid-feedback');
 
 ## Configuring webhooks
 
-At Sendgrid you must [configure a new webhook](https://sendgrid.com/docs/v2/for-developers/tracking-events/getting-started-event-webhook/).
+At Sendgrid you must [configure a new webhook](https://sendgrid.com/docs/for-developers/tracking-events/getting-started-event-webhook/).
 
 At the webhooks settings screen at sendgrid you must add the `Bounced`, `Opened`, `Clicked` and `Mark as Spam` webhooks and point them to the route your configured. In the screenshot below we configured the webhooks using a `ngrok.io` domain with a `?secret=yolo-no-real-signature` appended to the webhook url.
 
