@@ -6,7 +6,7 @@ You can use a one click installer to provision a new server at DigitalOcean. Thi
 
 You can start the Mailcoach 1-click installer at [the market place of Digital Ocean](https://marketplace.digitalocean.com/apps/mailcoach?refcode=daf998eae49e).
 
-Here's a video that walks you through the process.
+Read <a href="/1-click-installer">our summary</a> or watch this video that walks you through the process.
 
 <iframe src="https://player.vimeo.com/video/402762711" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
 
