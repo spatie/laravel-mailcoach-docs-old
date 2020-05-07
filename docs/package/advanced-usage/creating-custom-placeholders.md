@@ -32,7 +32,7 @@ class WebviewReplacer implements Replacer
     {
         $webviewUrl = $campaign->webviewUrl();
 
-        return str_ireplace('::webviewUrl::', $webviewUrl, $campaign->email_html);
+        return str_ireplace('::webviewUrl::', $webviewUrl, $html);
     }
 }
 ```
