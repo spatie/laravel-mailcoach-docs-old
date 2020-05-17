@@ -194,7 +194,7 @@ Mailcoach can send out mail via various email sending services and can handle th
 
 Head over to the Laravel documentation to learn [how to set up a mailer](https://laravel.com/docs/7.x/mail#configuration).
 
-Mailcoach can use a different mailers for sending confirmation & welcome mails and campaign mails. This way you can keep a very good reputations with the mailer service you use for campaign mails, as the confirmation mails might bounce.
+Mailcoach can use different mailers for sending confirmation & welcome mails and campaign mails. This way you can keep very good reputations with the mailer service you use for campaign mails, as the confirmation mails might bounce.
 
 To use different mailers, fill in the name of configured mailers in the `campaign_mailer` and `transactional_mailers` of the `mailcoach.php` config file.
 
