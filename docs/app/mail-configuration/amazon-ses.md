@@ -73,3 +73,5 @@ To complete your Amazon SES configuration, you need to enter your configuration 
 ![](https://mailcoach.app/images/docs/v2/app/mail-configuration/amazon-ses-final-mailcoach-mail-config.png)
 
 Your Amazon SES configuration should now be complete, you can go ahead and try sending a test mail. It may go to your spam if you have not set up your domain settings.
+
+Note: If you have created a new Amazon SES account, you will need to request a sending limit change to have your account removed from the sandbox. Until your account is removed from the Amazon SES sandbox you will only be able to send emails to verified email addresses.
