@@ -19,7 +19,7 @@ $email = $event->subcriber->email;
 This is how to get the name of the email list:
 
 ```php
-$nameOfEmailList = $event->emailList->name;
+$nameOfEmailList = $event->subscriber->emailList->name;
 ```
 
 ## `Spatie\Mailcoach\Events\UnconfirmedSubscriberCreatedEvent`
