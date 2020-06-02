@@ -103,6 +103,7 @@ return [
         'send_campaign_job' => 'send-campaign',
         'send_mail_job' => 'send-mail',
         'send_test_mail_job' => 'mailcoach',
+        'send_welcome_mail_job' => 'mailcoach',
         'process_feedback_job' => 'mailcoach-feedback',
         'import_subscribers_job' => 'mailcoach',
     ],
