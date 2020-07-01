@@ -12,5 +12,6 @@ Most email providers have a limit on how many emails you can send within a given
     'allowed_number_of_jobs_in_timespan' => 5,
     'timespan_in_seconds' => 1,
     'release_in_seconds' => 5,
+    'retry_until_hours' => 24,
 ],
 ```
