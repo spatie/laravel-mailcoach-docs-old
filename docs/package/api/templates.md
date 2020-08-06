@@ -14,7 +14,7 @@ $ curl https://example.app/mailcoach/api/templates \
     -H 'Content-Type: application/json'
 ```
 
-Searching is possible on this endpoint using `?search=searchterm` for searching.
+Searching is possible on this endpoint using `?filter[search]=searchterm` for searching.
 
 Sorting is possible on this endpoint on `name` and `updated_at`. For example `?sort=-updated_at` to sort descending on `updated_at`
 
