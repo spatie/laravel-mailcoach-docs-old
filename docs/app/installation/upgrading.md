@@ -1,5 +1,5 @@
 ---
-title: Upgrading
+title: Upgrading from v2 to v3
 ---
 
 If you installed Mailcoach as a package inside an existing Laravel app, you need to follow [these instructions](https://mailcoach.app/docs/v2/package/general/upgrading).
@@ -12,29 +12,42 @@ You can create a new Mailcoach app with this command
 composer create-project spatie/Mailcoach
 ```
 
-## Upgrading the database
+## Upgrading the database schema
 
 In your database you should add a few columns:
 
-#### media
+#### mailcoach_subscribers
 
-- `conversions_disk`: string, nullable
-- `uuid`: uuid, nullable,
+- `imported_via_import_uuid`: uuid, nullable
 
-#### mailcoach_email_lists
+#### mailcoach_subscriber_imports
 
-- `campaign_mailer`: string, nullable
-- `transactional_mailer`: string, nullable
-- `welcome_mail_delay_in_minutes`: integer, default value `0`
+- `subscribe_unsubscribed` : boolean, default: false
+- `unsubscribe_others`: boolean, default false,
 
-#### mailcoach_campaigns
+## Upgrading database content
 
-- `structured_html` : text, nullable
+- `track_opens` and `track_clicks`: v3 of mailcoach now assumes that the two last numbers are the digits. For campaign that were sent using v2 you should add two zeroes, so `31` should become `3100`
 
-#### mailcoach_templates
+## Updating the config file
 
-- `structured_html` : text, nullable
+The `middleware` option now contains an array with `web` and `api`. This is the new default:
 
-## Upgrading settings
-
-You should enter your mailer settings in the mail configuration section. You'll can find your old settings in the `mailConfiguration.json` of your old Mailcoach app.
+```php
+    /*
+     *  These middleware will be assigned to every Mailcoach routes, giving you the chance
+     *  to add your own middleware to this stack or override any of the existing middleware.
+     */
+    'middleware' => [
+        'web' => [
+            'web',
+            Spatie\Mailcoach\Http\App\Middleware\Authenticate::class,
+            Spatie\Mailcoach\Http\App\Middleware\Authorize::class,
+            Spatie\Mailcoach\Http\App\Middleware\SetMailcoachDefaults::class,
+        ],
+        'api' => [
+            'api',
+            'auth:api',
+        ],
+    ],
+```
