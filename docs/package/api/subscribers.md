@@ -1,5 +1,5 @@
 ---
-title: Email Lists
+title: Subscribers
 ---
 
 ## Get all subscribers from an email list
