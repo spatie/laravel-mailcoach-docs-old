@@ -229,7 +229,7 @@ If the API call succeeded, you'll be given an empty response with a `204` status
 
 ## Error handling
 
-If an error occured, you'll be given a non-HTTP/200 response code. The resulting payload might look like this.
+If an error occurred, you'll be given a non-HTTP/200 response code. The resulting payload might look like this.
 
 ```json
 {

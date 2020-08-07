@@ -2,7 +2,7 @@
 title: API Authentication
 ---
 
-For authentication, the Mailcoach API requires a logged in user through the `auth:api` guard. This can be configured by changing the `mailcoach.middleware.api` configuration.
+For authentication the Mailcoach API requires a logged in user through the `auth:api` guard. This can be configured by changing the `mailcoach.middleware.api` configuration.
 
 Other than this, Mailcoach does nothing special regarding authentication and leaves all authentication up to your implementation needs.
 

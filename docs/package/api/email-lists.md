@@ -183,7 +183,7 @@ If the API call succeeded, you'll be given output like this.
 
 ## Update an email list
 
-To update an email list, create a `PUT` call to the `/mailcoach/api/email-lists/<id>` endpoint. In the example below we're updating the email list with ID 99.
+To update an email list, create a `PUT` call to the `/mailcoach/api/email-lists/<id>` endpoint. In the example below we're updating the email list with ID 99. When update you should pass all fields mentioned in the payload above.
 
 ```shell script
 $ MAILCOACH_TOKEN="your API token"
@@ -225,7 +225,7 @@ If the API call succeeded, you'll be given an empty response with a `204` status
 
 ## Error handling
 
-If an error occured, you'll be given a non-HTTP/200 response code. The resulting payload might look like this.
+If an error occurred, you'll be given a non-HTTP/200 response code. The resulting payload might look like this.
 
 ```json
 {
