@@ -6,7 +6,7 @@ This package fires several events. You can listen for them firing to perform ext
 
 ## `Spatie\Mailcoach\Events\SubscribedEvent`
 
-This event will be fired as soon as someone subscribes. If [double opt-in](/docs/v2/package/working-with-lists/using-double-opt-in) is enabled on the email list someone is in the process of subscribing to, this event will be fired when the subscription is confirmed.
+This event will be fired as soon as someone subscribes. If [double opt-in](/docs/v3/package/working-with-lists/using-double-opt-in) is enabled on the email list someone is in the process of subscribing to, this event will be fired when the subscription is confirmed.
 
 The event has one public property: `$subscriber` which is an instance of `Spatie\Mailcoach\Models\Subscriber`.
 
@@ -74,7 +74,7 @@ $campaignName = $event->send->campaign->name;
 
 ## `Spatie\Mailcoach\Events\CampaignOpenedEvent`
 
-This event will be fired when somebody opens an email. Be aware that this event could be fired many times after sending a campaign to a email list with a large number of subscribers. This event will only be fired for campaigns that have [open tracking](/docs/v2/package/working-with-campaigns/tracking-opens) enabled.
+This event will be fired when somebody opens an email. Be aware that this event could be fired many times after sending a campaign to a email list with a large number of subscribers. This event will only be fired for campaigns that have [open tracking](/docs/v3/package/working-with-campaigns/tracking-opens) enabled.
 
 It has one public property: `$campaignOpen`, which is an instance of the `Spatie\Mailcoach\Models\CampaignOpen` model.
 
@@ -92,7 +92,7 @@ $name = $event->campaignOpen->campaign->name;
 
 ## `Spatie\Mailcoach\Events\CampaignLinkClickedEvent`
 
-This event will be fired when somebody clicks a link in a mail. This event will only be fired for campaigns that have [click tracking](/docs/v2/package/working-with-campaigns/tracking-clicks) enabled.
+This event will be fired when somebody clicks a link in a mail. This event will only be fired for campaigns that have [click tracking](/docs/v3/package/working-with-campaigns/tracking-clicks) enabled.
 
 It has one public property `$campaignClick`, which is an instance of the `Spatie\Mailcoach\Models\CampaignClick` model.
 
@@ -110,7 +110,7 @@ $email = $event->campaignClick->subscriber->email;
 
 ## `Spatie\Mailcoach\Events\CampaignStatisticsCalculatedEvent`
 
-After a campaign has been sent, statistics will [be calculated according to a schedule](/docs/v2/package/working-with-campaigns/viewing-statistics-of-a-sent-campaign).
+After a campaign has been sent, statistics will [be calculated according to a schedule](/docs/v3/package/working-with-campaigns/viewing-statistics-of-a-sent-campaign).
 
 Each time the statistics are calculated this event will be fired. It has one public property `$campaign`, which is an instance of the `Spatie\Mailcoach\Models\Campaign` model.
 

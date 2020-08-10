@@ -8,7 +8,7 @@ After a campaign is sent, some statistics will be made available.
 
 ### On a campaign
 
-The [scheduled](/docs/v2/package/general/installation-and-setup/#schedule-the-calculate-statistics-command) 'email-campaigns:calculate-statistics' will fill these attributes on the `Campaign` model:
+The [scheduled](/docs/v3/package/general/installation-and-setup/#schedule-the-calculate-statistics-command) 'email-campaigns:calculate-statistics' will fill these attributes on the `Campaign` model:
 
 - `sent_to_number_of_subscribers`
 - `open_count`: this is the total number of times your campaign was opened. Multiple opens by a single subscriber will be counted.

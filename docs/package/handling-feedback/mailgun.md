@@ -41,11 +41,11 @@ At Mailgun you must [configure a new webhook](https://www.mailgun.com/blog/a-gui
 
 At the webhooks settings screen, on mailgun, you must add the `clicked`, `complained`, `opened` and `permanent_fail` webhooks and point them to the route you configured. In the screenshot below we configured the webhooks using a `ngrok.io` domain.
 
-![Mailgun webhooks](https://mailcoach.app/images/docs/v2/mailgun-webhooks.png)
+![Mailgun webhooks](https://mailcoach.app/images/docs/v3/mailgun-webhooks.png)
 
 At the domain settings you must enable click and open tracking
 
-![Mailgun webhooks](https://mailcoach.app/images/docs/v2/mailgun-domain-settings.png)
+![Mailgun webhooks](https://mailcoach.app/images/docs/v3/mailgun-domain-settings.png)
 
 
 In the `mailcoach` config file you must add this section.

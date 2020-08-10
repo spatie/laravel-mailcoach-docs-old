@@ -2,9 +2,9 @@
 title: Installation & setup
 ---
 
-Mailcoach can be installed as a package inside an existing Laravel application. This version of Mailcoach does not come with any user management, instead you can [use a gate check to determine who can access Mailcoach](https://mailcoach.app/docs/v2/package/using-the-ui/authorizing-users).
+Mailcoach can be installed as a package inside an existing Laravel application. This version of Mailcoach does not come with any user management, instead you can [use a gate check to determine who can access Mailcoach](https://mailcoach.app/docs/v3/package/using-the-ui/authorizing-users).
 
-In order to install Mailcoach, you'll need to [get a license](/docs/v2/app/general/getting-a-license) first.
+In order to install Mailcoach, you'll need to [get a license](/docs/v3/app/general/getting-a-license) first.
  
  First, add the `satis.mailcoach.app` repository in your `composer.json`.
 
@@ -201,10 +201,10 @@ To use different mailers, fill in the name of configured mailers in the `campaig
 
 To configure tracking open, clicks, bounces & complaints, follow the instruction on the dedicated docs page of each supported service.
 
-- [Amazon SES](/docs/v2/package/handling-feedback/amazon-ses)
-- [Mailgun](/docs/v2/package/handling-feedback/mailgun)
-- [Sendgrid](/docs/v2/package/handling-feedback/sendgrid)
-- [Postmark](/docs/v2/package/handling-feedback/postmark)
+- [Amazon SES](/docs/v3/package/handling-feedback/amazon-ses)
+- [Mailgun](/docs/v3/package/handling-feedback/mailgun)
+- [Sendgrid](/docs/v3/package/handling-feedback/sendgrid)
+- [Postmark](/docs/v3/package/handling-feedback/postmark)
 
 ## Prepare the database
 
@@ -333,7 +333,7 @@ In the `config/queue.php` file you must add the `mailcoach-redis` connection:
 
 ## Add authorization to Mailcoach UI
 
-By default, you can only use Mailcoach UI on a local environment. To use it in another environment, you need to register a gate check. Head over to [the section on authorizing users](/docs/v2/package/using-the-ui/authorizing-users) to learn more.
+By default, you can only use Mailcoach UI on a local environment. To use it in another environment, you need to register a gate check. Head over to [the section on authorizing users](/docs/v3/package/using-the-ui/authorizing-users) to learn more.
 
 Mailcoach will redirect unauthorized users to the route specified in the `redirect_unauthorized_users_to_route` key of the Mailcoach config file. By default, the `login` route is used. If you don't have a `login` route in your application, set this setting to a route that does exist.
  
@@ -343,7 +343,7 @@ By default, all dates in Mailcoach are in UTC. If you want to use another timezo
 
 ## Choosing an editor
 
-By default, Mailcoach uses a plain textarea field to edit campaigns and templates. If you'd like to use a feature rich editor, you can [use one of the add-on packages](/docs/v2/package/customizing-the-editor/introduction).
+By default, Mailcoach uses a plain textarea field to edit campaigns and templates. If you'd like to use a feature rich editor, you can [use one of the add-on packages](/docs/v3/package/customizing-the-editor/introduction).
 
 ## Visit the UI
 

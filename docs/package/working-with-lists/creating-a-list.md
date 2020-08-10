@@ -25,7 +25,7 @@ When sending a campaign to this email list these defaults will be used if you se
 
 ### Specifing the mailers to be used
 
-By default, Mailcoach sends all mails using the default mailer of your Laravel app. In the `mailcoach.php` config file, [you can override this](https://mailcoach.app/docs/v2/package/general/installation-and-setup#configure-an-email-sending-service).
+By default, Mailcoach sends all mails using the default mailer of your Laravel app. In the `mailcoach.php` config file, [you can override this](https://mailcoach.app/docs/v3/package/general/installation-and-setup#configure-an-email-sending-service).
 
 At the time of creating your EmailList, the `transactional_mailer` and `campaign_mailer` attributes will be set based on your configuration settings. Any future change in your configuration settings will not automatically apply to the EmailList.
 

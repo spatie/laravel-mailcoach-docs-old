@@ -2,7 +2,7 @@
 title: Upgrading from v2 to v3
 ---
 
-If you installed Mailcoach as a package inside an existing Laravel app, you need to follow [these instructions](https://mailcoach.app/docs/v2/package/general/upgrading).
+If you installed Mailcoach as a package inside an existing Laravel app, you need to follow [these instructions](https://mailcoach.app/docs/v3/package/general/upgrading).
 
 An in-place upgrade of the full Mailcoach app is hard. Instead, we recommend creating a new fresh Mailcoach 2 app and updating your current database and settings to the new v2 format.
 
