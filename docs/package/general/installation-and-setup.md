@@ -271,7 +271,7 @@ This package handles various tasks in a queued way via [Laravel Horizon](https:/
 
 After Horizon is installed, don't forget to set `QUEUE_CONNECTION` in your `.env` file to `redis`.
 
-`config/horizon.php` should have been created in your project. In this config file, you must add a block named `mailcoach` to both the `production` and `local` environment.
+`config/horizon.php` should have been created in your project. In this config file, you must add a block named `mailcoach-general` and `mailcoach-heavy` to both the `production` and `local` environment.
 
 ```php
 'environments' => [
@@ -284,9 +284,17 @@ After Horizon is installed, don't forget to set `QUEUE_CONNECTION` in your `.env
             'tries' => 2,
             'timeout' => 60 * 60,
         ],
-        'mailcoach' => [
+        'mailcoach-general' => [
             'connection' => 'mailcoach-redis',
-            'queue' => ['send-campaign', 'send-mail', 'mailcoach-feedback', 'mailcoach'],
+            'queue' => ['mailcoach', 'mailcoach-feedback', 'send-mail'],
+            'balance' => 'auto',
+            'processes' => 10,
+            'tries' => 2,
+            'timeout' => 60 * 60,
+        ],
+        'mailcoach-heavy' => [
+            'connection' => 'mailcoach-redis',
+            'queue' => ['send-campaign'],
             'balance' => 'auto',
             'processes' => 3,
             'tries' => 1,
@@ -303,10 +311,17 @@ After Horizon is installed, don't forget to set `QUEUE_CONNECTION` in your `.env
             'tries' => 2,
             'timeout' => 60 * 60,
         ],
-
-        'mailcoach' => [
+        'mailcoach-general' => [
             'connection' => 'mailcoach-redis',
-            'queue' => ['send-campaign', 'send-mail', 'mailcoach-feedback', 'mailcoach'],
+            'queue' => ['mailcoach', 'mailcoach-feedback', 'send-mail'],
+            'balance' => 'auto',
+            'processes' => 10,
+            'tries' => 2,
+            'timeout' => 60 * 60,
+        ],
+        'mailcoach-heavy' => [
+            'connection' => 'mailcoach-redis',
+            'queue' => ['send-campaign'],
             'balance' => 'auto',
             'processes' => 3,
             'tries' => 1,

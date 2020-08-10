@@ -52,6 +52,69 @@ The `middleware` option now contains an array with `web` and `api`. This is the 
     ],
 ```
 
+## Horizon configuration
+
+We now suggest a new horizon configuration for balancing the queue that Mailcoach uses, make sure `mailcoach-general` and `mailcoach-heavy` are present in your production and local Horizon environments:
+
+```php
+// config/horizon.php
+'environments' => [
+    'production' => [
+        'supervisor-1' => [
+            'connection' => 'redis',
+            'queue' => ['default'],
+            'balance' => 'simple',
+            'processes' => 10,
+            'tries' => 2,
+            'timeout' => 60 * 60,
+        ],
+        'mailcoach-general' => [
+            'connection' => 'mailcoach-redis',
+            'queue' => ['mailcoach', 'mailcoach-feedback', 'send-mail'],
+            'balance' => 'auto',
+            'processes' => 10,
+            'tries' => 2,
+            'timeout' => 60 * 60,
+        ],
+        'mailcoach-heavy' => [
+            'connection' => 'mailcoach-redis',
+            'queue' => ['send-campaign'],
+            'balance' => 'auto',
+            'processes' => 3,
+            'tries' => 1,
+            'timeout' => 60 * 60,
+        ],
+    ],
+
+    'local' => [
+        'supervisor-1' => [
+            'connection' => 'redis',
+            'queue' => ['default'],
+            'balance' => 'simple',
+            'processes' => 10,
+            'tries' => 2,
+            'timeout' => 60 * 60,
+        ],
+        'mailcoach-general' => [
+            'connection' => 'mailcoach-redis',
+            'queue' => ['mailcoach', 'mailcoach-feedback', 'send-mail'],
+            'balance' => 'auto',
+            'processes' => 10,
+            'tries' => 2,
+            'timeout' => 60 * 60,
+        ],
+        'mailcoach-heavy' => [
+            'connection' => 'mailcoach-redis',
+            'queue' => ['send-campaign'],
+            'balance' => 'auto',
+            'processes' => 3,
+            'tries' => 1,
+            'timeout' => 60 * 60,
+        ],
+    ],
+],
+```
+
 ## New command for cleanup
 
 We've added a new command for cleanup of processed feedback in the `webhook_calls` table, make sure to add this to your `\App\Console\Kernel` schedule. 
