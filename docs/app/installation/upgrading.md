@@ -51,3 +51,11 @@ The `middleware` option now contains an array with `web` and `api`. This is the 
         ],
     ],
 ```
+
+## New command for cleanup
+
+We've added a new command for cleanup of processed feedback in the `webhook_calls` table, make sure to add this to your `\App\Console\Kernel` schedule. 
+
+```php
+$schedule->command('mailcoach:cleanup-processed-feedback')->hourly();
+```
