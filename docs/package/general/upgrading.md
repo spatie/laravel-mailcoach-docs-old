@@ -73,6 +73,7 @@ $table->integer('welcome_mail_delay_in_minutes')->default(0);
 Added:
 ```
 $table->longText('structured_html')->nullable();
+$table->json('mailable_arguments')->nullable();
 ```
 
 #### mailcoach_templates
