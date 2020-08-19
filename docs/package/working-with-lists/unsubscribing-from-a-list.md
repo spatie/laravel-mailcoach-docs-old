@@ -28,7 +28,7 @@ $emailList->unsubscribe('john@example.com');
 Alternatively, you can call unsubscribe on a subscriber
 
 ```php
-Subscriber::findForEmail('john@example.com')->unsubscribe();
+Subscriber::findForEmail('john@example.com', $emailList)->unsubscribe();
 ```
 
 ## Unsubscribing using an email client
@@ -42,7 +42,7 @@ Behind the scenes, the subscriber won't be deleted. Instead, the status of the s
 If you want to delete the subscription/subscriber entirely, you can call `delete` on it.
 
 ```php
-Subscriber::findForEmail('john@example.com')->delete();
+Subscriber::findForEmail('john@example.com', $emailList)->delete();
 ```
 
 The code above will also delete all related subscriptions.
