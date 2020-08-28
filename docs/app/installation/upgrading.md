@@ -25,6 +25,10 @@ In your database you should add a few columns:
 - `subscribe_unsubscribed` : boolean, default: false
 - `unsubscribe_others`: boolean, default false,
 
+#### mailcoach_email_lists
+
+- `allowed_form_extra_attributes`: text, nullable,
+
 ## Upgrading database content
 
 - `open_rate`, `click_rate`, `bounce_rate`, `unsubscribe_rate`: v3 of mailcoach now assumes that the two last numbers are the digits. For campaigns that were sent using v2 you should add two zeroes, so `31` should become `3100`
