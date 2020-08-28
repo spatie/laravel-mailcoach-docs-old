@@ -82,10 +82,10 @@ You can check if a given email is subscribed to an email list.
 $emailList->isSubscribed('john@example.com'); // returns a boolean
 ```
 
-You can use a subscriber to check to if it is subscriber to a list.
+You can use a subscriber to check to if it is subscribed.
 
 ```php
-$subscriber->isSubscribedTo($emailList) // returns a boolean;
+$subscriber->isSubscribed() // returns a boolean;
 ```
 
 ## Getting the status of a subscriber
