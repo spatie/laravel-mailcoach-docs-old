@@ -96,6 +96,12 @@ You can also optionally add fields for the user's first and last name:
 </div>
 ```
 
+You can also optionally add extra attributes fields for the user, should be allowd in List Settings:
+
+```html
+<input type="hidden" name="attribute[myfancyattribute]" value="attributeValue" />
+```
+
 Finally, Mailcoach can also redirect users after they subscribe. There are some more hidden fields for the different types of redirects, the names should be self-explanatory:
 
 ```html
