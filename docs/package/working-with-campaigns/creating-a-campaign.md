@@ -54,3 +54,10 @@ To set a from name, just pass the name as a second parameter to `from`
 ```php
 Campaign::create()->from('sender@example.com', 'Sender name')
 ```
+
+## Setting a reply to
+
+Optionally, you can set a reply to email and name like this
+```php
+Campaign::create()->replyTo('john@example.com', 'John Doe')
+```

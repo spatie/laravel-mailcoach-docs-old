@@ -16,6 +16,11 @@ composer create-project spatie/Mailcoach
 
 In your database you should add a few columns:
 
+#### mailcoach_campaigns
+
+- `reply_to_email`: string, nullable
+- `reply_to_name`: string, nullable
+
 #### mailcoach_subscribers
 
 - `imported_via_import_uuid`: uuid, nullable
@@ -27,6 +32,8 @@ In your database you should add a few columns:
 
 #### mailcoach_email_lists
 
+- `default_reply_to_email`: string, nullable
+- `default_reply_to_name`: string, nullable
 - `allowed_form_extra_attributes`: text, nullable,
 
 ## Upgrading database content

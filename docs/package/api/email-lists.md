@@ -146,6 +146,8 @@ These are all the available fields with their validation rules:
 - `name` => required
 - `default_from_email` => required | valid email
 - `default_from_name` => string
+- `default_reply_email` =>  valid email
+- `default_reply_name` => string
 - `campaign_mailer` => valid mailer (defined in laravel config)
 - `transactional_mailer` => valid mailer (defined in laravel config)
 - `campaigns_feed_enabled` => boolean
