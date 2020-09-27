@@ -4,80 +4,126 @@ title: Upgrading
 
 ## Upgrading to v2
 
-### Laravel 7
+### Laravel 8
 
-Mailcoach v2 requires Laravel 7, make sure to [upgrade your project](https://laravel.com/docs/7.x/upgrade#upgrade-7.0) first.
+Mailcoach v3 requires Laravel 8, make sure to [upgrade your project](https://laravel.com/docs/8.x/upgrade#upgrade-8.0) first.
 
-### Media library v8
+Mailcoach uses job batching under the hood. Make sure you add the required database table, as [mentioned in the Laravel docs on Job batching](https://laravel.com/docs/8.x/queues#job-batching).
 
-Medialibrary has been upgraded to v8, please read the [upgrade guide](https://github.com/spatie/laravel-medialibrary/blob/master/UPGRADING.md#from-v7-to-v8) to make any changes necessary to your project.
+## Upgrading the database schema
 
-If you were not using media library in any way in your own code, you only need to create and run a migration to add this column to the `media` table.
-
-```php
-$table->string('conversions_disk')->nullable();
-$table->uuid('uuid')->nullable();
-```
-
-### View changes
-All the views have changed, if you have published views that you've modified, make sure to republish them and port your changes.
-
-### Config changes
-Add the following new configuration keys to your `mailcoach.php` config file and set them to your preferred mailers. You can also keep these `null` and Mailcoach will use the default app mailer.
-
-```php
-/*
- * The mailer used by Mailcoach for password resets and summary emails.
- * Mailcoach will use the default Laravel mailer if this is not set.
- */
-'mailer' => null,
-
-/*
- * The default mailer used by Mailcoach for campaign sends. This can
- * be overridden on a List level.
- */
-'campaign_mailer' => null,
-
-/*
- * The default mailer used by Mailcoach for double opt-in and confirmation mails.
- * This can be overridden on a List level.
- */
-'transactional_mailer' => null,
-
-/**
- * Here you can configure which template editor Mailcoach uses.
- * By default this is a text editor that highlights HTML.
- */
-'editor' => \Spatie\Mailcoach\Support\Editor\TextEditor::class,
-```
-
-### Update the feed back package.
-
-If you're tracking opens and links you need to update the feedback package you are using to v2.
-
-Update `^1.0` for `^2.0` for the `spatie/laravel-mailcoach-<your email provider>-feedback` you have installed
-
-### Database changes
-
-Create and run a migration to add the following changed columns to your database table.
-
-#### mailcoach_email_lists
-Added:
-```
-$table->string('campaign_mailer')->nullable();
-$table->string('transactional_mailer')->nullable();
-$table->integer('welcome_mail_delay_in_minutes')->default(0);
-```
+In your database you should add a few columns:
 
 #### mailcoach_campaigns
-Added:
-```
-$table->longText('structured_html')->nullable();
-$table->json('mailable_arguments')->nullable();
+
+- `reply_to_email`: string, nullable
+- `reply_to_name`: string, nullable
+
+#### mailcoach_subscribers
+
+- `imported_via_import_uuid`: uuid, nullable
+
+#### mailcoach_subscriber_imports
+
+- `subscribe_unsubscribed` : boolean, default: false
+- `unsubscribe_others`: boolean, default false,
+
+#### mailcoach_email_lists
+
+- `default_reply_to_email`: string, nullable
+- `default_reply_to_name`: string, nullable
+- `allowed_form_extra_attributes`: text, nullable,
+
+#### mailcoach_sends
+
+- add an index on `uuid`
+
+## Upgrading database content
+
+- `open_rate`, `click_rate`, `bounce_rate`, `unsubscribe_rate`: v3 of mailcoach now assumes that the two last numbers are the digits. For campaigns that were sent using v2 you should add two zeroes, so `31` should become `3100`
+
+## Updating the config file
+
+The `middleware` option now contains an array with `web` and `api`. This is the new default:
+
+```php
+    /*
+     *  These middleware will be assigned to every Mailcoach routes, giving you the chance
+     *  to add your own middleware to this stack or override any of the existing middleware.
+     */
+    'middleware' => [
+        'web' => [
+            'web',
+            Spatie\Mailcoach\Http\App\Middleware\Authenticate::class,
+            Spatie\Mailcoach\Http\App\Middleware\Authorize::class,
+            Spatie\Mailcoach\Http\App\Middleware\SetMailcoachDefaults::class,
+        ],
+        'api' => [
+            'api',
+            'auth:api',
+        ],
+    ],
 ```
 
-#### mailcoach_templates
-Added:
-```
-$table->longText('structured_html')->nullable();
+## Horizon configuration
+
+We now suggest a new horizon configuration for balancing the queue that Mailcoach uses, make sure `mailcoach-general` and `mailcoach-heavy` are present in your production and local Horizon environments:
+
+```php
+// config/horizon.php
+'environments' => [
+    'production' => [
+        'supervisor-1' => [
+            'connection' => 'redis',
+            'queue' => ['default'],
+            'balance' => 'simple',
+            'processes' => 10,
+            'tries' => 2,
+            'timeout' => 60 * 60,
+        ],
+        'mailcoach-general' => [
+            'connection' => 'mailcoach-redis',
+            'queue' => ['mailcoach', 'mailcoach-feedback', 'send-mail'],
+            'balance' => 'auto',
+            'processes' => 10,
+            'tries' => 2,
+            'timeout' => 60 * 60,
+        ],
+        'mailcoach-heavy' => [
+            'connection' => 'mailcoach-redis',
+            'queue' => ['send-campaign'],
+            'balance' => 'auto',
+            'processes' => 3,
+            'tries' => 1,
+            'timeout' => 60 * 60,
+        ],
+    ],
+
+    'local' => [
+        'supervisor-1' => [
+            'connection' => 'redis',
+            'queue' => ['default'],
+            'balance' => 'simple',
+            'processes' => 10,
+            'tries' => 2,
+            'timeout' => 60 * 60,
+        ],
+        'mailcoach-general' => [
+            'connection' => 'mailcoach-redis',
+            'queue' => ['mailcoach', 'mailcoach-feedback', 'send-mail'],
+            'balance' => 'auto',
+            'processes' => 10,
+            'tries' => 2,
+            'timeout' => 60 * 60,
+        ],
+        'mailcoach-heavy' => [
+            'connection' => 'mailcoach-redis',
+            'queue' => ['send-campaign'],
+            'balance' => 'auto',
+            'processes' => 3,
+            'tries' => 1,
+            'timeout' => 60 * 60,
+        ],
+    ],
+],
 ```
