@@ -134,3 +134,11 @@ We now suggest a new horizon configuration for balancing the queue that Mailcoac
     ],
 ],
 ```
+
+## New command for cleanup
+
+We've added a new command for cleanup of processed feedback in the `webhook_calls` table, make sure to add this to your `\App\Console\Kernel` schedule. 
+
+```php
+$schedule->command('mailcoach:cleanup-processed-feedback')->hourly();
+```
