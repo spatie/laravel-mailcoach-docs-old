@@ -17,6 +17,7 @@ In your database you should add a few columns:
 #### mailcoach_campaigns
 
 - `all_jobs_added_to_batch_at`: timestamp, nullable
+- `send_batch_id`: string, nullable
 - `reply_to_email`: string, nullable
 - `reply_to_name`: string, nullable
 
