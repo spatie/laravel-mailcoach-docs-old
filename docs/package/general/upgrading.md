@@ -32,7 +32,7 @@ In your database you should add a few columns:
 
 - `default_reply_to_email`: string, nullable
 - `default_reply_to_name`: string, nullable
-- `allowed_form_extra_attributes`: text, nullable,
+- `allowed_form_extra_attributes`: text, nullable
 
 #### mailcoach_sends
 
@@ -44,7 +44,9 @@ In your database you should add a few columns:
 
 ## Updating the config file
 
-The `middleware` option now contains an array with `web` and `api`. This is the new default:
+The `middleware` option now contains an array with `web` and `api`. This is the new default. 
+
+If you don't have a `middleware` key in your config file, you don't need to do anything as the default will be used. If you do have a `middleware` key, update it accordingly.
 
 ```php
     /*
