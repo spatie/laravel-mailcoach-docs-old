@@ -41,6 +41,7 @@ In your database you should add a few columns:
 
 #### webhook_calls
 
+- `processed_at`: timestamp, nullable.
 - `external_id`: string, nullable. Make sure to add an index for performance.
 
 ## Upgrading database content
