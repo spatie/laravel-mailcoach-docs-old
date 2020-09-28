@@ -48,6 +48,7 @@ In your database you should add a few columns:
 ## Upgrading database content
 
 - `open_rate`, `click_rate`, `bounce_rate`, `unsubscribe_rate`: v3 of mailcoach now assumes that the two last numbers are the digits. For campaigns that were sent using v2 you should add two zeroes, so `31` should become `3100`
+- `webhook_calls` need the `processed_at` column filled in, you can set this using `update webhook_calls set processed_at = NOW() where processed_at is null;`
 
 ## Updating the config file
 
