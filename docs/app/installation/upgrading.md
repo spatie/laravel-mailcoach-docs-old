@@ -66,7 +66,7 @@ The `middleware` option now contains an array with `web` and `api`. This is the 
         ],
         'api' => [
             'api',
-            'auth:api',
+            'auth:sanctum',
         ],
     ],
 ```
