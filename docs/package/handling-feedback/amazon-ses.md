@@ -10,20 +10,6 @@ You can install the add-on package via composer:
 composer require spatie/laravel-mailcoach-ses-feedback:^2.0
 ```
 
-## Migrating the database
-
-Under the hood this package uses [spatie/laravel-webhook-client](https://github.com/spatie/laravel-webhook-client) to process handle webhooks. You are required to publish its migration to create the `webhook_calls` table. You can skip this step if your project already uses the `laravel-webhook-client` package directly.
-
-```bash
-php artisan vendor:publish --provider="Spatie\WebhookClient\WebhookClientServiceProvider" --tag="migrations"
-```
-
-After the migration has been published, you can create the `webhook_calls` table by running the migrations:
-
-```php
-php artisan migrate
-```
-
 ## Adding the webhooks route
 
 You must use this route macro in your route service provider. We recommend to not apply the `web` group middleware to this route as that would cause an unnecessary session to be started for each webhook call.
