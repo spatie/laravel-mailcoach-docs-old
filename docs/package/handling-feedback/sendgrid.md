@@ -41,11 +41,11 @@ At Sendgrid you must [configure a new webhook](https://sendgrid.com/docs/for-dev
 
 At the webhooks settings screen at sendgrid you must add the `Bounced`, `Opened`, `Clicked` and `Mark as Spam` webhooks and point them to the route your configured. In the screenshot below we configured the webhooks using a `ngrok.io` domain with a `?secret=yolo-no-real-signature` appended to the webhook url.
 
-![Sendgrid webhooks](https://mailcoach.app/images/docs/v2/sendgrid-webhooks.png)
+![Sendgrid webhooks](https://mailcoach.app/images/docs/v3/sendgrid-webhooks.png)
 
 At the Tracking settings you must enable click and open tracking
 
-![Mailgun webhooks](https://mailcoach.app/images/docs/v2/sendgrid-tracking-settings.png)
+![Mailgun webhooks](https://mailcoach.app/images/docs/v3/sendgrid-tracking-settings.png)
 
 In the `mailcoach` config file you must add this section.
 

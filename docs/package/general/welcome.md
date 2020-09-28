@@ -2,7 +2,7 @@
 title: Welcome
 ---
 
-![](https://mailcoach.app/images/docs/v2/package/welcome.png)
+![](https://mailcoach.app/images/docs/v3/package/welcome.png)
 
 This package allows you to send out email campaigns to a list of subscribers effortlessly. It also provides a UI to manage campaigns, email lists and subscribers.
 
@@ -14,7 +14,7 @@ Let’s take a quick look at how to use the package. First, create an email list
 $emailList = EmailList::create(['name' => 'newsletter subscribers']);
 ```
 
-Next, we subscribe people to a list. There's also support for [double opt-in subscriptions](/docs/v2/package/working-with-lists/using-double-opt-in).
+Next, we subscribe people to a list. There's also support for [double opt-in subscriptions](/docs/v3/package/working-with-lists/using-double-opt-in).
 
 ```php
 $emailList->subscribe('john@example.com');
@@ -32,5 +32,5 @@ Campaign::create()
     ->sendTo($emailList);
 ```
 
-After a campaign is sent, [interesting statistics](/docs/v2/package/working-with-campaigns/viewing-statistics-of-a-sent-campaign) are made available.
+After a campaign is sent, [interesting statistics](/docs/v3/package/working-with-campaigns/viewing-statistics-of-a-sent-campaign) are made available.
 

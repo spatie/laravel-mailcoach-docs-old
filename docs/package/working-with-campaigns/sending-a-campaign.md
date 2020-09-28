@@ -16,7 +16,7 @@ Alternatively you can set the email list and send the campaign in one go:
 $campaign->sendTo($emailList);
 ```
 
-If you don't want to send email to your entire list, but only to a subset of subscribers, you can [use a segment](/docs/v2/package/advanced-usage/segmenting-lists).
+If you don't want to send email to your entire list, but only to a subset of subscribers, you can [use a segment](/docs/v3/package/advanced-usage/segmenting-lists).
 
 ## What happens when a campaign is being sent
 
@@ -26,4 +26,4 @@ For each created `SendMail` model, a `SendMailJob` will be started. That job wil
 
  You can customize on which queue the `SendCampaignJob` and `SendMailJob` jobs are dispatched in the `perform_on_queue` in the `email-campaigns` config file. We recommend the `SendMailJob` having its own queue because it could contain many pending jobs if you are sending a campaign to a large list of subscribers.
 
-The `SendMailJob` is throttled by default so that it doesn't overwhelm your email service with a large number of calls. Only 5 of those jobs will be handled per second. To learn more about this, read [the docs on throttling sends](/docs/v2/package/advanced-usage/throttling-sends).
+The `SendMailJob` is throttled by default so that it doesn't overwhelm your email service with a large number of calls. Only 5 of those jobs will be handled per second. To learn more about this, read [the docs on throttling sends](/docs/v3/package/advanced-usage/throttling-sends).

@@ -10,7 +10,7 @@ You can create a new email list by newing up an `EmailList`. The only required f
 $emailList = EmailList::create(['name' => 'my email list name']);
 ```
 
-### Setting a default sender
+### Setting a default sender and reply to
 
 You can set a default email address and from name.
 
@@ -21,11 +21,18 @@ $emailList->update([
 ]);
 ```
 
-When sending a campaign to this email list these defaults will be used if you send a campaign that doesn't have a sender of its own.
+```php
+$emailList->update([
+    'default_reply_to_email' => 'jane@example.com',
+    'default_reply_to_name' => 'Jane Doe',
+]);
+```
 
-### Specifing the mailers to be used
+When sending a campaign to this email list these defaults will be used if you send a campaign that doesn't have a a from or reply to of its own.
 
-By default, Mailcoach sends all mails using the default mailer of your Laravel app. In the `mailcoach.php` config file, [you can override this](https://mailcoach.app/docs/v2/package/general/installation-and-setup#configure-an-email-sending-service).
+### Specifying the mailers to be used
+
+By default, Mailcoach sends all mails using the default mailer of your Laravel app. In the `mailcoach.php` config file, [you can override this](https://mailcoach.app/docs/v3/package/general/installation-and-setup#configure-an-email-sending-service).
 
 At the time of creating your EmailList, the `transactional_mailer` and `campaign_mailer` attributes will be set based on your configuration settings. Any future change in your configuration settings will not automatically apply to the EmailList.
 

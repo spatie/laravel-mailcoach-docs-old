@@ -43,7 +43,7 @@ $campaign->save();
 In that HTML you can use these placeholders which will be replaced when sending out the campaign:
 
 - `::unsubscribeUrl::`: this string will be replaced with the URL that, when hit, will immediately unsubscribe the person that clicked it
-- `::webviewUrl`: this string will be replaced with the URL that will display the content of your campaign. Learn more about this in [the docs on webviews](/docs/v2/package/advanced-usage/displaying-webviews).
+- `::webviewUrl`: this string will be replaced with the URL that will display the content of your campaign. Learn more about this in [the docs on webviews](/docs/v3/package/advanced-usage/displaying-webviews).
 
 If there is no way for a subscriber to unsubscribe, it will result in a lot of frustration on the part of the subscriber. We recommend always to use the `::unsubscribeUrl::` in the HTML of each campaign you send.
 
@@ -53,4 +53,11 @@ To set a from name, just pass the name as a second parameter to `from`
 
 ```php
 Campaign::create()->from('sender@example.com', 'Sender name')
+```
+
+## Setting a reply to
+
+Optionally, you can set a reply to email and name like this
+```php
+Campaign::create()->replyTo('john@example.com', 'John Doe')
 ```
