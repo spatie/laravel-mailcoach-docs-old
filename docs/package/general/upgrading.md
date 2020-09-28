@@ -38,6 +38,10 @@ In your database you should add a few columns:
 
 - add an index on `uuid`
 
+#### webhook_calls
+
+- `external_id`: string, nullable. Make sure to add an index for performance.
+
 ## Upgrading database content
 
 - `open_rate`, `click_rate`, `bounce_rate`, `unsubscribe_rate`: v3 of mailcoach now assumes that the two last numbers are the digits. For campaigns that were sent using v2 you should add two zeroes, so `31` should become `3100`
