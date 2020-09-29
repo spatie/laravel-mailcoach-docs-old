@@ -1,16 +1,14 @@
 ---
-title: Upgrading from v2 to v3
+title: Upgrading
 ---
 
-If you installed Mailcoach as a package inside an existing Laravel app, you need to follow [these instructions](https://mailcoach.app/docs/v3/package/general/upgrading).
+## Upgrading to v3
 
-An in-place upgrade of the full Mailcoach app is hard. Instead, we recommend creating a new fresh Mailcoach 2 app and updating your current database and settings to the new v2 format.
+### Laravel 8
 
-You can create a new Mailcoach app with this command
+Mailcoach v3 requires Laravel 8, make sure to [upgrade your project](https://laravel.com/docs/8.x/upgrade#upgrade-8.0) first.
 
-```bash
-composer create-project spatie/Mailcoach
-```
+Mailcoach uses job batching under the hood. Make sure you add the required database table, as [mentioned in the Laravel docs on Job batching](https://laravel.com/docs/8.x/queues#job-batching).
 
 ## Upgrading the database schema
 
@@ -36,7 +34,7 @@ In your database you should add a few columns:
 
 - `default_reply_to_email`: string, nullable
 - `default_reply_to_name`: string, nullable
-- `allowed_form_extra_attributes`: text, nullable,
+- `allowed_form_extra_attributes`: text, nullable
 
 #### mailcoach_sends
 
@@ -50,11 +48,13 @@ In your database you should add a few columns:
 ## Upgrading database content
 
 - `open_rate`, `click_rate`, `bounce_rate`, `unsubscribe_rate`: v3 of mailcoach now assumes that the two last numbers are the digits. For campaigns that were sent using v2 you should add two zeroes, so `31` should become `3100`
-- `webhook_calls` need the `processed_at` column filled in, you can set this using `update webhook_calls set processed_at = NOW() where processed_at is null;` 
- 
+- `webhook_calls` need the `processed_at` column filled in, you can set this using `update webhook_calls set processed_at = NOW() where processed_at is null;`
+
 ## Updating the config file
 
-The `middleware` option now contains an array with `web` and `api`. This is the new default:
+The `middleware` option now contains an array with `web` and `api`. This is the new default. 
+
+If you don't have a `middleware` key in your config file, you don't need to do anything as the default will be used. If you do have a `middleware` key, update it accordingly.
 
 ```php
     /*
@@ -70,7 +70,7 @@ The `middleware` option now contains an array with `web` and `api`. This is the 
         ],
         'api' => [
             'api',
-            'auth:sanctum',
+            'auth:api',
         ],
     ],
 ```
