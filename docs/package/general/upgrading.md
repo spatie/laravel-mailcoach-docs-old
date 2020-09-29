@@ -2,7 +2,7 @@
 title: Upgrading
 ---
 
-## Upgrading to v2
+## Upgrading to v3
 
 ### Laravel 8
 
