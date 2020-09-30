@@ -142,6 +142,8 @@ We now suggest a new horizon configuration for balancing the queue that Mailcoac
 
 We've added a new command for cleanup of processed feedback in the `webhook_calls` table, make sure to add this to your `\App\Console\Kernel` schedule. 
 
+Be aware that email providers such as SES are a 'deliver at least once' service. Duplicate feedback delivery could be seen weeks after the event. Mailcoach prevents duplicates from SES by checking for old matching feedback. As such, cleaning up historical feedback webhooks could lead to duplicate feedbacks items being processed multiple times. The end result is inflated open and click metrics.
+
 ```php
 $schedule->command('mailcoach:cleanup-processed-feedback')->hourly();
 ```

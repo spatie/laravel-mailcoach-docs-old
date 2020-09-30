@@ -227,6 +227,8 @@ Route::mailcoach('mailcoach');
 
 In the console kernel, you should schedule these commands.
 
+Regarding the mailcoach:cleanup-processed-feedback command, be aware that email providers such as SES are a 'deliver at least once' service. Duplicate feedback delivery could be seen weeks after the event. Mailcoach prevents duplicates from SES by checking for old matching feedback. As such, cleaning up historical feedback webhooks could lead to duplicate feedbacks items being processed multiple times. The end result is inflated open and click metrics.
+
 ```php
 // in app/Console/Kernel.php
 protected function schedule(Schedule $schedule)
