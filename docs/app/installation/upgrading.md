@@ -12,7 +12,7 @@ Mailcoach uses job batching under the hood. Make sure you add the required datab
 
 ## Upgrading the database schema
 
-In your database you should add a few columns:
+In your database you should add a few columns. You can add them manually like described below, or use the migration mentioned in [this comment on GitHub](https://github.com/spatie/mailcoach-support/issues/251#issuecomment-700925757).
 
 #### mailcoach_campaigns
 
