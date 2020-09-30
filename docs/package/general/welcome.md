@@ -6,7 +6,7 @@ title: Welcome
 
 This package allows you to send out email campaigns to a list of subscribers effortlessly. It also provides a UI to manage campaigns, email lists and subscribers.
 
-You are currently looking at the documentation of v2 which requires Laravel 8. If you are on Laravel 7, take a look at [the docs of Mailcoach v2](/docs/v2/app/general/welcome).
+You are currently looking at the documentation of v3 which requires Laravel 8. If you are on Laravel 7, take a look at [the docs of Mailcoach v2](/docs/v2/app/general/welcome).
 
 Let’s take a quick look at how to use the package. First, create an email list:
 
