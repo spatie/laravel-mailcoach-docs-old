@@ -12,7 +12,7 @@ In order to install Mailcoach, you'll need to [get a license](/docs/v3/app/gener
 "repositories": [
     {
         "type": "composer",
-        "url": "https://satis.mailcoach.app"
+        "url": "https://satis.spatie.be"
     }
 ],
 ```
