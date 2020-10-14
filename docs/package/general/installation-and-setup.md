@@ -29,7 +29,7 @@ This is the content you should put in `auth.json`:
 {
     "http-basic": {
         "satis.spatie.be": {
-            "username": "<YOUR mailcoach.app USERNAME HERE>",
+            "username": "<YOUR spatie.be email HERE>",
             "password": "<YOUR-LICENSE-KEY-HERE>"
         }
     }
