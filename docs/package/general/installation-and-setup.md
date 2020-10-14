@@ -6,7 +6,7 @@ Mailcoach can be installed as a package inside an existing Laravel application. 
 
 In order to install Mailcoach, you'll need to [get a license](/docs/v3/app/general/getting-a-license) first.
  
- First, add the `satis.mailcoach.app` repository in your `composer.json`.
+ First, add the `satis.spatie.be` repository in your `composer.json`.
 
 ```php
 "repositories": [
@@ -28,7 +28,7 @@ This is the content you should put in `auth.json`:
 ```php
 {
     "http-basic": {
-        "satis.mailcoach.app": {
+        "satis.spatie.be": {
             "username": "<YOUR mailcoach.app USERNAME HERE>",
             "password": "<YOUR-LICENSE-KEY-HERE>"
         }
