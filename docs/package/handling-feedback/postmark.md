@@ -12,7 +12,7 @@ composer require spatie/laravel-mailcoach-postmark-feedback:^2.0
 
 ## Adding the webhooks route
 
-You must use this route macro in your route service provider. We recommend to not apply the `web` group middleware to this route as that would cause an unnecessary session to be started for each webhook call.
+You must use this route macro in your route service provider. Do **NOT** apply the `web` group middleware to this route as that would cause an unnecessary session to be started for each webhook call.
 
 You can replace `postmark-feedback` with any url you'd like.
 
