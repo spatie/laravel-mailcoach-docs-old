@@ -20,7 +20,7 @@ Next, you must update the values of the `DB_*` entries in `.env` so they match y
 
 ### Creating the first user
 
-After that you can create an initial user by executing `php artisan make:user`. You can use the created user to login at Mailcoach. New user can be made on the users screen in mailcoach.
+After that you can create an initial user by executing `php artisan mailcoach:make-user`. You can use the created user to login at Mailcoach. New user can be made on the users screen in mailcoach.
 
 ![Users screen](https://mailcoach.app/images/docs/v2/app/getting-started/users.png)
 
