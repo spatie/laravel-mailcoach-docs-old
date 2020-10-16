@@ -60,7 +60,7 @@ As a result, you get the details of all the email list's subscribers:
 
 ## Get a specific subscriber
 
-If you want to get the details of a specific subscriber, you can send a `GET` request to the `/mailcoach/api/subscribers/<id>` endpoint.
+If you want to get the details of a specific subscriber, you can send a `GET` request to the `/mailcoach/api/subscribers/<id or encoded email>` endpoint.
 
 ```shell script
 $ MAILCOACH_TOKEN="your API token"
@@ -100,7 +100,7 @@ $ curl -x POST https://example.app/mailcoach/api/email-lists/99/subscribers \
     -H "Authorization: Bearer $MAILCOACH_TOKEN" \
     -H 'Accept: application/json' \
     -H 'Content-Type: application/json' \
-    -d '{"email":"john@doe.com", "first_name":"John", "last_name":"Doe"}'
+    -d '{"email":"john@doe.com", "first_name":"John", "last_name":"Doe", "tags": ["tag-a", "tag-b"]}'
 ```
 
 The only required field is `email` and should be a valid email address that is not already subscribed (or unsubscribed) in the list.
@@ -125,9 +125,40 @@ If the API call succeeded, you'll be given a response with the subscriber's deta
 }
 ```
 
+## Update a subscriber
+
+To update a subscriber, including any associated tags, you can send a `PUT` request to the `/mailcoach/api/subscribers/<id or encoded email>` endpoint.
+
+All fields are optional - only provide the values you wish to update.
+
+Add additional tags to the subscriber by providing the `add_tags` field.
+Remove existing tags from the subscriber by providing the `remove_tags` field.
+
+```shell script
+$ MAILCOACH_TOKEN="your API token"
+$ curl -x PUT https://example.app/mailcoach/api/subscribers/99 \
+    -H "Authorization: Bearer $MAILCOACH_TOKEN" \
+    -H 'Accept: application/json' \
+    -H 'Content-Type: application/json' \
+    -d '{"first_name":"John", "last_name":"Doe", "add_tags": ["tag-a", "tag-b"], "remove_tags": ["tag-c"]}'
+```
+
+or sync the tags altogether.
+
+```shell script
+$ MAILCOACH_TOKEN="your API token"
+$ curl -x PUT https://example.app/mailcoach/api/subscribers/99 \
+    -H "Authorization: Bearer $MAILCOACH_TOKEN" \
+    -H 'Accept: application/json' \
+    -H 'Content-Type: application/json' \
+    -d '{"first_name":"John", "last_name":"Doe", "tags": ["tag-a", "tag-b"]}'
+```
+
+If the API call succeeded, you'll be given an empty response with a `204` status code.
+
 ## Delete a subscriber
 
-To delete a subscriber, and erase all knowledge of it existing, you can send a `DELETE` request to the `/mailcoach/api/subscribers/<id>` endpoint.
+To delete a subscriber, and erase all knowledge of it existing, you can send a `DELETE` request to the `/mailcoach/api/subscribers/<id or encoded email>` endpoint.
 
 > This means the email address can be subscribed again on a later date.
 
@@ -143,7 +174,7 @@ If the API call succeeded, you'll be given an empty response with a `204` status
 
 ## Confirm a subscriber
 
-To confirm a subscriber's subscription to an email list, you can send a `POST` request to the `/mailcoach/api/subscribers/<id>/confirm` endpoint
+To confirm a subscriber's subscription to an email list, you can send a `POST` request to the `/mailcoach/api/subscribers/<id or encoded email>/confirm` endpoint
 
 ```shell script
 $ MAILCOACH_TOKEN="your API token"
@@ -157,7 +188,7 @@ If the API call succeeded, you'll be given an empty response with a `204` status
 
 ## Unsubscribe a subscriber
 
-To unsubscribe a subscriber's subscription to an email list, you can send a `POST` request to the `/mailcoach/api/subscribers/<id>/unsubscribe` endpoint
+To unsubscribe a subscriber's subscription to an email list, you can send a `POST` request to the `/mailcoach/api/subscribers/<id or encoded email>/unsubscribe` endpoint
 
 ```shell script
 $ MAILCOACH_TOKEN="your API token"
@@ -171,7 +202,7 @@ If the API call succeeded, you'll be given an empty response with a `204` status
 
 ## Resend confirmation of a subscriber
 
-To resend the confirmation email a subscriber received, you can send a `POST` request to the `/mailcoach/api/subscribers/<id>/resend-confirmation` endpoint
+To resend the confirmation email a subscriber received, you can send a `POST` request to the `/mailcoach/api/subscribers/<id or encoded email>/resend-confirmation` endpoint
 
 ```shell script
 $ MAILCOACH_TOKEN="your API token"
