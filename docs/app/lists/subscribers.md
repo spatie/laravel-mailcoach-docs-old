@@ -12,7 +12,7 @@ There are a couple of different statuses that a subscriber can have: _unconfirme
 
 **Unconfirmed**
 
-When people have signed up for your list, but have not yet confirmed their subscription, they will be _unconfirmed_. You will only see this status the list requires confirmation.
+When people have signed up for your list, but have not yet confirmed their subscription, they will be _unconfirmed_. You will only see this status if the list requires confirmation.
 
 You can manually confirm email addresses using the action menu next to their name, but we don't suggest doing this without the consent of the person this account belongs to.
 
@@ -30,7 +30,7 @@ You can manually revert an unsubscribe by using the action menu, but we strongly
 
 ![](https://mailcoach.app/images/docs/v3/app/lists/subscribers-import.png)
 
-You can easily import a list of subscribers into an existing list. Upload a CSV file with these columns: `email`, `first_name`, `last_name` and `tags`, and Mailcoach will start importing these into the list. When you want to attach multiple tags to a subscribe, use `;` as the delimiter.  You can follow the progress of the import, see any errors that occurred during the process, and download the uploaded file by using the action menu on the right.
+You can easily import a list of subscribers into an existing list. Upload a CSV file with these columns: `email`, `first_name`, `last_name` and `tags`, and Mailcoach will start importing these into the list. When you want to attach multiple tags to a subscriber, use `;` as the delimiter.  You can follow the progress of the import, see any errors that occurred during the process, and download the uploaded file by using the action menu on the right.
 
 ![](https://mailcoach.app/images/docs/v3/app/lists/subscribers-import-page.png)
 
@@ -42,6 +42,6 @@ Because these lists can get quite large and an import might take a while, we sen
 
 ## Exporting subscribers
 
-You can also export the entire list or parts of it. By filtering by name email address, status or tags, you can choose which lines will be included in an export. An export will create a CSV file with email addresses, first names, last names, and tags.
+You can also export the entire list or parts of it. By filtering by name, email address, status or tags, you can choose which lines will be included in an export. An export will create a CSV file with email addresses, first names, last names, and tags.
 
 ![](https://mailcoach.app/images/docs/v3/app/lists/subscribers-export.png)
