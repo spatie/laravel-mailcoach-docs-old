@@ -29,6 +29,7 @@ On the Mail configuration settings screen in Mailcoach, you'll have to have to f
 - Mails per second: to not overwhelm Postmark with mail requests, send this to a sensible value. In many cases `10` will be sufficient
 - Server token: you can get the right value on the [Postmark account details screen](https://account.postmarkapp.com/account/edit)
 - Signing secret: this should be set to the value you specified for the `mailcoach-signature` header.
+- Message stream (optional): the [Postmark Broadcast](https://postmarkapp.com/message-streams) message stream
 
 ## Informing Postmark 
 

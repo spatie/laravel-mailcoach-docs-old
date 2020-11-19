@@ -54,6 +54,21 @@ In your `.env` you must add a key `POSTMARK_SIGNING_SECRET` the value should be 
 POSTMARK_SIGNING_SECRET=
 ```
 
+## Setting the message stream in your Laravel app
+
+This package automatically adds the correct `X-PM-Message-Stream` header for Postmark Broadcast support. Make sure the name of your configuration set is available under the `mailcoach.postmark.message_stream` configuration key.
+
+Here's an example for a configuration set that is named `mailcoach`:
+
+```php
+// in config/mailcoach.php
+
+'postmark' => [
+    'message_stream' => 'newsletters',
+]
+
+```
+
 ## Using the correct mail driver
 
 If you haven't done so already, you must configure Laravel to use the Postmark driver. Follow the instruction in [the mail section of the Laravel docs](https://laravel.com/docs/7.x/mail#driver-prerequisites).
