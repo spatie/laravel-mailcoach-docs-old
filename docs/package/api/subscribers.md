@@ -32,6 +32,7 @@ As a result, you get the details of all the email list's subscribers:
             "first_name": null,
             "last_name": null,
             "extra_attributes": [],
+            "tags": [],
             "uuid": "2a0c72d9-f91a-4fd2-88a7-589dfd75f464",
             "subscribed_at": "2020-08-06T13:24:31.000000Z",
             "unsubscribed_at": null,
@@ -81,6 +82,7 @@ Response:
         "first_name": null,
         "last_name": null,
         "extra_attributes": [],
+        "tags": [],
         "uuid": "2a0c72d9-f91a-4fd2-88a7-589dfd75f464",
         "subscribed_at": "2020-08-06T13:24:31.000000Z",
         "unsubscribed_at": null,
@@ -107,6 +109,16 @@ The only required field is `email` and should be a valid email address that is n
 
 If the API call succeeded, you'll be given a response with the subscriber's details:
 
+You can pass the following fields while creating a subscriber:
+
+- `email`: string, required
+- `first_name`: nullable
+- `last_name`: nullable
+- `extra_attributes`: nullable, array
+- `tags`: nullable, array
+
+When passing tags, the tags will be synced to the subscriber.
+
 ```json
 {
   "data": {
@@ -116,6 +128,7 @@ If the API call succeeded, you'll be given a response with the subscriber's deta
     "first_name": null,
     "last_name": null,
     "extra_attributes": [],
+    "tags": [],
     "uuid": "2a0c72d9-f91a-4fd2-88a7-589dfd75f464",
     "subscribed_at": "2020-08-06T13:24:31.000000Z",
     "unsubscribed_at": null,
