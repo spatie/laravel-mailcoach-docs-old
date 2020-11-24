@@ -269,7 +269,7 @@ By default, we set this value to the default Laravel connection name, `default`.
 
 ## Install Horizon
 
-This package handles various tasks in a queued way via [Laravel Horizon](https://laravel.com/docs/7.x/horizon). If your application doesn't have Horizon installed yet, follow [their installation instructions](https://laravel.com/docs/7.x/horizon#installation).
+This package handles various tasks in a queued way via [Laravel Horizon](https://laravel.com/docs/horizon). If your application doesn't have Horizon installed yet, follow [their installation instructions](https://laravel.com/docs/horizon#installation).
 
 After Horizon is installed, don't forget to set `QUEUE_CONNECTION` in your `.env` file to `redis`.
 
