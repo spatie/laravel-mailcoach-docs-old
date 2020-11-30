@@ -31,6 +31,7 @@ Now that you are logged in you must configure the email sending service you'd li
 - [Amazon SES](/docs/v3/app/mail-configuration/amazon-ses)
 - [SendGrid](/docs/v3/app/mail-configuration/sendgrid)
 - [Mailgun](/docs/v3/app/mail-configuration/mailgun)
+- [Postmark](/docs/v3/app/mail-configuration/postmark)
 
 ### Running Horizon
 
