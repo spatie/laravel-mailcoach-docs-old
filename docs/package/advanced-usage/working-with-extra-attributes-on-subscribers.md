@@ -11,6 +11,14 @@ $subscription = $emailList->subscribe('john@example.com', [
 ]);
 ```
 
+When you are adding subscribers from an external form, you can also add extra attributes by using a specific input name pattern `attributes['name-of-your-new-attribute']`. This is what that looks like for storing a user's job.
+
+```html
+<input type="text" name="attributes[job]" value="developer">
+```
+
+To make this work, you also have to make sure `job` is defined as an allowed extra field on your email list's field `allowed_form_extra_attributes`.
+
 Here are examples of methods to work with those extra attributes.
 
 ```php
