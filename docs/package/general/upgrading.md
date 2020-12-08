@@ -24,6 +24,7 @@ In your database you should add a few columns. You can add them manually like de
 #### mailcoach_subscribers
 
 - `imported_via_import_uuid`: uuid, nullable
+- `$table->index(['email_list_id', 'subscribed_at', 'unsubscribed_at'], 'email_list_subscribed_index');`
 
 #### mailcoach_subscriber_imports
 
