@@ -6,8 +6,6 @@ title: Postmark
 
 First off, make sure you have created an account with [Postmark](https://postmarkapp.com). 
 
-At this moment, sending bulk email with Postmark is in beta. Before using Mailcoach to send out mails with Postmark, contact their support to enable this on your account.
-
 ## Configuring Postmark
 
 At Postmark you must [configure a new webhook](https://postmarkapp.com/support/article/1067-how-do-i-enable-delivery-webhooks).
