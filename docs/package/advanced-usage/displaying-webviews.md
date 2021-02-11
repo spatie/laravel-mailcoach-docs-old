@@ -18,4 +18,4 @@ You can customize the webview. To do this, you must publish all views:
 php artisan vendor:publish --provider="Spatie\Mailcoach\MailcoachServiceProvider" --tag="views"
 ```
 
-After that, you can customize the `webview.blade.php` view in the `resources/views/vendor/mailcoach/campaign`directory.
+After that, you can customize the `webview.blade.php` view in the `resources/views/vendor/mailcoach/campaign` directory.
