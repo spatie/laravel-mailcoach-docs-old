@@ -29,7 +29,3 @@ On the Mail configuration settings screen in Mailcoach, you'll have to have to f
 - Signing secret: this should be set to the value you specified for the `mailcoach-signature` header.
 - Message stream (optional): the [Postmark Broadcast](https://postmarkapp.com/message-streams) message stream
 
-## Informing Postmark 
-
-Using Postmark for bulk mail is currently in beta. Before start sending campaigns via Postmark we highly recommend getting in touch with their support and let them know you want to start sending bulk emails.
-
