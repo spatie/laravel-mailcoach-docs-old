@@ -1,13 +1,11 @@
 
-[<img src="https://github-ads.s3.eu-central-1.amazonaws.com/support-ukraine.svg?t=1" />](https://supportukrainenow.org)
-
 # laravel-mailcoach docs
 
 This repository contains the content of [the documentation section of the Mailcoach website](https://mailcoach.app/docs). Feel free to PR improvements and typo fixes.
 
 ## Support us
 
-[<img src="https://github-ads.s3.eu-central-1.amazonaws.com/laravel-mailcoach-docs.jpg?t=1" width="419px" />](https://spatie.be/github-ad-click/laravel-mailcoach-docs)
+[<img src="https://spatie.be/github-ad-image/laravel-mailcoach-docs-old.jpg" width="419px" />](https://spatie.be/github-ad-click/laravel-mailcoach-docs)
 
 We invest a lot of resources into creating [best in class open source packages](https://spatie.be/open-source). You can support us by [buying one of our paid products](https://spatie.be/open-source/support-us).
 
